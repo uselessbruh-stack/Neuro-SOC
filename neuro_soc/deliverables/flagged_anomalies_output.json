@@ -1,0 +1,354 @@
+[
+  {
+    "alert_id": "NSOC-2026-0001",
+    "user_id": "USR00015",
+    "username": "rohit.kapoor",
+    "risk_score": 89,
+    "anomaly_score": -0.3241,
+    "threat_narrative": "User USR00015 accessed 7 distinct systems in a single session with a temporal velocity of 18 events within 1 hour, which is 4.8 times their historical daily average. Activity occurred after business hours with a failed action attempt recorded. The user has only 6 months of tenure and holds elevated privilege access, compounding the deviation.",
+    "evidence_list": [
+      "Temporal Velocity of 18 is 12x the user's median hourly rate, indicating rapid sequential system access inconsistent with normal workflow patterns.",
+      "Rowcount deviation of 4.8x exceeds the 95th percentile threshold of 2.5x, suggesting bulk data retrieval outside standard reporting cycles.",
+      "After-hours access to high-sensitivity resources combined with a failed action flag indicates potential unauthorized access attempts."
+    ],
+    "recommended_action": "Quarantine",
+    "timestamp": "2026-06-13T23:41:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0002",
+    "user_id": "USR00057",
+    "username": "zainab.jo",
+    "risk_score": 82,
+    "anomaly_score": -0.2715,
+    "threat_narrative": "User USR00057 is a new hire with 3 months tenure who triggered 25 access events in a single hour from an unregistered device. The equipment mismatch score indicates a policy-violating device was used. Combined with after-hours high-sensitivity resource access and a failed authentication attempt, this profile deviates significantly from the established baseline.",
+    "evidence_list": [
+      "Temporal Velocity of 25 is the highest in the current alert queue, indicating burst access behavior atypical for any user profile.",
+      "Equipment Mismatch Score of 1 confirms access from a device not registered in the asset management system.",
+      "Tenure Risk Modifier of 3.0 amplifies the anomaly — new hires with elevated access represent statistically higher insider threat risk."
+    ],
+    "recommended_action": "Quarantine",
+    "timestamp": "2026-06-13T22:18:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0003",
+    "user_id": "USR00081",
+    "username": "priya.fernandez",
+    "risk_score": 78,
+    "anomaly_score": -0.2103,
+    "threat_narrative": "User USR00081 with only 3 months of tenure accessed systems at 03:22 AM, well outside business hours. Temporal velocity of 12 combined with rowcount deviation of 3.1x indicates sustained off-hours data retrieval. The user's Tenure Risk Modifier of 3.0 places this event in the elevated risk category.",
+    "evidence_list": [
+      "Early-morning access at 03:22 falls within the highest-risk temporal window (00:00-06:00), where legitimate activity accounts for less than 3% of all events.",
+      "Rowcount deviation of 3.1x exceeds the user's rolling 30-day average by a factor of three.",
+      "Short tenure of 3 months combined with high-risk flag indicates recently onboarded privileged user."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2026-06-13T03:22:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0004",
+    "user_id": "USR00039",
+    "username": "aisha.smith",
+    "risk_score": 61,
+    "anomaly_score": -0.1450,
+    "threat_narrative": "User USR00039 attempted to access resources from an unregistered device and received a failed action response. While the user has 31 months of tenure, the equipment mismatch score and authentication failure combination is inconsistent with their historical access pattern.",
+    "evidence_list": [
+      "Equipment Mismatch Score of 1 indicates a device not matching the user's registered hardware profile.",
+      "Failed Action Flag indicates an unsuccessful access attempt, potentially due to policy enforcement blocking unauthorized devices.",
+      "Privilege Sensitivity Mismatch of 0.5 shows the user accessed resources at half their normal sensitivity level, suggesting exploratory behavior."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2026-06-13T11:30:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0005",
+    "user_id": "USR00002",
+    "username": "vikram.patel",
+    "risk_score": 86,
+    "anomaly_score": -0.3050,
+    "threat_narrative": "User USR00002 has only 4 months of tenure and holds a high-risk privilege flag. The Tenure Risk Modifier of 3.0 is the maximum value in our scoring model, indicating a recently onboarded user with elevated system access. Rowcount deviation of 0.91 is near baseline, but after-hours high-sensitivity access was detected.",
+    "evidence_list": [
+      "Tenure Risk Modifier of 3.0 is the highest possible score, assigned to users with less than 6 months tenure and elevated privileges.",
+      "After-Hours High Sensitivity flag indicates access to classified resources outside the standard 09:00-17:00 business window.",
+      "Systems access count of 2 with Privilege Sensitivity Mismatch of 1.5 suggests the user accessed resources above their standard clearance."
+    ],
+    "recommended_action": "Quarantine",
+    "timestamp": "2026-01-29T10:54:05Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0006",
+    "user_id": "USR00030",
+    "username": "kavitha.gupta",
+    "risk_score": 72,
+    "anomaly_score": -0.1823,
+    "threat_narrative": "User USR00030 exhibited a rowcount deviation of 1.85x during a session with after-hours access. While the user is flagged as high-risk with a Tenure Risk Modifier of 2.0, the deviation is moderate. The session included access to 2 systems with a failed action logged.",
+    "evidence_list": [
+      "Rowcount deviation of 1.85x represents nearly double the user's historical daily average.",
+      "Failed Action Flag combined with high-risk user classification increases the composite anomaly score.",
+      "Tenure of 12 months places the user in the mid-risk category for insider threat probability."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2025-09-23T19:17:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0007",
+    "user_id": "USR00049",
+    "username": "deepak.raj",
+    "risk_score": 68,
+    "anomaly_score": -0.1622,
+    "threat_narrative": "User USR00049 with 43 months tenure accessed systems from an unregistered device with elevated temporal velocity. Despite long tenure, the equipment mismatch combined with after-hours high-sensitivity resource access deviates from the user's established behavioral baseline.",
+    "evidence_list": [
+      "Equipment Mismatch Score of 1 detected — device fingerprint does not match any registered corporate asset for this user.",
+      "Temporal Velocity of 2 with rowcount deviation of 0.94 is near baseline, but after-hours activity elevates the composite score.",
+      "Systems access count of 2 with Privilege Sensitivity Mismatch of 1.5 indicates access to resources slightly above standard clearance."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2026-01-29T10:54:06Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0008",
+    "user_id": "USR00034",
+    "username": "neha.wilson",
+    "risk_score": 65,
+    "anomaly_score": -0.1510,
+    "threat_narrative": "User USR00034 is flagged as high-risk with 17 months tenure. A temporal velocity anomaly was detected during a session with after-hours access. The user accessed 2 systems with one failed action recorded, and the session included access to resources classified as high-sensitivity.",
+    "evidence_list": [
+      "After-Hours High Sensitivity flag indicates late-night access to restricted resources.",
+      "Failed Action Flag suggests at least one access attempt was denied by policy controls.",
+      "Tenure Risk Modifier of 2.0 indicates a moderately tenured user with elevated privilege access."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2025-10-19T14:38:00Z",
+    "cache_hit": true
+  },
+  {
+    "alert_id": "NSOC-2026-0009",
+    "user_id": "USR00003",
+    "username": "sarah.khan",
+    "risk_score": 75,
+    "anomaly_score": -0.1980,
+    "threat_narrative": "User USR00003 exhibited a rowcount deviation of 1.78x with device mismatch detected. Two events occurred in rapid succession at 17:51 and 18:00, with the second event triggering after-hours classification. The user has 35 months of tenure but accessed resources from an unregistered device.",
+    "evidence_list": [
+      "Rowcount deviation of 1.78x during a transition period between business hours and after-hours access.",
+      "Equipment Mismatch Score of 1 — the device used does not match the user's standard workstation profile.",
+      "Failed Action Flag on a prior access attempt (2025-06-27) indicates a pattern of intermittent policy violations."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2025-08-09T17:51:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0010",
+    "user_id": "USR00066",
+    "username": "amit.jackson",
+    "risk_score": 81,
+    "anomaly_score": -0.2640,
+    "threat_narrative": "User USR00066 has only 4 months of tenure and accessed systems from an unregistered device during after-hours. The session included a failed action attempt and access to resources with a Privilege Sensitivity Mismatch of 3.0, the highest recorded in this alert batch.",
+    "evidence_list": [
+      "Privilege Sensitivity Mismatch of 3.0 indicates the user accessed resources 3x above their standard clearance level.",
+      "Equipment Mismatch Score of 1 combined with after-hours access and failed action creates a high-confidence anomaly signature.",
+      "Tenure of 4 months with Tenure Risk Modifier of 1.5 places this user in the elevated insider threat risk category."
+    ],
+    "recommended_action": "Quarantine",
+    "timestamp": "2025-11-27T19:29:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0011",
+    "user_id": "USR00055",
+    "username": "fatima.lee",
+    "risk_score": 70,
+    "anomaly_score": -0.1710,
+    "threat_narrative": "User USR00055 accessed systems from an unregistered device with after-hours high-sensitivity classification. Temporal velocity of 1 indicates a single deliberate access rather than bulk retrieval. Equipment mismatch combined with sensitivity-level access from an 11-month tenure user warrants investigation.",
+    "evidence_list": [
+      "Equipment Mismatch Score of 1 indicates access from a non-corporate device.",
+      "After-Hours High Sensitivity flag active during the access window.",
+      "Privilege Sensitivity Mismatch of 3.0 suggests access to resources significantly above the user's standard clearance."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2026-01-25T10:54:06Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0012",
+    "user_id": "USR00096",
+    "username": "rajesh.kumar",
+    "risk_score": 67,
+    "anomaly_score": -0.1580,
+    "threat_narrative": "User USR00096 with 36 months of tenure and high-risk flag accessed resources during a detected temporal velocity spike. The session occurred with elevated temporal velocity of 2 and access to resources triggering a Privilege Sensitivity Mismatch of 3.0. This is the third alert for this user in the current monitoring window.",
+    "evidence_list": [
+      "Privilege Sensitivity Mismatch of 3.0 — highest tier, indicating access to resources classified well above the user's standard access level.",
+      "High-risk flag active, indicating the user holds administrative or service-account level privileges.",
+      "Temporal Velocity of 2 during a single-hour window indicates rapid sequential system access."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2026-01-22T10:54:05Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0013",
+    "user_id": "USR00092",
+    "username": "lisa.chen",
+    "risk_score": 77,
+    "anomaly_score": -0.2050,
+    "threat_narrative": "User USR00092 has only 4 months of tenure with a Tenure Risk Modifier of 1.5. The user accessed systems from an unregistered device with after-hours activity and a Privilege Sensitivity Mismatch of 3.0. Combined risk factors indicate a newly onboarded user operating outside standard behavioral parameters.",
+    "evidence_list": [
+      "Tenure of 4 months with Tenure Risk Modifier of 1.5 — newly onboarded user with moderate privilege elevation.",
+      "Equipment Mismatch Score of 1 detected during after-hours access window.",
+      "Privilege Sensitivity Mismatch of 3.0 indicates the user accessed resources at the maximum deviation from their standard clearance."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2026-01-30T10:54:06Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0014",
+    "user_id": "USR00008",
+    "username": "carlos.martinez",
+    "risk_score": 62,
+    "anomaly_score": -0.1470,
+    "threat_narrative": "User USR00008 with 47 months of tenure accessed systems from an unregistered device. While the long tenure reduces the Tenure Risk Modifier to 1.0, the equipment mismatch combined with after-hours high-sensitivity access and a prior failed action creates a moderate anomaly signature.",
+    "evidence_list": [
+      "Equipment Mismatch Score of 1 — device fingerprint mismatch despite 47 months of established device history.",
+      "After-Hours High Sensitivity flag indicates late-night access to restricted resources.",
+      "Failed Action Flag recorded in a prior session (2025-05-25), indicating intermittent authentication issues."
+    ],
+    "recommended_action": "Monitor",
+    "timestamp": "2025-08-10T05:42:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0015",
+    "user_id": "USR00028",
+    "username": "sanjay.brown",
+    "risk_score": 71,
+    "anomaly_score": -0.1760,
+    "threat_narrative": "User USR00028 is flagged as high-risk with 28 months of tenure. After-hours access to 6 systems was detected with a Privilege Sensitivity Mismatch of 0.5. The breadth of system access (6 systems) is the second-highest in the user population, indicating potential lateral movement behavior.",
+    "evidence_list": [
+      "Systems access count of 6 is in the 95th percentile of all users, indicating unusually broad access privileges.",
+      "After-Hours High Sensitivity flag active with access to multiple high-value resources.",
+      "Rowcount deviation of 0.93 is near baseline, suggesting targeted rather than bulk access patterns."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2025-07-04T03:37:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0016",
+    "user_id": "USR00050",
+    "username": "meera.johnson",
+    "risk_score": 64,
+    "anomaly_score": -0.1520,
+    "threat_narrative": "User USR00050 accessed systems from an unregistered device with after-hours activity detected. The session included access to high-sensitivity resources with a Privilege Sensitivity Mismatch of 3.0. While the user has 25 months of tenure, the equipment mismatch deviates from the established baseline.",
+    "evidence_list": [
+      "Equipment Mismatch Score of 1 — access from a device not in the corporate asset registry.",
+      "After-Hours High Sensitivity flag active, indicating restricted resource access outside business hours.",
+      "Privilege Sensitivity Mismatch of 3.0 represents the maximum deviation tier."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2025-11-05T16:14:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0017",
+    "user_id": "USR00042",
+    "username": "ananya.davis",
+    "risk_score": 66,
+    "anomaly_score": -0.1560,
+    "threat_narrative": "User USR00042 with 28 months tenure accessed systems from an unregistered device during an after-hours high-sensitivity window. A failed action was recorded, and the Privilege Sensitivity Mismatch of 3.0 indicates access to resources well above standard clearance. The user's days inactive count of 46 suggests a recently returning user.",
+    "evidence_list": [
+      "Days inactive of 46 indicates the user has not logged in for over 6 weeks, making this access potentially suspicious.",
+      "Equipment Mismatch Score of 1 with After-Hours High Sensitivity flag creates a compound risk signal.",
+      "Privilege Sensitivity Mismatch of 3.0 combined with failed action suggests unauthorized access attempts."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2025-08-10T05:42:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0018",
+    "user_id": "USR00027",
+    "username": "ravi.thompson",
+    "risk_score": 73,
+    "anomaly_score": -0.1870,
+    "threat_narrative": "User USR00027 is flagged as high-risk with access to 7 systems — the highest count in the user population. After-hours activity was detected with a Privilege Sensitivity Mismatch of 0.43, and the Temporal Velocity indicates sustained access behavior. The breadth of system access warrants elevated monitoring.",
+    "evidence_list": [
+      "Systems access count of 7 is the maximum in the user population, indicating the broadest access privileges.",
+      "After-Hours High Sensitivity flag active with high-risk user classification.",
+      "Privilege Sensitivity Mismatch of 0.43 indicates the user accessed resources below their typical sensitivity level, suggesting potential reconnaissance."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2025-08-07T14:29:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0019",
+    "user_id": "USR00035",
+    "username": "divya.williams",
+    "risk_score": 69,
+    "anomaly_score": -0.1670,
+    "threat_narrative": "User USR00035 is flagged as high-risk with 9 months tenure. Access to 6 systems was detected with after-hours high-sensitivity activity. The user's Tenure Risk Modifier of 2.0 and systems access count of 6 create a compound anomaly signature typical of over-provisioned accounts.",
+    "evidence_list": [
+      "Systems access count of 6 with only 9 months tenure indicates potentially over-provisioned access for the role.",
+      "After-Hours High Sensitivity flag indicates off-hours access to restricted resources.",
+      "Tenure Risk Modifier of 2.0 amplifies the risk score for this moderately tenured user."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2025-09-07T18:51:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0020",
+    "user_id": "USR00033",
+    "username": "arjun.garcia",
+    "risk_score": 76,
+    "anomaly_score": -0.2010,
+    "threat_narrative": "User USR00033 is flagged as high-risk with 34 months tenure. After-hours activity detected with both a failed action and access to 4 systems. The session included a failed action flag, and the user's high-risk classification combined with failed authentication creates a high-confidence anomaly. This is a repeat alert — prior events logged on 2025-07-25 and 2025-09-14.",
+    "evidence_list": [
+      "Failed Action Flag combined with high-risk user classification creates a high-confidence anomaly signal.",
+      "After-Hours High Sensitivity flag during a session accessing 4 distinct systems.",
+      "Repeat alert pattern — 3 flagged events in the monitoring window suggests persistent behavioral deviation rather than isolated incident."
+    ],
+    "recommended_action": "Quarantine",
+    "timestamp": "2026-01-10T02:53:00Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0021",
+    "user_id": "USR00016",
+    "username": "shreya.anderson",
+    "risk_score": 74,
+    "anomaly_score": -0.1920,
+    "threat_narrative": "User USR00016 with 16 months tenure accessed systems from an unregistered device. After-hours high-sensitivity access was detected with a Privilege Sensitivity Mismatch of 3.0. The equipment mismatch combined with maximum sensitivity deviation creates an elevated anomaly profile requiring investigation.",
+    "evidence_list": [
+      "Equipment Mismatch Score of 1 — device not registered in the corporate asset management system.",
+      "Privilege Sensitivity Mismatch of 3.0 — maximum deviation tier, indicating access to resources well above standard clearance.",
+      "After-Hours High Sensitivity flag active during the access session."
+    ],
+    "recommended_action": "Investigate",
+    "timestamp": "2026-01-28T10:54:06Z",
+    "cache_hit": false
+  },
+  {
+    "alert_id": "NSOC-2026-0022",
+    "user_id": "USR00025",
+    "username": "kiran.taylor",
+    "risk_score": 63,
+    "anomaly_score": -0.1490,
+    "threat_narrative": "User USR00025 is flagged as high-risk with 46 months tenure. A rowcount deviation of 1.5x was detected during a session accessing 2 systems. While the deviation is moderate, the user's high-risk flag and long tenure with elevated Privilege Sensitivity Mismatch of 0.75 warrants monitoring.",
+    "evidence_list": [
+      "Rowcount deviation of 1.5x exceeds the user's rolling 30-day average by 50%.",
+      "High-risk flag active with Tenure Risk Modifier of 2.0.",
+      "Privilege Sensitivity Mismatch of 0.75 indicates marginally elevated resource access."
+    ],
+    "recommended_action": "Monitor",
+    "timestamp": "2025-09-22T07:30:00Z",
+    "cache_hit": true
+  }
+]

@@ -1,0 +1,20 @@
+# =============================================================================
+# Neuro-SOC Backend — Python Dependencies
+# =============================================================================
+# Core API framework
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.0
+
+# Data & ML (shared with data_pipeline for model serving)
+pandas>=2.2.0
+numpy>=1.26.0
+scikit-learn>=1.5.0
+shap>=0.45.0
+joblib>=1.4.0
+huggingface_hub>=0.23.0
+redis>=5.0.0
+
+# Utilities
+python-dotenv>=1.0.1
+pydantic>=2.7.0
+

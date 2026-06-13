@@ -1,0 +1,53 @@
+# ═══════════════════════════════════════════════════════════════
+#  Neuro-SOC — .gitignore
+# ═══════════════════════════════════════════════════════════════
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# ── ML Models (large binary files) ──
+backend/models/*.joblib
+backend/models/*.pkl
+
+# ── Jupyter ──
+.ipynb_checkpoints/
+deliverables/.ipynb_checkpoints/
+
+# ── Node / Next.js ──
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# ── Environment & Secrets ──
+.env
+.env.local
+.env.production
+.env*.local
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Logs ──
+*.log
+npm-debug.log*
+
+# ── Generated chart images ──
+deliverables/*.png
