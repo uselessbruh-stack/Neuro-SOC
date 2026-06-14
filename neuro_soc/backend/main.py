@@ -35,9 +35,18 @@ from fastapi.middleware.cors import CORSMiddleware
 from huggingface_hub import InferenceClient
 from pydantic import BaseModel, Field
 import redis
+import shap
+import numpy as np
+import pandas as pd
+from pathlib import Path
+from sklearn.metrics import (
+    precision_score as _precision_score,
+    recall_score as _recall_score,
+    f1_score as _f1_score,
+)
 
 # Local ML engine import
-from ml_engine import evaluate_event
+from ml_engine import evaluate_event, FEATURE_COLUMNS, _get_cached_model
 
 # ---------------------------------------------------------------------------
 #  Logging
@@ -102,7 +111,7 @@ app = FastAPI(
 # ---------------------------------------------------------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -124,6 +133,15 @@ app.add_middleware(
 REDIS_URL = os.environ.get("REDIS_URL", "")
 CACHE_TTL_SECONDS = int(os.environ.get("CACHE_TTL_SECONDS", "3600"))  # 1 hour
 CACHE_KEY_PREFIX = "neurosoc:cache:"  # namespace to avoid key collisions
+
+# ---------------------------------------------------------------------------
+#  Data File Paths (for batch processing endpoint)
+# ---------------------------------------------------------------------------
+_BACKEND_DIR = Path(__file__).resolve().parent
+_PROJECT_ROOT = _BACKEND_DIR.parent
+_ENRICHED_CSV = _PROJECT_ROOT / "data_pipeline" / "processed_data" / "enriched_features.csv"
+_LABELS_CSV = _PROJECT_ROOT / "data_pipeline" / "raw_data" / "data_access_labels.csv"
+_LOGS_CSV = _PROJECT_ROOT / "data_pipeline" / "raw_data" / "data_access_logs.csv"
 
 # In-memory fallback cache
 _fallback_cache: dict[str, dict[str, Any]] = {}
@@ -302,6 +320,62 @@ class EventResponse(BaseModel):
     analyzed_at: str = Field(description="ISO 8601 timestamp of analysis")
 
 
+class GroundTruth(BaseModel):
+    """Ground truth label from data_access_labels.csv."""
+    is_anomaly: bool
+    anomaly_type: str
+    severity: str
+    explanation: str
+
+
+class FlaggedEvent(BaseModel):
+    """A single flagged event with ML analysis and ground truth."""
+    access_id: str
+    user_id: str
+    username: str
+    department: str
+    timestamp: str
+    data_asset: str
+    data_sensitivity: str
+    query_type: str
+    destination: str
+    anomaly_score: float
+    risk_score: int
+    is_anomaly_predicted: bool
+    prediction: int
+    top_shap_features: list[ShapFeature] = []
+    llm_narrative: LlmNarrative | None = None
+    ground_truth: GroundTruth
+
+
+class EvaluationMetrics(BaseModel):
+    """Model evaluation metrics against ground truth labels."""
+    total_events: int
+    total_predicted_anomalies: int
+    total_ground_truth_anomalies: int
+    precision: float
+    recall: float
+    f1_score: float
+
+
+class FlaggedEventsResponse(BaseModel):
+    """Response for the /flagged_events endpoint."""
+    metrics: EvaluationMetrics
+    flagged_events: list[FlaggedEvent]
+
+
+# ---------------------------------------------------------------------------
+#  Utility: score normalisation (same formula as frontend)
+# ---------------------------------------------------------------------------
+def _normalize_score(raw: float) -> int:
+    clamped = max(-0.5, min(0.5, raw))
+    return round(((0.5 - clamped) / 1.0) * 100)
+
+
+# Cache for batch-processed flagged events
+_flagged_events_cache: dict[str, Any] | None = None
+
+
 # ═══════════════════════════════════════════════════════════════════════════
 #  ENDPOINTS
 # ═══════════════════════════════════════════════════════════════════════════
@@ -402,6 +476,190 @@ async def analyze_event(event: EventRequest):
         **full_result,
         cache_hit=False,
         analyzed_at=now,
+    )
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+#  BATCH FLAGGED EVENTS ENDPOINT
+# ═══════════════════════════════════════════════════════════════════════════
+
+@app.get("/flagged_events", response_model=FlaggedEventsResponse)
+async def get_flagged_events(limit: int = 50, refresh: bool = False):
+    """
+    Batch-process enriched features, score with Isolation Forest,
+    compute SHAP explanations, and return the top N flagged events
+    with evaluation metrics against ground truth labels.
+
+    Results are cached in memory after first computation.
+    Use refresh=true to force recomputation.
+    """
+    global _flagged_events_cache
+
+    # Return cached results if available
+    if _flagged_events_cache is not None and not refresh:
+        cached_events = _flagged_events_cache["flagged_events"][:limit]
+        return FlaggedEventsResponse(
+            metrics=_flagged_events_cache["metrics"],
+            flagged_events=cached_events,
+        )
+
+    logger.info("📊 Computing flagged events (first call may take 30-60s) ...")
+
+    # ---- Load data files ----
+    enriched = pd.read_csv(_ENRICHED_CSV)
+    labels = pd.read_csv(_LABELS_CSV)
+    logs = pd.read_csv(_LOGS_CSV)
+    logger.info(f"  Loaded: {len(enriched)} enriched, {len(labels)} labels, {len(logs)} logs")
+
+    # ---- Get model ----
+    model, scaler, training_data, onnx_session = _get_cached_model()
+
+    # ---- Prepare features and predict all events ----
+    X = enriched[FEATURE_COLUMNS].fillna(0).values.astype(np.float32)
+    X_scaled = scaler.transform(X)
+    predictions = model.predict(X_scaled)
+    scores = model.decision_function(X_scaled)
+
+    # ---- Compute evaluation metrics ----
+    y_true = labels["is_anomaly"].map(
+        {True: 1, False: 0, "True": 1, "False": 0}
+    ).values
+    y_pred = (predictions == -1).astype(int)
+
+    metrics = EvaluationMetrics(
+        total_events=len(enriched),
+        total_predicted_anomalies=int(y_pred.sum()),
+        total_ground_truth_anomalies=int(y_true.sum()),
+        precision=round(float(_precision_score(y_true, y_pred)), 4),
+        recall=round(float(_recall_score(y_true, y_pred)), 4),
+        f1_score=round(float(_f1_score(y_true, y_pred)), 4),
+    )
+    logger.info(
+        f"  Metrics: P={metrics.precision} R={metrics.recall} F1={metrics.f1_score}"
+    )
+
+    # ---- Top N anomalies by score (most anomalous first) ----
+    anomaly_indices = np.where(predictions == -1)[0]
+    anomaly_scores = scores[anomaly_indices]
+    sorted_order = np.argsort(anomaly_scores)  # ascending = most negative first
+    max_compute = min(len(sorted_order), max(limit, 100))
+    top_indices = anomaly_indices[sorted_order[:max_compute]]
+
+    # ---- Create SHAP explainer ONCE for efficiency ----
+    logger.info(f"  Creating SHAP explainer for {max_compute} events ...")
+    bg = training_data.sample(n=min(100, len(training_data)), random_state=42)
+    bg_scaled = scaler.transform(bg)
+    explainer = shap.TreeExplainer(
+        model, data=bg_scaled, feature_names=FEATURE_COLUMNS
+    )
+
+    # ---- Build fast index lookups ----
+    labels_lkp = labels.drop_duplicates(subset="access_id").set_index("access_id")
+    logs_lkp = logs.drop_duplicates(subset="access_id").set_index("access_id")
+
+    # ---- Process each flagged event ----
+    flagged_events: list[FlaggedEvent] = []
+    for count, idx in enumerate(top_indices):
+        row = enriched.iloc[idx]
+        aid = row["access_id"]
+
+        # Ground truth
+        if aid in labels_lkp.index:
+            lbl = labels_lkp.loc[aid]
+            is_anom = lbl["is_anomaly"]
+            if isinstance(is_anom, str):
+                is_anom = is_anom == "True"
+            gt = GroundTruth(
+                is_anomaly=bool(is_anom),
+                anomaly_type=str(lbl["anomaly_type"]),
+                severity=str(lbl.get("severity", "NONE")),
+                explanation=str(lbl.get("explanation", "")),
+            )
+        else:
+            gt = GroundTruth(
+                is_anomaly=False,
+                anomaly_type="UNKNOWN",
+                severity="NONE",
+                explanation="",
+            )
+
+        # Log context
+        if aid in logs_lkp.index:
+            lg = logs_lkp.loc[aid]
+            username = str(lg.get("username", "unknown"))
+            department = str(lg.get("department", "unknown"))
+            data_asset = str(lg.get("data_asset", "unknown"))
+            data_sensitivity = str(lg.get("data_sensitivity", "unknown"))
+            query_type = str(lg.get("query_type", "unknown"))
+            destination = str(lg.get("destination", "unknown"))
+        else:
+            username = department = data_asset = "unknown"
+            data_sensitivity = query_type = destination = "unknown"
+
+        # SHAP values
+        sv = explainer.shap_values(X_scaled[idx : idx + 1])[0]
+        impacts = [
+            {
+                "feature": FEATURE_COLUMNS[i],
+                "shap_value": round(float(sv[i]), 6),
+                "event_value": round(float(X[idx][i]), 4),
+            }
+            for i in range(len(FEATURE_COLUMNS))
+        ]
+        impacts.sort(key=lambda x: abs(x["shap_value"]), reverse=True)
+        top_shap = [ShapFeature(**f) for f in impacts[:3]]
+
+        # Narrative (rule-based for batch speed)
+        narrative_dict = _build_fallback_narrative(
+            anomaly_score=float(scores[idx]),
+            shap_features=[f.model_dump() for f in top_shap],
+        )
+        # Override the generic template with contextual text
+        feat_name = top_shap[0].feature.replace("_", " ") if top_shap else "unknown"
+        narrative_dict["threat_narrative"] = (
+            f"User {username} ({department}) triggered anomaly detection "
+            f"while accessing {data_asset} at {row['timestamp']}. "
+            f"Risk score: {_normalize_score(float(scores[idx]))}/100 "
+            f"(raw: {float(scores[idx]):.4f}). "
+            f"Primary contributing factor: {feat_name}."
+        )
+        narrative = LlmNarrative(**narrative_dict)
+
+        flagged_events.append(
+            FlaggedEvent(
+                access_id=aid,
+                user_id=str(row["user_id"]),
+                username=username,
+                department=department,
+                timestamp=str(row["timestamp"]),
+                data_asset=data_asset,
+                data_sensitivity=data_sensitivity,
+                query_type=query_type,
+                destination=destination,
+                anomaly_score=round(float(scores[idx]), 6),
+                risk_score=_normalize_score(float(scores[idx])),
+                is_anomaly_predicted=True,
+                prediction=-1,
+                top_shap_features=top_shap,
+                llm_narrative=narrative,
+                ground_truth=gt,
+            )
+        )
+
+        if (count + 1) % 10 == 0:
+            logger.info(f"  Processed {count + 1}/{max_compute} events")
+
+    logger.info(f"  ✓ Computed {len(flagged_events)} flagged events")
+
+    # Cache for subsequent requests
+    _flagged_events_cache = {
+        "metrics": metrics,
+        "flagged_events": flagged_events,
+    }
+
+    return FlaggedEventsResponse(
+        metrics=metrics,
+        flagged_events=flagged_events[:limit],
     )
 
 
