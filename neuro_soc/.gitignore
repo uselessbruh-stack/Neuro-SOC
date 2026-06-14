@@ -17,6 +17,7 @@ env/
 # ── ML Models (large binary files) ──
 backend/models/*.joblib
 backend/models/*.pkl
+backend/models/*.onnx
 
 # ── Jupyter ──
 .ipynb_checkpoints/

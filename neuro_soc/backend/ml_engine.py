@@ -26,6 +26,15 @@ import shap
 from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import StandardScaler
 
+# ONNX — fast inference without Python/sklearn overhead
+try:
+    import onnxruntime as ort
+    from skl2onnx import convert_sklearn
+    from skl2onnx.common.data_types import FloatTensorType
+    ONNX_AVAILABLE = True
+except ImportError:
+    ONNX_AVAILABLE = False
+
 # ---------------------------------------------------------------------------
 #  Logging
 # ---------------------------------------------------------------------------
@@ -45,25 +54,41 @@ ENRICHED_CSV = PROJECT_ROOT / "data_pipeline" / "processed_data" / "enriched_fea
 MODEL_DIR = BACKEND_DIR / "models"
 MODEL_PATH = MODEL_DIR / "isolation_forest.joblib"
 SCALER_PATH = MODEL_DIR / "scaler.joblib"
+ONNX_PATH  = MODEL_DIR / "isolation_forest.onnx"
 
 # ---------------------------------------------------------------------------
-#  Feature Configuration
-#  These are the NUMERIC columns we feed into the Isolation Forest.
-#  Non-numeric / identifier columns (user_id, timestamp, hire_date, etc.)
-#  are excluded.
+#  Feature Configuration — 23 engineered features (v2.1)
+#  19 base features + 4 compound features for weak-category amplification.
 # ---------------------------------------------------------------------------
 FEATURE_COLUMNS: list[str] = [
-    "days_inactive",
+    # ── User profile features (static per user) ──
     "tenure_months",
-    "high_risk_flag",              # bool → treated as 0/1
+    "high_risk_flag",
+    "notice_period_flag",
+    "failed_logins_30d",
+    "stale_account_days",
+    "approved_assets_count",
+    # ── Computed risk modifiers ──
     "Tenure_Risk_Modifier",
-    "Equipment_Mismatch_Score",
+    "Equipment_Risk_Score",
+    "Access_Tier_Mismatch",
+    "Cross_Dept_Access_Flag",
+    # ── Per-event features ──
+    "Rowcount_Deviation",
+    "Exfiltration_Dest_Score",
+    "Query_Type_Risk",
+    "Weak_Auth_Flag",
+    "Suspicious_Geo_Flag",
+    "VPN_Mismatch",
+    # ── Temporal features ──
     "Temporal_Velocity",
-    "rowcount_deviation",
     "After_Hours_High_Sensitivity",
     "Failed_Action_Flag",
-    "systems_access_count",
-    "Privilege_Sensitivity_Mismatch",
+    # ── Compound features (amplify weak signals) ──
+    "Cross_Dept_Sensitivity",
+    "Time_Sensitivity_Risk",
+    "Stale_Sensitivity_Risk",
+    "Volume_Dest_Compound",
 ]
 
 # ---------------------------------------------------------------------------
@@ -71,9 +96,10 @@ FEATURE_COLUMNS: list[str] = [
 # ---------------------------------------------------------------------------
 IF_PARAMS: dict[str, Any] = {
     "n_estimators": 200,        # Number of trees in the forest
-    "contamination": 0.05,      # Expected fraction of anomalies (5%)
+    "contamination": 0.43,      # Tuned: true anomaly rate is 45.8%
     "max_samples": "auto",      # Subsample size for each tree
     "random_state": 42,         # Reproducibility
+
     "n_jobs": -1,               # Use all CPU cores
 }
 
@@ -90,7 +116,8 @@ def train_model(force_retrain: bool = False) -> tuple[IsolationForest, StandardS
       2. Select only the numeric feature columns
       3. Standardise features (IsolationForest works better with scaled data)
       4. Fit the Isolation Forest
-      5. Persist model + scaler to disk for fast reload
+      5. Convert to ONNX format for optimised inference
+      6. Persist model + scaler + ONNX to disk for fast reload
 
     Parameters
     ----------
@@ -135,13 +162,64 @@ def train_model(force_retrain: bool = False) -> tuple[IsolationForest, StandardS
         f"({n_anomalies / len(predictions) * 100:.1f}%)"
     )
 
-    # --- Persist to disk ---
+    # --- Persist sklearn model + scaler ---
     MODEL_DIR.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, MODEL_PATH)
     joblib.dump(scaler, SCALER_PATH)
-    logger.info(f"  ✓ Model saved to {MODEL_PATH}")
+    logger.info(f"  ✓ sklearn model saved to {MODEL_PATH}")
+
+    # --- Convert to ONNX for fast runtime inference ---
+    _export_to_onnx(model)
 
     return model, scaler, training_data
+
+
+def _export_to_onnx(model: IsolationForest) -> None:
+    """
+    Convert the trained IsolationForest to ONNX format.
+    ONNX strips Python overhead and enables C++ inference.
+    """
+    if not ONNX_AVAILABLE:
+        logger.warning("  ⚠ skl2onnx not installed — skipping ONNX export.")
+        return
+
+    try:
+        initial_type = [
+            ("float_input", FloatTensorType([None, len(FEATURE_COLUMNS)]))
+        ]
+        onnx_model = convert_sklearn(
+            model,
+            initial_types=initial_type,
+            target_opset=17,
+        )
+        with open(ONNX_PATH, "wb") as f:
+            f.write(onnx_model.SerializeToString())
+
+        onnx_size = ONNX_PATH.stat().st_size / 1024
+        logger.info(f"  ✓ ONNX model exported to {ONNX_PATH} ({onnx_size:.0f} KB)")
+    except Exception as e:
+        logger.warning(f"  ⚠ ONNX export failed: {e}")
+
+
+def _load_onnx_session() -> "ort.InferenceSession | None":
+    """Load the ONNX model into an InferenceSession for fast inference."""
+    if not ONNX_AVAILABLE:
+        logger.info("  ⚠ onnxruntime not installed — using sklearn fallback.")
+        return None
+    if not ONNX_PATH.exists():
+        logger.info("  ⚠ ONNX file not found — using sklearn fallback.")
+        return None
+
+    try:
+        session = ort.InferenceSession(
+            str(ONNX_PATH),
+            providers=["CPUExecutionProvider"],
+        )
+        logger.info(f"  ✓ ONNX Runtime session loaded ({ONNX_PATH.name})")
+        return session
+    except Exception as e:
+        logger.warning(f"  ⚠ ONNX session load failed: {e} — using sklearn.")
+        return None
 
 
 def _load_feature_matrix() -> pd.DataFrame:
@@ -252,28 +330,14 @@ def evaluate_event(event_data: dict[str, Any]) -> dict[str, Any]:
     """
     The main entry point called by FastAPI's /analyze_event endpoint.
 
-    Takes a single event's data, runs it through the Isolation Forest,
+    Takes a single event's data, runs it through the Isolation Forest
+    (via ONNX Runtime if available, else sklearn fallback),
     and returns the anomaly score + SHAP explanation if anomalous.
 
     Parameters
     ----------
     event_data : dict
         Must contain keys matching FEATURE_COLUMNS (or a superset).
-        Example:
-        {
-            "user_id": "USR00057",
-            "days_inactive": 14,
-            "tenure_months": 22,
-            "high_risk_flag": 1,
-            "Tenure_Risk_Modifier": 2.0,
-            "Equipment_Mismatch_Score": 0,
-            "Temporal_Velocity": 15,
-            "rowcount_deviation": 3.5,
-            "After_Hours_High_Sensitivity": 1,
-            "Failed_Action_Flag": 0,
-            "systems_access_count": 4,
-            "Privilege_Sensitivity_Mismatch": 0.75,
-        }
 
     Returns
     -------
@@ -283,10 +347,11 @@ def evaluate_event(event_data: dict[str, Any]) -> dict[str, Any]:
       - "anomaly_score"     : float (raw decision_function score;
                               more negative = more anomalous)
       - "prediction"        : int (-1 = anomaly, 1 = normal)
+      - "inference_backend" : str ("onnx" or "sklearn")
       - "top_shap_features" : list[dict] (only if anomalous, else [])
     """
     # --- Load / initialise model (cached after first call) ---
-    model, scaler, training_data = _get_cached_model()
+    model, scaler, training_data, onnx_session = _get_cached_model()
 
     # --- Extract feature vector in the correct column order ---
     try:
@@ -298,10 +363,27 @@ def evaluate_event(event_data: dict[str, Any]) -> dict[str, Any]:
             f"Could not parse feature values from event_data: {e}"
         ) from e
 
-    # --- Scale and predict ---
+    # --- Scale ---
     X_scaled = scaler.transform(feature_values.reshape(1, -1))
-    prediction = model.predict(X_scaled)[0]            # -1 or 1
-    anomaly_score = model.decision_function(X_scaled)[0]  # continuous score
+
+    # --- Predict via ONNX Runtime (fast) or sklearn (fallback) ---
+    if onnx_session is not None:
+        inference_backend = "onnx"
+        input_name = onnx_session.get_inputs()[0].name
+        onnx_result = onnx_session.run(
+            None, {input_name: X_scaled.astype(np.float32)}
+        )
+        prediction = int(onnx_result[0][0])              # -1 or 1
+        # onnx_result[1] is a list of dicts with scores per class
+        # Extract the anomaly score (decision_function equivalent)
+        score_dict = onnx_result[1][0]
+        # IsolationForest ONNX outputs scores keyed by class label
+        # decision_function ≈ score for inlier class (1)
+        anomaly_score = float(score_dict.get(1, score_dict.get(-1, 0.0)))
+    else:
+        inference_backend = "sklearn"
+        prediction = model.predict(X_scaled)[0]              # -1 or 1
+        anomaly_score = model.decision_function(X_scaled)[0]  # continuous
 
     # --- Build response ---
     result: dict[str, Any] = {
@@ -309,10 +391,12 @@ def evaluate_event(event_data: dict[str, Any]) -> dict[str, Any]:
         "is_anomaly": prediction == -1,
         "anomaly_score": round(float(anomaly_score), 6),
         "prediction": int(prediction),
+        "inference_backend": inference_backend,
         "top_shap_features": [],
     }
 
     # --- SHAP explanation only for anomalies (saves compute on normals) ---
+    # SHAP always uses the sklearn model (TreeExplainer requires it)
     if prediction == -1:
         result["top_shap_features"] = explain_anomaly(
             model=model,
@@ -323,12 +407,12 @@ def evaluate_event(event_data: dict[str, Any]) -> dict[str, Any]:
         )
         logger.warning(
             f"🚨 ANOMALY detected for user {result['user_id']} "
-            f"(score: {result['anomaly_score']:.4f})"
+            f"(score: {result['anomaly_score']:.4f}, via {inference_backend})"
         )
     else:
         logger.info(
             f"✓ Normal event for user {result['user_id']} "
-            f"(score: {result['anomaly_score']:.4f})"
+            f"(score: {result['anomaly_score']:.4f}, via {inference_backend})"
         )
 
     return result
@@ -340,20 +424,23 @@ def evaluate_event(event_data: dict[str, Any]) -> dict[str, Any]:
 _model_cache: dict[str, Any] | None = None
 
 
-def _get_cached_model() -> tuple[IsolationForest, StandardScaler, pd.DataFrame]:
-    """Return the cached (model, scaler, training_data) tuple."""
+def _get_cached_model() -> tuple[IsolationForest, StandardScaler, pd.DataFrame, "ort.InferenceSession | None"]:
+    """Return the cached (model, scaler, training_data, onnx_session) tuple."""
     global _model_cache
     if _model_cache is None:
         model, scaler, training_data = train_model()
+        onnx_session = _load_onnx_session()
         _model_cache = {
             "model": model,
             "scaler": scaler,
             "training_data": training_data,
+            "onnx_session": onnx_session,
         }
     return (
         _model_cache["model"],
         _model_cache["scaler"],
         _model_cache["training_data"],
+        _model_cache["onnx_session"],
     )
 
 
@@ -389,10 +476,26 @@ if __name__ == "__main__":
     logger.info(f"  Anomalies: {n_anomalies} / {len(predictions)}")
     logger.info(f"{'='*50}")
 
+    # Verify ONNX export
+    if ONNX_AVAILABLE and ONNX_PATH.exists():
+        session = ort.InferenceSession(str(ONNX_PATH), providers=["CPUExecutionProvider"])
+        input_name = session.get_inputs()[0].name
+        onnx_preds = session.run(None, {input_name: X_scaled.astype(np.float32)})
+        onnx_labels = onnx_preds[0].flatten()
+        match_rate = (onnx_labels == predictions).mean() * 100
+        logger.info(f"\n  ONNX Verification:")
+        logger.info(f"    sklearn vs ONNX prediction match: {match_rate:.1f}%")
+        logger.info(f"    ONNX file size: {ONNX_PATH.stat().st_size / 1024:.0f} KB")
+    else:
+        logger.info("\n  ⚠ ONNX not available for verification.")
+
     # Test evaluate_event with the first row
     sample_row = training_data.iloc[0].to_dict()
     sample_row["user_id"] = "USR_TEST"
     result = evaluate_event(sample_row)
-    logger.info(f"\n  Sample evaluation result: {result}")
+    logger.info(f"\n  Sample evaluation result:")
+    logger.info(f"    Backend: {result['inference_backend']}")
+    logger.info(f"    Anomaly: {result['is_anomaly']}")
+    logger.info(f"    Score:   {result['anomaly_score']}")
 
     logger.info("\n  ✅ ML Engine ready.")
