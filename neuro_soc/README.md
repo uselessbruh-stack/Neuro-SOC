@@ -25,7 +25,7 @@
 ```
 
 **Three-Tiered Detection Pipeline:**
-1. **ML Baselining** — Isolation Forest trained on 11 engineered features
+1. **ML Baselining** — Isolation Forest trained on 23 engineered features
 2. **LLM Translation** — Llama-3-8B generates objective threat narratives (T=0.1)
 3. **Human-in-the-Loop** — SOC analyst makes final Quarantine/False Positive decision
 
@@ -52,7 +52,7 @@ cd neuro_soc/data_pipeline
 python enrichment.py
 ```
 
-Output: `processed_data/enriched_features.csv` (1,200 events × 11 engineered features)
+Output: `processed_data/enriched_features.csv` (50,000 events × 23 engineered features)
 
 ### 3. Start Backend
 
@@ -111,7 +111,7 @@ neuro_soc/
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
-| Data Pipeline | Pandas | Feature engineering (11 features) |
+| Data Pipeline | Pandas | Feature engineering (23 features) |
 | ML Engine | Scikit-learn, SHAP | Isolation Forest anomaly detection + explainability |
 | Backend API | FastAPI, Uvicorn | REST API with async support |
 | Semantic Cache | Redis Cloud | SHA-256 hashed cache with 1-hour TTL |

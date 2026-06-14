@@ -25,6 +25,7 @@ from __future__ import annotations
 import hashlib
 import json
 import logging
+import gc
 import os
 import re
 from datetime import datetime
@@ -542,12 +543,12 @@ async def get_flagged_events(limit: int = 50, refresh: bool = False):
     anomaly_indices = np.where(predictions == -1)[0]
     anomaly_scores = scores[anomaly_indices]
     sorted_order = np.argsort(anomaly_scores)  # ascending = most negative first
-    max_compute = min(len(sorted_order), max(limit, 100))
+    max_compute = min(len(sorted_order), max(limit, 50))
     top_indices = anomaly_indices[sorted_order[:max_compute]]
 
     # ---- Create SHAP explainer ONCE for efficiency ----
     logger.info(f"  Creating SHAP explainer for {max_compute} events ...")
-    bg = training_data.sample(n=min(100, len(training_data)), random_state=42)
+    bg = training_data.sample(n=min(50, len(training_data)), random_state=42)
     bg_scaled = scaler.transform(bg)
     explainer = shap.TreeExplainer(
         model, data=bg_scaled, feature_names=FEATURE_COLUMNS
@@ -650,6 +651,12 @@ async def get_flagged_events(limit: int = 50, refresh: bool = False):
             logger.info(f"  Processed {count + 1}/{max_compute} events")
 
     logger.info(f"  ✓ Computed {len(flagged_events)} flagged events")
+
+    # Free the large DataFrames — they are no longer needed
+    del enriched, labels, logs, X, X_scaled, predictions, scores
+    del labels_lkp, logs_lkp, bg, bg_scaled, explainer
+    gc.collect()
+    logger.info("  ✓ Freed temporary DataFrames from memory")
 
     # Cache for subsequent requests
     _flagged_events_cache = {
@@ -873,6 +880,6 @@ if __name__ == "__main__":
         "main:app",
         host="0.0.0.0",
         port=8000,
-        reload=True,         # Auto-reload during development
+        reload=False,        # DISABLED: reload spawns a 2nd process that doubles RAM usage
         log_level="info",
     )

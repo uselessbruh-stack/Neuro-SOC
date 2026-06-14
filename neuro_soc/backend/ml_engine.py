@@ -100,7 +100,7 @@ IF_PARAMS: dict[str, Any] = {
     "max_samples": "auto",      # Subsample size for each tree
     "random_state": 42,         # Reproducibility
 
-    "n_jobs": -1,               # Use all CPU cores
+    "n_jobs": 1,                # Single core prevents Windows multiprocessing RAM explosion
 }
 
 
