@@ -13,7 +13,7 @@ USR-0010,False,NORMAL,NONE,User profile within normal parameters
 USR-0011,False,NORMAL,NONE,User profile within normal parameters
 USR-0012,False,NORMAL,NONE,User profile within normal parameters
 USR-0013,False,NORMAL,NONE,User profile within normal parameters
-USR-0014,True,STALE_ACCOUNT,MEDIUM,User flagged for: under_investigation. Requires periodic access review.
+USR-0014,True,EXCESSIVE_SYSTEMS,MEDIUM,User flagged for: under_investigation. Requires periodic access review.
 USR-0015,False,NORMAL,NONE,User profile within normal parameters
 USR-0016,False,NORMAL,NONE,User profile within normal parameters
 USR-0017,False,NORMAL,NONE,User profile within normal parameters
@@ -79,13 +79,13 @@ USR-0076,False,NORMAL,NONE,User profile within normal parameters
 USR-0077,False,NORMAL,NONE,User profile within normal parameters
 USR-0078,True,OVER_PRIVILEGED,MEDIUM,Contractor with contractor tier has access to high/restricted sensitivity assets.
 USR-0079,False,NORMAL,NONE,User profile within normal parameters
-USR-0080,True,EXCESSIVE_SYSTEMS,MEDIUM,User flagged for: security_violation_history. Requires periodic access review.
+USR-0080,True,STALE_ACCOUNT,MEDIUM,User flagged for: security_violation_history. Requires periodic access review.
 USR-0081,True,NOTICE_PERIOD_RISK,MEDIUM,Employee on PIP (rating: 1.6) with active data access — disgruntled insider risk.
 USR-0082,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 3 data assets. Elevated exfiltration risk.
-USR-0083,True,EXCESSIVE_SYSTEMS,MEDIUM,User flagged for: security_violation_history. Requires periodic access review.
+USR-0083,True,STALE_ACCOUNT,MEDIUM,User flagged for: security_violation_history. Requires periodic access review.
 USR-0084,False,NORMAL,NONE,User profile within normal parameters
 USR-0085,False,NORMAL,NONE,User profile within normal parameters
-USR-0086,True,STALE_ACCOUNT,MEDIUM,User flagged for: termination_pending. Requires periodic access review.
+USR-0086,True,EXCESSIVE_SYSTEMS,MEDIUM,User flagged for: termination_pending. Requires periodic access review.
 USR-0087,False,NORMAL,NONE,User profile within normal parameters
 USR-0088,False,NORMAL,NONE,User profile within normal parameters
 USR-0089,False,NORMAL,NONE,User profile within normal parameters
@@ -99,3 +99,403 @@ USR-0096,False,NORMAL,NONE,User profile within normal parameters
 USR-0097,False,NORMAL,NONE,User profile within normal parameters
 USR-0098,False,NORMAL,NONE,User profile within normal parameters
 USR-0099,True,STALE_ACCOUNT,HIGH,16 failed login attempts in 30 days suggests potential credential compromise.
+USR-0100,False,NORMAL,NONE,User profile within normal parameters
+USR-0101,False,NORMAL,NONE,User profile within normal parameters
+USR-0102,False,NORMAL,NONE,User profile within normal parameters
+USR-0103,False,NORMAL,NONE,User profile within normal parameters
+USR-0104,False,NORMAL,NONE,User profile within normal parameters
+USR-0105,True,STALE_ACCOUNT,HIGH,19 failed login attempts in 30 days suggests potential credential compromise.
+USR-0106,True,STALE_ACCOUNT,MEDIUM,User flagged for: security_violation_history. Requires periodic access review.
+USR-0107,False,NORMAL,NONE,User profile within normal parameters
+USR-0108,False,NORMAL,NONE,User profile within normal parameters
+USR-0109,True,STALE_ACCOUNT,HIGH,23 failed login attempts in 30 days suggests potential credential compromise.
+USR-0110,True,STALE_ACCOUNT,HIGH,24 failed login attempts in 30 days suggests potential credential compromise.
+USR-0111,True,STALE_ACCOUNT,MEDIUM,User flagged for: termination_pending. Requires periodic access review.
+USR-0112,True,OVER_PRIVILEGED,MEDIUM,Contractor with contractor tier has access to high/restricted sensitivity assets.
+USR-0113,True,STALE_ACCOUNT,HIGH,24 failed login attempts in 30 days suggests potential credential compromise.
+USR-0114,False,NORMAL,NONE,User profile within normal parameters
+USR-0115,True,STALE_ACCOUNT,HIGH,16 failed login attempts in 30 days suggests potential credential compromise.
+USR-0116,False,NORMAL,NONE,User profile within normal parameters
+USR-0117,False,NORMAL,NONE,User profile within normal parameters
+USR-0118,True,STALE_ACCOUNT,HIGH,17 failed login attempts in 30 days suggests potential credential compromise.
+USR-0119,False,NORMAL,NONE,User profile within normal parameters
+USR-0120,True,OVER_PRIVILEGED,MEDIUM,Contractor with contractor tier has access to high/restricted sensitivity assets.
+USR-0121,False,NORMAL,NONE,User profile within normal parameters
+USR-0122,False,NORMAL,NONE,User profile within normal parameters
+USR-0123,True,STALE_ACCOUNT,HIGH,11 failed login attempts in 30 days suggests potential credential compromise.
+USR-0124,True,STALE_ACCOUNT,HIGH,23 failed login attempts in 30 days suggests potential credential compromise.
+USR-0125,True,EXCESSIVE_SYSTEMS,MEDIUM,User flagged for: under_investigation. Requires periodic access review.
+USR-0126,False,NORMAL,NONE,User profile within normal parameters
+USR-0127,False,NORMAL,NONE,User profile within normal parameters
+USR-0128,True,NOTICE_PERIOD_RISK,MEDIUM,Employee on PIP (rating: 1.9) with active data access — disgruntled insider risk.
+USR-0129,False,NORMAL,NONE,User profile within normal parameters
+USR-0130,False,NORMAL,NONE,User profile within normal parameters
+USR-0131,False,NORMAL,NONE,User profile within normal parameters
+USR-0132,False,NORMAL,NONE,User profile within normal parameters
+USR-0133,False,NORMAL,NONE,User profile within normal parameters
+USR-0134,False,NORMAL,NONE,User profile within normal parameters
+USR-0135,False,NORMAL,NONE,User profile within normal parameters
+USR-0136,False,NORMAL,NONE,User profile within normal parameters
+USR-0137,True,OVER_PRIVILEGED,MEDIUM,User flagged for: security_violation_history. Requires periodic access review.
+USR-0138,False,NORMAL,NONE,User profile within normal parameters
+USR-0139,False,NORMAL,NONE,User profile within normal parameters
+USR-0140,True,NOTICE_PERIOD_RISK,MEDIUM,Employee on PIP (rating: 1.9) with active data access — disgruntled insider risk.
+USR-0141,True,OVER_PRIVILEGED,MEDIUM,Contractor with contractor tier has access to high/restricted sensitivity assets.
+USR-0142,False,NORMAL,NONE,User profile within normal parameters
+USR-0143,False,NORMAL,NONE,User profile within normal parameters
+USR-0144,False,NORMAL,NONE,User profile within normal parameters
+USR-0145,False,NORMAL,NONE,User profile within normal parameters
+USR-0146,False,NORMAL,NONE,User profile within normal parameters
+USR-0147,False,NORMAL,NONE,User profile within normal parameters
+USR-0148,False,NORMAL,NONE,User profile within normal parameters
+USR-0149,False,NORMAL,NONE,User profile within normal parameters
+USR-0150,False,NORMAL,NONE,User profile within normal parameters
+USR-0151,True,OVER_PRIVILEGED,MEDIUM,Contractor with contractor tier has access to high/restricted sensitivity assets.
+USR-0152,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 3 data assets. Elevated exfiltration risk.
+USR-0153,False,NORMAL,NONE,User profile within normal parameters
+USR-0154,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 5 data assets. Elevated exfiltration risk.
+USR-0155,False,NORMAL,NONE,User profile within normal parameters
+USR-0156,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 4 data assets. Elevated exfiltration risk.
+USR-0157,False,NORMAL,NONE,User profile within normal parameters
+USR-0158,False,NORMAL,NONE,User profile within normal parameters
+USR-0159,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 7 data assets. Elevated exfiltration risk.
+USR-0160,False,NORMAL,NONE,User profile within normal parameters
+USR-0161,True,NOTICE_PERIOD_RISK,MEDIUM,Employee on PIP (rating: 1.6) with active data access — disgruntled insider risk.
+USR-0162,False,NORMAL,NONE,User profile within normal parameters
+USR-0163,False,NORMAL,NONE,User profile within normal parameters
+USR-0164,False,NORMAL,NONE,User profile within normal parameters
+USR-0165,False,NORMAL,NONE,User profile within normal parameters
+USR-0166,False,NORMAL,NONE,User profile within normal parameters
+USR-0167,False,NORMAL,NONE,User profile within normal parameters
+USR-0168,False,NORMAL,NONE,User profile within normal parameters
+USR-0169,False,NORMAL,NONE,User profile within normal parameters
+USR-0170,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 7 data assets. Elevated exfiltration risk.
+USR-0171,False,NORMAL,NONE,User profile within normal parameters
+USR-0172,False,NORMAL,NONE,User profile within normal parameters
+USR-0173,False,NORMAL,NONE,User profile within normal parameters
+USR-0174,True,STALE_ACCOUNT,HIGH,10 failed login attempts in 30 days suggests potential credential compromise.
+USR-0175,False,NORMAL,NONE,User profile within normal parameters
+USR-0176,False,NORMAL,NONE,User profile within normal parameters
+USR-0177,False,NORMAL,NONE,User profile within normal parameters
+USR-0178,False,NORMAL,NONE,User profile within normal parameters
+USR-0179,False,NORMAL,NONE,User profile within normal parameters
+USR-0180,False,NORMAL,NONE,User profile within normal parameters
+USR-0181,False,NORMAL,NONE,User profile within normal parameters
+USR-0182,True,STALE_ACCOUNT,HIGH,18 failed login attempts in 30 days suggests potential credential compromise.
+USR-0183,False,NORMAL,NONE,User profile within normal parameters
+USR-0184,False,NORMAL,NONE,User profile within normal parameters
+USR-0185,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 4 data assets. Elevated exfiltration risk.
+USR-0186,False,NORMAL,NONE,User profile within normal parameters
+USR-0187,False,NORMAL,NONE,User profile within normal parameters
+USR-0188,False,NORMAL,NONE,User profile within normal parameters
+USR-0189,False,NORMAL,NONE,User profile within normal parameters
+USR-0190,False,NORMAL,NONE,User profile within normal parameters
+USR-0191,False,NORMAL,NONE,User profile within normal parameters
+USR-0192,False,NORMAL,NONE,User profile within normal parameters
+USR-0193,False,NORMAL,NONE,User profile within normal parameters
+USR-0194,False,NORMAL,NONE,User profile within normal parameters
+USR-0195,False,NORMAL,NONE,User profile within normal parameters
+USR-0196,True,STALE_ACCOUNT,HIGH,11 failed login attempts in 30 days suggests potential credential compromise.
+USR-0197,False,NORMAL,NONE,User profile within normal parameters
+USR-0198,False,NORMAL,NONE,User profile within normal parameters
+USR-0199,True,OVER_PRIVILEGED,MEDIUM,User flagged for: termination_pending. Requires periodic access review.
+USR-0200,True,STALE_ACCOUNT,HIGH,24 failed login attempts in 30 days suggests potential credential compromise.
+USR-0201,False,NORMAL,NONE,User profile within normal parameters
+USR-0202,False,NORMAL,NONE,User profile within normal parameters
+USR-0203,False,NORMAL,NONE,User profile within normal parameters
+USR-0204,False,NORMAL,NONE,User profile within normal parameters
+USR-0205,False,NORMAL,NONE,User profile within normal parameters
+USR-0206,True,STALE_ACCOUNT,HIGH,20 failed login attempts in 30 days suggests potential credential compromise.
+USR-0207,False,NORMAL,NONE,User profile within normal parameters
+USR-0208,True,OVER_PRIVILEGED,MEDIUM,Contractor with contractor tier has access to high/restricted sensitivity assets.
+USR-0209,False,NORMAL,NONE,User profile within normal parameters
+USR-0210,False,NORMAL,NONE,User profile within normal parameters
+USR-0211,False,NORMAL,NONE,User profile within normal parameters
+USR-0212,True,OVER_PRIVILEGED,MEDIUM,User flagged for: security_violation_history. Requires periodic access review.
+USR-0213,False,NORMAL,NONE,User profile within normal parameters
+USR-0214,False,NORMAL,NONE,User profile within normal parameters
+USR-0215,False,NORMAL,NONE,User profile within normal parameters
+USR-0216,True,OVER_PRIVILEGED,MEDIUM,User flagged for: under_investigation. Requires periodic access review.
+USR-0217,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 2 data assets. Elevated exfiltration risk.
+USR-0218,True,OVER_PRIVILEGED,MEDIUM,Contractor with contractor tier has access to high/restricted sensitivity assets.
+USR-0219,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 6 data assets. Elevated exfiltration risk.
+USR-0220,False,NORMAL,NONE,User profile within normal parameters
+USR-0221,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 4 data assets. Elevated exfiltration risk.
+USR-0222,False,NORMAL,NONE,User profile within normal parameters
+USR-0223,False,NORMAL,NONE,User profile within normal parameters
+USR-0224,False,NORMAL,NONE,User profile within normal parameters
+USR-0225,False,NORMAL,NONE,User profile within normal parameters
+USR-0226,False,NORMAL,NONE,User profile within normal parameters
+USR-0227,False,NORMAL,NONE,User profile within normal parameters
+USR-0228,False,NORMAL,NONE,User profile within normal parameters
+USR-0229,False,NORMAL,NONE,User profile within normal parameters
+USR-0230,False,NORMAL,NONE,User profile within normal parameters
+USR-0231,True,STALE_ACCOUNT,HIGH,22 failed login attempts in 30 days suggests potential credential compromise.
+USR-0232,False,NORMAL,NONE,User profile within normal parameters
+USR-0233,True,STALE_ACCOUNT,HIGH,14 failed login attempts in 30 days suggests potential credential compromise.
+USR-0234,False,NORMAL,NONE,User profile within normal parameters
+USR-0235,False,NORMAL,NONE,User profile within normal parameters
+USR-0236,False,NORMAL,NONE,User profile within normal parameters
+USR-0237,False,NORMAL,NONE,User profile within normal parameters
+USR-0238,True,OVER_PRIVILEGED,MEDIUM,User flagged for: under_investigation. Requires periodic access review.
+USR-0239,False,NORMAL,NONE,User profile within normal parameters
+USR-0240,False,NORMAL,NONE,User profile within normal parameters
+USR-0241,False,NORMAL,NONE,User profile within normal parameters
+USR-0242,False,NORMAL,NONE,User profile within normal parameters
+USR-0243,False,NORMAL,NONE,User profile within normal parameters
+USR-0244,True,STALE_ACCOUNT,HIGH,12 failed login attempts in 30 days suggests potential credential compromise.
+USR-0245,True,STALE_ACCOUNT,HIGH,20 failed login attempts in 30 days suggests potential credential compromise.
+USR-0246,False,NORMAL,NONE,User profile within normal parameters
+USR-0247,False,NORMAL,NONE,User profile within normal parameters
+USR-0248,False,NORMAL,NONE,User profile within normal parameters
+USR-0249,False,NORMAL,NONE,User profile within normal parameters
+USR-0250,False,NORMAL,NONE,User profile within normal parameters
+USR-0251,False,NORMAL,NONE,User profile within normal parameters
+USR-0252,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 4 data assets. Elevated exfiltration risk.
+USR-0253,False,NORMAL,NONE,User profile within normal parameters
+USR-0254,True,STALE_ACCOUNT,HIGH,21 failed login attempts in 30 days suggests potential credential compromise.
+USR-0255,False,NORMAL,NONE,User profile within normal parameters
+USR-0256,False,NORMAL,NONE,User profile within normal parameters
+USR-0257,False,NORMAL,NONE,User profile within normal parameters
+USR-0258,False,NORMAL,NONE,User profile within normal parameters
+USR-0259,False,NORMAL,NONE,User profile within normal parameters
+USR-0260,False,NORMAL,NONE,User profile within normal parameters
+USR-0261,False,NORMAL,NONE,User profile within normal parameters
+USR-0262,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 4 data assets. Elevated exfiltration risk.
+USR-0263,False,NORMAL,NONE,User profile within normal parameters
+USR-0264,False,NORMAL,NONE,User profile within normal parameters
+USR-0265,False,NORMAL,NONE,User profile within normal parameters
+USR-0266,False,NORMAL,NONE,User profile within normal parameters
+USR-0267,False,NORMAL,NONE,User profile within normal parameters
+USR-0268,True,NOTICE_PERIOD_RISK,MEDIUM,Employee on PIP (rating: 1.0) with active data access — disgruntled insider risk.
+USR-0269,True,STALE_ACCOUNT,HIGH,25 failed login attempts in 30 days suggests potential credential compromise.
+USR-0270,False,NORMAL,NONE,User profile within normal parameters
+USR-0271,False,NORMAL,NONE,User profile within normal parameters
+USR-0272,False,NORMAL,NONE,User profile within normal parameters
+USR-0273,True,NOTICE_PERIOD_RISK,MEDIUM,Employee on PIP (rating: 1.6) with active data access — disgruntled insider risk.
+USR-0274,False,NORMAL,NONE,User profile within normal parameters
+USR-0275,False,NORMAL,NONE,User profile within normal parameters
+USR-0276,False,NORMAL,NONE,User profile within normal parameters
+USR-0277,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 5 data assets. Elevated exfiltration risk.
+USR-0278,True,OVER_PRIVILEGED,MEDIUM,User flagged for: termination_pending. Requires periodic access review.
+USR-0279,False,NORMAL,NONE,User profile within normal parameters
+USR-0280,False,NORMAL,NONE,User profile within normal parameters
+USR-0281,False,NORMAL,NONE,User profile within normal parameters
+USR-0282,True,OVER_PRIVILEGED,MEDIUM,User flagged for: termination_pending. Requires periodic access review.
+USR-0283,False,NORMAL,NONE,User profile within normal parameters
+USR-0284,False,NORMAL,NONE,User profile within normal parameters
+USR-0285,True,NOTICE_PERIOD_RISK,MEDIUM,Employee on PIP (rating: 2.0) with active data access — disgruntled insider risk.
+USR-0286,False,NORMAL,NONE,User profile within normal parameters
+USR-0287,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 4 data assets. Elevated exfiltration risk.
+USR-0288,False,NORMAL,NONE,User profile within normal parameters
+USR-0289,False,NORMAL,NONE,User profile within normal parameters
+USR-0290,False,NORMAL,NONE,User profile within normal parameters
+USR-0291,False,NORMAL,NONE,User profile within normal parameters
+USR-0292,False,NORMAL,NONE,User profile within normal parameters
+USR-0293,False,NORMAL,NONE,User profile within normal parameters
+USR-0294,False,NORMAL,NONE,User profile within normal parameters
+USR-0295,False,NORMAL,NONE,User profile within normal parameters
+USR-0296,True,OVER_PRIVILEGED,MEDIUM,User flagged for: security_violation_history. Requires periodic access review.
+USR-0297,False,NORMAL,NONE,User profile within normal parameters
+USR-0298,True,STALE_ACCOUNT,HIGH,15 failed login attempts in 30 days suggests potential credential compromise.
+USR-0299,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 5 data assets. Elevated exfiltration risk.
+USR-0300,True,OVER_PRIVILEGED,MEDIUM,User flagged for: under_investigation. Requires periodic access review.
+USR-0301,False,NORMAL,NONE,User profile within normal parameters
+USR-0302,True,STALE_ACCOUNT,MEDIUM,User flagged for: under_investigation. Requires periodic access review.
+USR-0303,True,NOTICE_PERIOD_RISK,MEDIUM,Employee on PIP (rating: 1.7) with active data access — disgruntled insider risk.
+USR-0304,False,NORMAL,NONE,User profile within normal parameters
+USR-0305,False,NORMAL,NONE,User profile within normal parameters
+USR-0306,True,NOTICE_PERIOD_RISK,MEDIUM,Employee on PIP (rating: 1.3) with active data access — disgruntled insider risk.
+USR-0307,False,NORMAL,NONE,User profile within normal parameters
+USR-0308,False,NORMAL,NONE,User profile within normal parameters
+USR-0309,False,NORMAL,NONE,User profile within normal parameters
+USR-0310,False,NORMAL,NONE,User profile within normal parameters
+USR-0311,False,NORMAL,NONE,User profile within normal parameters
+USR-0312,True,STALE_ACCOUNT,HIGH,10 failed login attempts in 30 days suggests potential credential compromise.
+USR-0313,False,NORMAL,NONE,User profile within normal parameters
+USR-0314,False,NORMAL,NONE,User profile within normal parameters
+USR-0315,False,NORMAL,NONE,User profile within normal parameters
+USR-0316,False,NORMAL,NONE,User profile within normal parameters
+USR-0317,False,NORMAL,NONE,User profile within normal parameters
+USR-0318,True,STALE_ACCOUNT,HIGH,19 failed login attempts in 30 days suggests potential credential compromise.
+USR-0319,True,STALE_ACCOUNT,MEDIUM,User flagged for: security_violation_history. Requires periodic access review.
+USR-0320,False,NORMAL,NONE,User profile within normal parameters
+USR-0321,False,NORMAL,NONE,User profile within normal parameters
+USR-0322,False,NORMAL,NONE,User profile within normal parameters
+USR-0323,False,NORMAL,NONE,User profile within normal parameters
+USR-0324,False,NORMAL,NONE,User profile within normal parameters
+USR-0325,False,NORMAL,NONE,User profile within normal parameters
+USR-0326,True,OVER_PRIVILEGED,MEDIUM,Contractor with contractor tier has access to high/restricted sensitivity assets.
+USR-0327,False,NORMAL,NONE,User profile within normal parameters
+USR-0328,False,NORMAL,NONE,User profile within normal parameters
+USR-0329,True,STALE_ACCOUNT,HIGH,18 failed login attempts in 30 days suggests potential credential compromise.
+USR-0330,False,NORMAL,NONE,User profile within normal parameters
+USR-0331,True,EXCESSIVE_SYSTEMS,MEDIUM,User flagged for: termination_pending. Requires periodic access review.
+USR-0332,False,NORMAL,NONE,User profile within normal parameters
+USR-0333,False,NORMAL,NONE,User profile within normal parameters
+USR-0334,False,NORMAL,NONE,User profile within normal parameters
+USR-0335,False,NORMAL,NONE,User profile within normal parameters
+USR-0336,False,NORMAL,NONE,User profile within normal parameters
+USR-0337,False,NORMAL,NONE,User profile within normal parameters
+USR-0338,False,NORMAL,NONE,User profile within normal parameters
+USR-0339,False,NORMAL,NONE,User profile within normal parameters
+USR-0340,False,NORMAL,NONE,User profile within normal parameters
+USR-0341,False,NORMAL,NONE,User profile within normal parameters
+USR-0342,True,OVER_PRIVILEGED,MEDIUM,User flagged for: security_violation_history. Requires periodic access review.
+USR-0343,False,NORMAL,NONE,User profile within normal parameters
+USR-0344,False,NORMAL,NONE,User profile within normal parameters
+USR-0345,False,NORMAL,NONE,User profile within normal parameters
+USR-0346,False,NORMAL,NONE,User profile within normal parameters
+USR-0347,False,NORMAL,NONE,User profile within normal parameters
+USR-0348,False,NORMAL,NONE,User profile within normal parameters
+USR-0349,False,NORMAL,NONE,User profile within normal parameters
+USR-0350,True,OVER_PRIVILEGED,MEDIUM,User flagged for: termination_pending. Requires periodic access review.
+USR-0351,False,NORMAL,NONE,User profile within normal parameters
+USR-0352,True,STALE_ACCOUNT,MEDIUM,User flagged for: termination_pending. Requires periodic access review.
+USR-0353,False,NORMAL,NONE,User profile within normal parameters
+USR-0354,True,STALE_ACCOUNT,HIGH,19 failed login attempts in 30 days suggests potential credential compromise.
+USR-0355,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 5 data assets. Elevated exfiltration risk.
+USR-0356,True,STALE_ACCOUNT,HIGH,18 failed login attempts in 30 days suggests potential credential compromise.
+USR-0357,False,NORMAL,NONE,User profile within normal parameters
+USR-0358,False,NORMAL,NONE,User profile within normal parameters
+USR-0359,False,NORMAL,NONE,User profile within normal parameters
+USR-0360,False,NORMAL,NONE,User profile within normal parameters
+USR-0361,False,NORMAL,NONE,User profile within normal parameters
+USR-0362,False,NORMAL,NONE,User profile within normal parameters
+USR-0363,True,STALE_ACCOUNT,HIGH,16 failed login attempts in 30 days suggests potential credential compromise.
+USR-0364,False,NORMAL,NONE,User profile within normal parameters
+USR-0365,True,NOTICE_PERIOD_RISK,MEDIUM,Employee on PIP (rating: 1.6) with active data access — disgruntled insider risk.
+USR-0366,False,NORMAL,NONE,User profile within normal parameters
+USR-0367,False,NORMAL,NONE,User profile within normal parameters
+USR-0368,False,NORMAL,NONE,User profile within normal parameters
+USR-0369,False,NORMAL,NONE,User profile within normal parameters
+USR-0370,False,NORMAL,NONE,User profile within normal parameters
+USR-0371,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 3 data assets. Elevated exfiltration risk.
+USR-0372,False,NORMAL,NONE,User profile within normal parameters
+USR-0373,False,NORMAL,NONE,User profile within normal parameters
+USR-0374,False,NORMAL,NONE,User profile within normal parameters
+USR-0375,False,NORMAL,NONE,User profile within normal parameters
+USR-0376,False,NORMAL,NONE,User profile within normal parameters
+USR-0377,False,NORMAL,NONE,User profile within normal parameters
+USR-0378,True,STALE_ACCOUNT,HIGH,14 failed login attempts in 30 days suggests potential credential compromise.
+USR-0379,True,STALE_ACCOUNT,HIGH,16 failed login attempts in 30 days suggests potential credential compromise.
+USR-0380,False,NORMAL,NONE,User profile within normal parameters
+USR-0381,False,NORMAL,NONE,User profile within normal parameters
+USR-0382,False,NORMAL,NONE,User profile within normal parameters
+USR-0383,False,NORMAL,NONE,User profile within normal parameters
+USR-0384,True,STALE_ACCOUNT,HIGH,19 failed login attempts in 30 days suggests potential credential compromise.
+USR-0385,False,NORMAL,NONE,User profile within normal parameters
+USR-0386,False,NORMAL,NONE,User profile within normal parameters
+USR-0387,False,NORMAL,NONE,User profile within normal parameters
+USR-0388,True,NOTICE_PERIOD_RISK,MEDIUM,Employee on PIP (rating: 2.0) with active data access — disgruntled insider risk.
+USR-0389,True,STALE_ACCOUNT,MEDIUM,User flagged for: security_violation_history. Requires periodic access review.
+USR-0390,False,NORMAL,NONE,User profile within normal parameters
+USR-0391,False,NORMAL,NONE,User profile within normal parameters
+USR-0392,False,NORMAL,NONE,User profile within normal parameters
+USR-0393,False,NORMAL,NONE,User profile within normal parameters
+USR-0394,True,OVER_PRIVILEGED,MEDIUM,Contractor with contractor tier has access to high/restricted sensitivity assets.
+USR-0395,True,STALE_ACCOUNT,HIGH,24 failed login attempts in 30 days suggests potential credential compromise.
+USR-0396,True,OVER_PRIVILEGED,MEDIUM,User flagged for: under_investigation. Requires periodic access review.
+USR-0397,False,NORMAL,NONE,User profile within normal parameters
+USR-0398,True,OVER_PRIVILEGED,MEDIUM,User flagged for: termination_pending. Requires periodic access review.
+USR-0399,False,NORMAL,NONE,User profile within normal parameters
+USR-0400,False,NORMAL,NONE,User profile within normal parameters
+USR-0401,True,STALE_ACCOUNT,HIGH,22 failed login attempts in 30 days suggests potential credential compromise.
+USR-0402,False,NORMAL,NONE,User profile within normal parameters
+USR-0403,True,STALE_ACCOUNT,HIGH,16 failed login attempts in 30 days suggests potential credential compromise.
+USR-0404,False,NORMAL,NONE,User profile within normal parameters
+USR-0405,False,NORMAL,NONE,User profile within normal parameters
+USR-0406,False,NORMAL,NONE,User profile within normal parameters
+USR-0407,False,NORMAL,NONE,User profile within normal parameters
+USR-0408,False,NORMAL,NONE,User profile within normal parameters
+USR-0409,False,NORMAL,NONE,User profile within normal parameters
+USR-0410,True,EXCESSIVE_SYSTEMS,MEDIUM,User flagged for: under_investigation. Requires periodic access review.
+USR-0411,False,NORMAL,NONE,User profile within normal parameters
+USR-0412,False,NORMAL,NONE,User profile within normal parameters
+USR-0413,False,NORMAL,NONE,User profile within normal parameters
+USR-0414,True,STALE_ACCOUNT,HIGH,23 failed login attempts in 30 days suggests potential credential compromise.
+USR-0415,True,NOTICE_PERIOD_RISK,MEDIUM,Employee on PIP (rating: 1.6) with active data access — disgruntled insider risk.
+USR-0416,False,NORMAL,NONE,User profile within normal parameters
+USR-0417,False,NORMAL,NONE,User profile within normal parameters
+USR-0418,True,OVER_PRIVILEGED,MEDIUM,Contractor with contractor tier has access to high/restricted sensitivity assets.
+USR-0419,False,NORMAL,NONE,User profile within normal parameters
+USR-0420,False,NORMAL,NONE,User profile within normal parameters
+USR-0421,False,NORMAL,NONE,User profile within normal parameters
+USR-0422,False,NORMAL,NONE,User profile within normal parameters
+USR-0423,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 4 data assets. Elevated exfiltration risk.
+USR-0424,False,NORMAL,NONE,User profile within normal parameters
+USR-0425,False,NORMAL,NONE,User profile within normal parameters
+USR-0426,False,NORMAL,NONE,User profile within normal parameters
+USR-0427,False,NORMAL,NONE,User profile within normal parameters
+USR-0428,False,NORMAL,NONE,User profile within normal parameters
+USR-0429,False,NORMAL,NONE,User profile within normal parameters
+USR-0430,False,NORMAL,NONE,User profile within normal parameters
+USR-0431,False,NORMAL,NONE,User profile within normal parameters
+USR-0432,False,NORMAL,NONE,User profile within normal parameters
+USR-0433,False,NORMAL,NONE,User profile within normal parameters
+USR-0434,False,NORMAL,NONE,User profile within normal parameters
+USR-0435,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 7 data assets. Elevated exfiltration risk.
+USR-0436,False,NORMAL,NONE,User profile within normal parameters
+USR-0437,False,NORMAL,NONE,User profile within normal parameters
+USR-0438,False,NORMAL,NONE,User profile within normal parameters
+USR-0439,True,STALE_ACCOUNT,HIGH,24 failed login attempts in 30 days suggests potential credential compromise.
+USR-0440,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 5 data assets. Elevated exfiltration risk.
+USR-0441,False,NORMAL,NONE,User profile within normal parameters
+USR-0442,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 6 data assets. Elevated exfiltration risk.
+USR-0443,False,NORMAL,NONE,User profile within normal parameters
+USR-0444,True,STALE_ACCOUNT,MEDIUM,User flagged for: security_violation_history. Requires periodic access review.
+USR-0445,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 5 data assets. Elevated exfiltration risk.
+USR-0446,True,OVER_PRIVILEGED,MEDIUM,User flagged for: security_violation_history. Requires periodic access review.
+USR-0447,False,NORMAL,NONE,User profile within normal parameters
+USR-0448,True,STALE_ACCOUNT,HIGH,19 failed login attempts in 30 days suggests potential credential compromise.
+USR-0449,False,NORMAL,NONE,User profile within normal parameters
+USR-0450,False,NORMAL,NONE,User profile within normal parameters
+USR-0451,False,NORMAL,NONE,User profile within normal parameters
+USR-0452,False,NORMAL,NONE,User profile within normal parameters
+USR-0453,False,NORMAL,NONE,User profile within normal parameters
+USR-0454,False,NORMAL,NONE,User profile within normal parameters
+USR-0455,False,NORMAL,NONE,User profile within normal parameters
+USR-0456,False,NORMAL,NONE,User profile within normal parameters
+USR-0457,False,NORMAL,NONE,User profile within normal parameters
+USR-0458,True,STALE_ACCOUNT,HIGH,11 failed login attempts in 30 days suggests potential credential compromise.
+USR-0459,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 5 data assets. Elevated exfiltration risk.
+USR-0460,True,NOTICE_PERIOD_RISK,HIGH,Employee on notice period with access to 2 data assets. Elevated exfiltration risk.
+USR-0461,False,NORMAL,NONE,User profile within normal parameters
+USR-0462,False,NORMAL,NONE,User profile within normal parameters
+USR-0463,False,NORMAL,NONE,User profile within normal parameters
+USR-0464,False,NORMAL,NONE,User profile within normal parameters
+USR-0465,False,NORMAL,NONE,User profile within normal parameters
+USR-0466,False,NORMAL,NONE,User profile within normal parameters
+USR-0467,False,NORMAL,NONE,User profile within normal parameters
+USR-0468,False,NORMAL,NONE,User profile within normal parameters
+USR-0469,False,NORMAL,NONE,User profile within normal parameters
+USR-0470,False,NORMAL,NONE,User profile within normal parameters
+USR-0471,False,NORMAL,NONE,User profile within normal parameters
+USR-0472,False,NORMAL,NONE,User profile within normal parameters
+USR-0473,False,NORMAL,NONE,User profile within normal parameters
+USR-0474,False,NORMAL,NONE,User profile within normal parameters
+USR-0475,True,OVER_PRIVILEGED,MEDIUM,Contractor with contractor tier has access to high/restricted sensitivity assets.
+USR-0476,False,NORMAL,NONE,User profile within normal parameters
+USR-0477,False,NORMAL,NONE,User profile within normal parameters
+USR-0478,False,NORMAL,NONE,User profile within normal parameters
+USR-0479,False,NORMAL,NONE,User profile within normal parameters
+USR-0480,False,NORMAL,NONE,User profile within normal parameters
+USR-0481,False,NORMAL,NONE,User profile within normal parameters
+USR-0482,False,NORMAL,NONE,User profile within normal parameters
+USR-0483,False,NORMAL,NONE,User profile within normal parameters
+USR-0484,False,NORMAL,NONE,User profile within normal parameters
+USR-0485,False,NORMAL,NONE,User profile within normal parameters
+USR-0486,False,NORMAL,NONE,User profile within normal parameters
+USR-0487,False,NORMAL,NONE,User profile within normal parameters
+USR-0488,False,NORMAL,NONE,User profile within normal parameters
+USR-0489,False,NORMAL,NONE,User profile within normal parameters
+USR-0490,False,NORMAL,NONE,User profile within normal parameters
+USR-0491,False,NORMAL,NONE,User profile within normal parameters
+USR-0492,False,NORMAL,NONE,User profile within normal parameters
+USR-0493,True,OVER_PRIVILEGED,MEDIUM,Contractor with contractor tier has access to high/restricted sensitivity assets.
+USR-0494,False,NORMAL,NONE,User profile within normal parameters
+USR-0495,False,NORMAL,NONE,User profile within normal parameters
+USR-0496,False,NORMAL,NONE,User profile within normal parameters
+USR-0497,False,NORMAL,NONE,User profile within normal parameters
+USR-0498,False,NORMAL,NONE,User profile within normal parameters
+USR-0499,False,NORMAL,NONE,User profile within normal parameters

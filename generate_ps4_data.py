@@ -43,8 +43,8 @@ from collections import defaultdict
 SEED = 42
 random.seed(SEED)
 
-NUM_USERS = 100
-NUM_EVENTS = 1200
+NUM_USERS = 500
+NUM_EVENTS = 50000
 DATE_START = datetime(2025, 4, 21)
 DATE_END = datetime(2026, 4, 20)
 
@@ -208,18 +208,18 @@ LAST_NAMES = [
 # ============================================================
 
 EVENT_ANOMALY_TYPES = {
-    "BULK_EXPORT":              {"severity": "HIGH",     "count": 80,  "desc": "Unusually large data export exceeding 10x normal volume"},
-    "AFTER_HOURS_RESTRICTED":   {"severity": "HIGH",     "count": 85,  "desc": "Access to high/restricted data outside business hours"},
-    "CROSS_DEPT_ACCESS":        {"severity": "MEDIUM",   "count": 75,  "desc": "Accessing data assets outside approved department scope"},
-    "STALE_ACCOUNT_ACCESS":     {"severity": "HIGH",     "count": 50,  "desc": "Dormant account suddenly active after extended inactivity"},
-    "PRIVILEGE_ESCALATION":     {"severity": "HIGH",     "count": 45,  "desc": "Junior/standard tier accessing admin-level resources"},
-    "DEVICE_ANOMALY":           {"severity": "MEDIUM",   "count": 40,  "desc": "Access from unauthorized or mismatched equipment type"},
-    "EXFILTRATION_RISK":        {"severity": "CRITICAL", "count": 55,  "desc": "Data sent to external email, USB, or cloud storage"},
-    "NIGHT_BULK_CRITICAL":      {"severity": "CRITICAL", "count": 28,  "desc": "After-midnight bulk export to external destination"},
-    "PRE_RESIGNATION_DOWNLOAD": {"severity": "CRITICAL", "count": 40,  "desc": "User on notice period performing unusual bulk access"},
-    "FAILED_AUTH_BURST":        {"severity": "MEDIUM",   "count": 52,  "desc": "Multiple failed authentication attempts in rapid succession"},
+    "BULK_EXPORT":              {"severity": "HIGH",     "count": 3200, "desc": "Unusually large data export exceeding 10x normal volume"},
+    "AFTER_HOURS_RESTRICTED":   {"severity": "HIGH",     "count": 3400, "desc": "Access to high/restricted data outside business hours"},
+    "CROSS_DEPT_ACCESS":        {"severity": "MEDIUM",   "count": 3000, "desc": "Accessing data assets outside approved department scope"},
+    "STALE_ACCOUNT_ACCESS":     {"severity": "HIGH",     "count": 2000, "desc": "Dormant account suddenly active after extended inactivity"},
+    "PRIVILEGE_ESCALATION":     {"severity": "HIGH",     "count": 1800, "desc": "Junior/standard tier accessing admin-level resources"},
+    "DEVICE_ANOMALY":           {"severity": "MEDIUM",   "count": 1600, "desc": "Access from unauthorized or mismatched equipment type"},
+    "EXFILTRATION_RISK":        {"severity": "CRITICAL", "count": 2200, "desc": "Data sent to external email, USB, or cloud storage"},
+    "NIGHT_BULK_CRITICAL":      {"severity": "CRITICAL", "count": 1120, "desc": "After-midnight bulk export to external destination"},
+    "PRE_RESIGNATION_DOWNLOAD": {"severity": "CRITICAL", "count": 1600, "desc": "User on notice period performing unusual bulk access"},
+    "FAILED_AUTH_BURST":        {"severity": "MEDIUM",   "count": 2080, "desc": "Multiple failed authentication attempts in rapid succession"},
 }
-# Total anomalous: 550 / 1200 = ~45.8%
+# Total anomalous: 22000 / 50000 = 44.0%
 
 USER_RISK_TYPES = {
     "STALE_ACCOUNT":       {"desc": "Account inactive >90 days but still enabled"},
