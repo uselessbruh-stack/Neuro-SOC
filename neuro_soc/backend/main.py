@@ -118,6 +118,85 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ---------------------------------------------------------------------------
+#  Human-Readable Feature Dictionary — for SOC auditor-facing narratives
+#  Maps raw ML feature names → plain-English descriptions.
+# ---------------------------------------------------------------------------
+FEATURE_DISPLAY: dict[str, dict[str, str]] = {
+    "tenure_months":               {"name": "Employee Tenure",            "desc": "length of employment at the organisation"},
+    "high_risk_flag":              {"name": "HR Risk Flag",               "desc": "employee flagged by HR as high-risk (PIP, termination notice, etc.)"},
+    "notice_period_flag":          {"name": "Notice Period",              "desc": "employee is currently serving their notice period"},
+    "failed_logins_30d":           {"name": "Failed Logins (30 days)",    "desc": "number of failed authentication attempts in the past 30 days"},
+    "stale_account_days":          {"name": "Account Inactivity",         "desc": "number of days the account was dormant before this access"},
+    "approved_assets_count":       {"name": "Approved Asset Count",       "desc": "number of data assets the employee is authorised to access"},
+    "Tenure_Risk_Modifier":        {"name": "Tenure-Based Risk Weight",   "desc": "risk multiplier based on employee tenure and HR risk status"},
+    "Equipment_Risk_Score":        {"name": "Device Risk",                "desc": "risk score based on equipment mismatch or unauthorised device usage"},
+    "Access_Tier_Mismatch":        {"name": "Access Level Mismatch",      "desc": "discrepancy between the employee's clearance level and the resource sensitivity"},
+    "Cross_Dept_Access_Flag":      {"name": "Cross-Department Access",    "desc": "access to resources belonging to a different department"},
+    "Rowcount_Deviation":          {"name": "Unusual Data Volume",        "desc": "volume of records accessed is significantly above the employee's baseline"},
+    "Exfiltration_Dest_Score":     {"name": "Destination Risk",           "desc": "data was sent to a high-risk destination (external email, USB, cloud storage)"},
+    "Query_Type_Risk":             {"name": "Query Type Risk",            "desc": "the type of database query used carries elevated risk (bulk export, DELETE, etc.)"},
+    "Weak_Auth_Flag":              {"name": "Weak Authentication",        "desc": "access was performed using weak or single-factor authentication"},
+    "Suspicious_Geo_Flag":         {"name": "Suspicious Location",        "desc": "access originated from an unusual or high-risk geographic location"},
+    "VPN_Mismatch":                {"name": "VPN Anomaly",                "desc": "VPN usage pattern is inconsistent with employee's normal behaviour"},
+    "Temporal_Velocity":           {"name": "Rapid Access Burst",         "desc": "unusually high number of access events in a short time window"},
+    "After_Hours_High_Sensitivity":{"name": "After-Hours Sensitive Access","desc": "high-sensitivity resource accessed outside normal business hours"},
+    "Failed_Action_Flag":          {"name": "Failed Action Detected",     "desc": "one or more attempted actions resulted in access denial or failure"},
+    "Cross_Dept_Sensitivity":      {"name": "Cross-Dept Sensitive Access","desc": "accessed sensitive resources belonging to another department"},
+    "Time_Sensitivity_Risk":       {"name": "Off-Hours Sensitivity Risk", "desc": "combined risk of after-hours access and resource sensitivity level"},
+    "Stale_Sensitivity_Risk":      {"name": "Dormant Account Risk",       "desc": "previously dormant account accessed sensitive resources"},
+    "Volume_Dest_Compound":        {"name": "Bulk Export to Risky Dest",  "desc": "large data volume sent to a high-risk external destination"},
+}
+
+
+def _friendly_name(feature: str) -> str:
+    """Return the auditor-friendly display name for a feature."""
+    entry = FEATURE_DISPLAY.get(feature)
+    if entry:
+        return entry["name"]
+    return feature.replace("_", " ").title()
+
+
+def _friendly_desc(feature: str) -> str:
+    """Return the auditor-friendly description for a feature."""
+    entry = FEATURE_DISPLAY.get(feature)
+    if entry:
+        return entry["desc"]
+    return f"{feature.replace('_', ' ').lower()} deviated from normal"
+
+
+def _fmt_name(raw: str) -> str:
+    """kavya.dubois → Kavya Dubois, USR_0042 → USR-0042."""
+    if "." in raw and not raw.startswith("USR"):
+        return " ".join(part.capitalize() for part in raw.split("."))
+    return raw
+
+
+def _fmt_asset(raw: str) -> str:
+    """All_Financial → All Financial, HR_Records → HR Records."""
+    return raw.replace("_", " ")
+
+
+def _fmt_ts(raw: str) -> str:
+    """2025-10-10 00:08:23 → 10 Oct 2025 at 00:08."""
+    try:
+        from datetime import datetime as _dt
+        dt = _dt.strptime(str(raw)[:19], "%Y-%m-%d %H:%M:%S")
+        return dt.strftime("%d %b %Y at %H:%M")
+    except Exception:
+        return str(raw)
+
+
+def _severity_word(score: int) -> str:
+    """Map risk score to a human severity word."""
+    if score >= 80:
+        return "critical"
+    if score >= 60:
+        return "high"
+    if score >= 40:
+        return "elevated"
+    return "low"
+
 
 # ═══════════════════════════════════════════════════════════════════════════
 #  SEMANTIC CACHE — Redis Cloud (with in-memory fallback)
@@ -611,19 +690,44 @@ async def get_flagged_events(limit: int = 50, refresh: bool = False):
         top_shap = [ShapFeature(**f) for f in impacts[:3]]
 
         # Narrative (rule-based for batch speed)
-        narrative_dict = _build_fallback_narrative(
-            anomaly_score=float(scores[idx]),
-            shap_features=[f.model_dump() for f in top_shap],
+        risk_score = _normalize_score(float(scores[idx]))
+        raw_score = float(scores[idx])
+        action = _derive_fallback_action(raw_score)
+        sev_word = _severity_word(risk_score)
+
+        # Clean display values
+        disp_name = _fmt_name(username)
+        disp_asset = _fmt_asset(data_asset)
+        disp_ts = _fmt_ts(str(row['timestamp']))
+
+        # Build auditor-friendly evidence bullets
+        evidence = []
+        for sf in top_shap:
+            fn = _friendly_name(sf.feature)
+            fd = _friendly_desc(sf.feature)
+            evidence.append(f"{fn}: {fd}.")
+
+        # Build contextual threat summary
+        primary = _friendly_name(top_shap[0].feature) if top_shap else "unknown factor"
+        primary_desc = _friendly_desc(top_shap[0].feature) if top_shap else ""
+        narrative_text = (
+            f"A {sev_word}-severity event was detected for {disp_name} "
+            f"({department}) on {disp_ts}. "
+            f"The employee accessed the {disp_asset} data store "
+            f"(classified as {data_sensitivity.lower()}) "
+            f"and the system flagged this activity with a risk score of {risk_score} out of 100. "
+            f"The primary indicator was {primary} — {primary_desc}."
         )
-        # Override the generic template with contextual text
-        feat_name = top_shap[0].feature.replace("_", " ") if top_shap else "unknown"
-        narrative_dict["threat_narrative"] = (
-            f"User {username} ({department}) triggered anomaly detection "
-            f"while accessing {data_asset} at {row['timestamp']}. "
-            f"Risk score: {_normalize_score(float(scores[idx]))}/100 "
-            f"(raw: {float(scores[idx]):.4f}). "
-            f"Primary contributing factor: {feat_name}."
-        )
+        if len(top_shap) > 1:
+            secondary = _friendly_name(top_shap[1].feature)
+            sec_desc = _friendly_desc(top_shap[1].feature)
+            narrative_text += f" A secondary concern was {secondary} — {sec_desc}."
+
+        narrative_dict = {
+            "threat_narrative": narrative_text,
+            "evidence_list": evidence,
+            "recommended_action": action,
+        }
         narrative = LlmNarrative(**narrative_dict)
 
         flagged_events.append(
@@ -813,20 +917,21 @@ def _build_fallback_narrative(
     Ensures the API always returns a usable response.
     """
     evidence = [
-        f"{f['feature']} deviated with SHAP value {f['shap_value']} "
-        f"(event value: {f['event_value']})"
+        f"{_friendly_name(f['feature'])} — {_friendly_desc(f['feature'])} "
+        f"(observed value: {f['event_value']})"
         for f in shap_features[:3]
     ]
 
+    primary = _friendly_name(shap_features[0]["feature"]) if shap_features else "unknown"
+    primary_desc = _friendly_desc(shap_features[0]["feature"]) if shap_features else ""
+
     return {
         "threat_narrative": (
-            f"Anomaly detected with score {anomaly_score:.4f}. "
-            f"The top deviating feature was '{shap_features[0]['feature']}' "
-            f"if available. This is a rule-based summary generated because "
-            f"the LLM service was unavailable."
+            f"Anomaly detected with risk score based on raw value {anomaly_score:.4f}. "
+            f"The primary concern is {primary}: {primary_desc}."
             if shap_features
             else f"Anomaly detected with score {anomaly_score:.4f}. "
-                 f"No SHAP features available for explanation."
+                 f"No feature-level explanation available."
         ),
         "evidence_list": evidence,
         "recommended_action": _derive_fallback_action(anomaly_score),
