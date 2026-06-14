@@ -1,101 +1,101 @@
-user_id,username,email,department,job_title,privilege_level,systems_access,last_login,days_inactive,is_active,hire_date
-USR00000,pooja.murphy,pooja.murphy@company.com,Executive,Developer,user,AD,2026-02-20,59,true,2024-12-21
-USR00001,daniel.singh,daniel.singh@company.com,Compliance,Lead,user,Azure_AD|Salesforce,2026-03-31,20,true,2024-04-04
-USR00002,kenneth.moore,kenneth.moore@company.com,Sales,Architect,service-account,EMAIL|PROD_DB,2026-04-07,13,true,2025-12-07
-USR00003,sanjana.li,sanjana.li@company.com,Marketing,Director,user,AD|AWS_IAM,2026-04-07,13,true,2023-04-21
-USR00004,diya.anderson,diya.anderson@company.com,Marketing,Administrator,user,ServiceNow|AWS_IAM,2026-04-06,14,true,2022-10-18
-USR00005,george.lim,george.lim@company.com,Engineering,Administrator,user,GCP,2026-02-22,57,true,2025-05-25
-USR00006,kevin.ramirez,kevin.ramirez@company.com,Legal,Architect,power-user,Azure_AD|Salesforce|SIEM,2026-03-05,46,true,2024-05-08
-USR00007,robert.smith,robert.smith@company.com,Operations,Lead,user,VPN|Okta,2026-03-07,44,true,2025-05-25
-USR00008,thomas.iyer,thomas.iyer@company.com,Sales,Administrator,user,AD|AWS_IAM,2026-02-22,57,true,2022-04-27
-USR00009,aditya.burke,aditya.burke@company.com,Finance,Architect,power-user,SIEM|Azure_AD,2026-03-28,23,true,2024-02-27
-USR00010,jacob.patel,jacob.patel@company.com,Marketing,Architect,user,PROD_DB|ADMIN_SYS,2026-04-19,1,true,2025-09-20
-USR00011,maria.o'brien,maria.o'brien@company.com,Security,Administrator,user,SIEM,2026-04-04,16,true,2025-09-10
-USR00012,vikram.white,vikram.white@company.com,Operations,Director,service-account,SIEM|Azure_AD,2026-03-26,25,true,2024-12-04
-USR00013,jonathan.jackson,jonathan.jackson@company.com,Sales,Administrator,user,EMAIL,2026-03-17,34,true,2022-05-30
-USR00014,david.thomas,david.thomas@company.com,Support,Architect,user,ADMIN_SYS,2026-04-18,2,true,2025-06-17
-USR00015,sophia.white,sophia.white@company.com,Security,Developer,admin,Okta|SIEM|Azure_AD|ServiceNow|AWS_IAM|VPN|ADMIN_SYS,2026-03-27,24,true,2025-10-04
-USR00016,elena.dubois,elena.dubois@company.com,IT,Specialist,user,Azure_AD,2026-03-19,32,true,2024-12-06
-USR00017,diya.schulz,diya.schulz@company.com,Executive,Manager,power-user,ADMIN_SYS|GCP|Okta,2026-03-05,46,true,2025-04-02
-USR00018,meera.burke,meera.burke@company.com,Operations,Executive,power-user,EMAIL|ServiceNow|ADMIN_SYS|Azure_AD,2026-02-20,59,true,2025-10-04
-USR00019,joshua.white,joshua.white@company.com,Finance,Coordinator,user,VPN|EMAIL,2026-04-18,2,true,2024-06-20
-USR00020,karan.white,karan.white@company.com,IT,Specialist,user,GCP,2026-03-26,25,true,2023-12-14
-USR00021,rohan.harris,rohan.harris@company.com,Marketing,Executive,user,Azure_AD,2026-03-18,33,true,2022-12-22
-USR00022,harsh.patel,harsh.patel@company.com,Legal,Specialist,user,ADMIN_SYS|Okta,2026-02-27,52,true,2025-04-22
-USR00023,isha.jones,isha.jones@company.com,Legal,Director,power-user,SIEM|AD|EMAIL,2026-02-24,55,true,2024-03-25
-USR00024,nicholas.jackson,nicholas.jackson@company.com,Compliance,Lead,user,PROD_DB,2026-03-20,31,true,2023-11-01
-USR00025,diya.romano,diya.romano@company.com,Marketing,Coordinator,power-user,EMAIL|ADMIN_SYS,2026-04-07,13,true,2022-06-12
-USR00026,stephen.bhat,stephen.bhat@company.com,Finance,Director,user,ADMIN_SYS|PROD_DB,2026-03-18,33,true,2022-12-14
-USR00027,pooja.sullivan,pooja.sullivan@company.com,Support,Lead,admin,VPN|Salesforce|AWS_IAM|ADMIN_SYS|SIEM|Azure_AD|ServiceNow,2026-03-17,34,true,2024-02-21
-USR00028,paul.singh,paul.singh@company.com,HR,Officer,admin,GCP|Salesforce|EMAIL|VPN|ServiceNow|ADMIN_SYS,2026-03-23,28,true,2023-11-27
-USR00029,zainab.wagner,zainab.wagner@company.com,Support,Engineer,user,ADMIN_SYS,2026-03-16,35,true,2023-12-12
-USR00030,yuki.meyer,yuki.meyer@company.com,Marketing,Manager,service-account,EMAIL|AWS_IAM,2026-03-27,24,true,2025-04-07
-USR00031,amitabh.taylor,amitabh.taylor@company.com,Finance,Director,power-user,Azure_AD|ServiceNow|Salesforce,2026-03-21,30,true,2024-01-24
-USR00032,pooja.martin,pooja.martin@company.com,Support,Coordinator,user,SIEM|AWS_IAM,2026-04-07,13,true,2023-06-21
-USR00033,michael.sharma,michael.sharma@company.com,Legal,Officer,power-user,AWS_IAM|EMAIL|Azure_AD|GCP,2026-03-25,26,true,2023-06-10
-USR00034,harsh.jones,harsh.jones@company.com,Operations,Specialist,service-account,EMAIL|AWS_IAM,2026-03-08,43,true,2024-10-23
-USR00035,nikhil.rao,nikhil.rao@company.com,Executive,Lead,admin,PROD_DB|EMAIL|ServiceNow|SIEM|Salesforce|AD,2026-02-23,56,true,2025-07-05
-USR00036,nicholas.harris,nicholas.harris@company.com,Marketing,Analyst,user,AD|Azure_AD,2026-03-11,40,true,2025-11-25
-USR00037,ronald.wilson,ronald.wilson@company.com,Finance,Coordinator,power-user,AD|AWS_IAM|Azure_AD|EMAIL,2026-03-26,25,true,2024-03-06
-USR00038,aisha.kim,aisha.kim@company.com,Compliance,Engineer,user,Azure_AD,2026-04-15,5,true,2022-07-14
-USR00039,stephen.bhat,stephen.bhat@company.com,Engineering,Engineer,user,GCP|VPN,2026-03-26,25,true,2023-09-11
-USR00040,nicholas.romano,nicholas.romano@company.com,Security,Officer,power-user,EMAIL|VPN,2026-02-27,52,true,2023-12-02
-USR00041,matthew.huang,matthew.huang@company.com,Operations,Lead,power-user,Salesforce|EMAIL,2026-04-13,7,true,2025-10-08
-USR00042,kenneth.sanchez,kenneth.sanchez@company.com,Support,Engineer,user,ServiceNow,2026-03-05,46,true,2023-12-06
-USR00043,matthew.bernard,matthew.bernard@company.com,Operations,Coordinator,power-user,GCP|AD|SIEM|Okta,2026-03-18,33,true,2024-11-02
-USR00044,pooja.mishra,pooja.mishra@company.com,Finance,Developer,admin,EMAIL|SIEM|ADMIN_SYS|Salesforce|Azure_AD,2026-02-20,59,true,2023-11-18
-USR00045,stephen.kumar,stephen.kumar@company.com,Security,Coordinator,user,Azure_AD|Salesforce,2026-03-25,26,true,2022-09-10
-USR00046,deepika.li,deepika.li@company.com,Support,Manager,user,PROD_DB,2026-03-03,48,true,2024-07-14
-USR00047,george.clark,george.clark@company.com,Engineering,Lead,power-user,Azure_AD|ServiceNow,2026-02-24,55,true,2024-04-12
-USR00048,xiulan.colombo,xiulan.colombo@company.com,Compliance,Administrator,user,GCP|Azure_AD,2026-03-17,34,true,2023-10-28
-USR00049,thomas.kang,thomas.kang@company.com,Engineering,Administrator,user,EMAIL|AWS_IAM,2026-03-27,24,true,2022-08-24
-USR00050,nisha.martinez,nisha.martinez@company.com,HR,Architect,user,EMAIL,2026-03-26,25,true,2024-02-19
-USR00051,meera.quinn,meera.quinn@company.com,Executive,Developer,user,VPN|ServiceNow,2026-03-21,30,true,2025-01-26
-USR00052,leila.sun,leila.sun@company.com,Engineering,Administrator,user,AD,2026-02-26,53,true,2024-04-05
-USR00053,timothy.jo,timothy.jo@company.com,Engineering,Engineer,user,SIEM|PROD_DB,2026-04-09,11,true,2025-09-20
-USR00054,edward.smith,edward.smith@company.com,Support,Specialist,user,ADMIN_SYS,2026-04-08,12,true,2023-07-28
-USR00055,neha.johnson,neha.johnson@company.com,Sales,Analyst,user,GCP,2026-03-02,49,true,2025-05-20
-USR00056,william.kumar,william.kumar@company.com,Compliance,Manager,user,Azure_AD|VPN,2026-02-21,58,true,2023-09-13
-USR00057,zainab.jo,zainab.jo@company.com,Sales,Architect,admin,GCP|ADMIN_SYS|AD|SIEM,2026-04-06,14,true,2024-06-15
-USR00058,anthony.taylor,anthony.taylor@company.com,Finance,Administrator,user,AD,2026-02-28,51,true,2024-07-06
-USR00059,thomas.lewis,thomas.lewis@company.com,Finance,Director,power-user,ServiceNow|EMAIL|SIEM|Azure_AD,2026-02-21,58,true,2024-08-12
-USR00060,vikram.gonzalez,vikram.gonzalez@company.com,Sales,Developer,power-user,EMAIL|AD|ADMIN_SYS|VPN,2026-04-16,4,true,2022-06-14
-USR00061,sophia.hernandez,sophia.hernandez@company.com,Support,Developer,user,Okta|SIEM,2026-03-16,35,true,2023-04-13
-USR00062,nisha.jones,nisha.jones@company.com,Marketing,Coordinator,power-user,GCP|ServiceNow|PROD_DB,2026-03-15,36,true,2023-10-20
-USR00063,daniel.colombo,daniel.colombo@company.com,Sales,Specialist,power-user,GCP|VPN,2026-02-27,52,true,2025-03-04
-USR00064,zainab.pillai,zainab.pillai@company.com,HR,Director,user,VPN,2026-02-21,58,true,2023-08-19
-USR00065,timothy.xu,timothy.xu@company.com,Marketing,Architect,user,Salesforce|ADMIN_SYS,2026-04-14,6,true,2023-02-03
-USR00066,ronald.martin,ronald.martin@company.com,Security,Specialist,user,ADMIN_SYS,2026-03-22,29,true,2025-12-10
-USR00067,donald.wang,donald.wang@company.com,Marketing,Manager,user,PROD_DB|ADMIN_SYS,2026-02-25,54,true,2023-07-01
-USR00068,robert.patel,robert.patel@company.com,Support,Lead,admin,ADMIN_SYS|PROD_DB|AWS_IAM|Salesforce|EMAIL,2026-04-13,7,true,2024-10-25
-USR00069,nikhil.jang,nikhil.jang@company.com,HR,Analyst,user,ServiceNow|Okta,2026-03-21,30,true,2023-07-16
-USR00070,jeffrey.chen,jeffrey.chen@company.com,IT,Administrator,power-user,Salesforce|ADMIN_SYS,2026-04-01,19,true,2024-02-02
-USR00071,richard.johnson,richard.johnson@company.com,HR,Administrator,user,AD|ServiceNow,2026-03-28,23,true,2022-03-25
-USR00072,amitabh.park,amitabh.park@company.com,Legal,Analyst,user,EMAIL,2026-03-07,44,true,2025-12-13
-USR00073,joshua.becker,joshua.becker@company.com,Security,Engineer,user,ServiceNow|VPN,2026-03-31,20,true,2025-02-03
-USR00074,mark.he,mark.he@company.com,Security,Officer,user,SIEM|AWS_IAM,2026-04-20,0,true,2022-03-26
-USR00075,timothy.huang,timothy.huang@company.com,Sales,Manager,user,ADMIN_SYS,2026-03-30,21,true,2023-12-15
-USR00076,stephen.guo,stephen.guo@company.com,Finance,Lead,user,PROD_DB|VPN,2026-04-12,8,true,2025-10-30
-USR00077,neha.taylor,neha.taylor@company.com,Finance,Architect,power-user,AD|EMAIL|PROD_DB,2026-04-09,11,true,2023-08-29
-USR00078,christopher.menon,christopher.menon@company.com,Executive,Officer,service-account,Azure_AD,2026-03-29,22,true,2023-01-02
-USR00079,varun.weber,varun.weber@company.com,Engineering,Engineer,user,AWS_IAM,2026-02-27,52,true,2025-02-10
-USR00080,david.rodriguez,david.rodriguez@company.com,HR,Developer,service-account,Okta,2026-03-08,43,true,2023-04-22
-USR00081,isha.ghosh,isha.ghosh@company.com,IT,Manager,power-user,AWS_IAM|VPN|Azure_AD,2026-03-07,44,true,2025-12-26
-USR00082,arjun.hwang,arjun.hwang@company.com,Legal,Manager,admin,PROD_DB|Okta|VPN|AD|GCP,2026-02-27,52,true,2024-09-21
-USR00083,ryan.thomas,ryan.thomas@company.com,Marketing,Executive,service-account,VPN|SIEM,2026-04-03,17,true,2025-02-21
-USR00084,aditya.gupta,aditya.gupta@company.com,Engineering,Analyst,admin,Okta|Salesforce|ServiceNow|EMAIL|Azure_AD|AWS_IAM,2026-02-20,59,true,2023-06-17
-USR00085,varun.rao,varun.rao@company.com,Marketing,Developer,user,Salesforce,2026-03-07,44,true,2022-07-24
-USR00086,ryan.colombo,ryan.colombo@company.com,Engineering,Analyst,service-account,GCP|VPN,2026-03-02,49,true,2024-11-18
-USR00087,aditya.taylor,aditya.taylor@company.com,Marketing,Manager,power-user,SIEM|VPN|ServiceNow,2026-03-23,28,true,2023-04-29
-USR00088,william.jang,william.jang@company.com,Engineering,Engineer,admin,ServiceNow|VPN|EMAIL|AD,2026-03-15,36,true,2024-10-14
-USR00089,isha.chen,isha.chen@company.com,Compliance,Coordinator,service-account,Salesforce|ServiceNow,2026-04-02,18,true,2025-06-09
-USR00090,neha.o'brien,neha.o'brien@company.com,Finance,Officer,admin,Azure_AD|VPN|AD|PROD_DB,2026-02-22,57,true,2024-07-03
-USR00091,steven.thompson,steven.thompson@company.com,Support,Lead,power-user,AD|PROD_DB,2026-03-25,26,true,2023-02-06
-USR00092,charles.sullivan,charles.sullivan@company.com,IT,Executive,user,ADMIN_SYS,2026-03-23,28,true,2025-12-05
-USR00093,nadia.muller,nadia.muller@company.com,Sales,Director,user,PROD_DB,2026-03-05,46,true,2024-02-07
-USR00094,donald.schulz,donald.schulz@company.com,Sales,Officer,user,VPN,2026-03-23,28,true,2024-01-04
-USR00095,priya.petit,priya.petit@company.com,HR,Architect,user,ADMIN_SYS,2026-03-31,20,true,2023-04-28
-USR00096,edward.thomas,edward.thomas@company.com,Operations,Officer,service-account,ServiceNow,2026-03-27,24,true,2023-04-08
-USR00097,leila.lopez,leila.lopez@company.com,IT,Executive,user,EMAIL|VPN,2026-03-08,43,true,2025-01-27
-USR00098,jason.white,jason.white@company.com,Compliance,Lead,power-user,Okta|Azure_AD|AWS_IAM,2026-02-27,52,true,2023-04-03
-USR00099,maria.bianchi,maria.bianchi@company.com,Marketing,Officer,service-account,ADMIN_SYS,2026-03-11,40,true,2025-10-01
+user_id,username,email,department,job_title,access_tier,tenure_months,approved_data_assets,avg_queries_per_day,typical_access_hours,avg_rowcount_per_query,high_risk_flag,equipment,clearance_level,notice_period,last_performance_rating,security_training_current,failed_logins_30d,vpn_user,last_access_date
+USR-0000,kiara.jackson,kiara.jackson@societe-corp.com,Finance,Controller,standard,47,GL_Ledger|AR_System,13.9,8-18,385,False,company_laptop,public,False,2.7,True,1,False,2026-04-08
+USR-0001,xiulan.iyer,xiulan.iyer@societe-corp.com,Finance,Analyst,standard,33,GL_Ledger|Financial_Reports|AR_System|AP_System,17.1,8-18,257,True,company_laptop,internal,False,2.5,True,12,False,2026-04-07
+USR-0002,neha.hernandez,neha.hernandez@societe-corp.com,Engineering,Tech Lead,admin,45,Code_Repository|Backup_System|Network_Logs|Dev_DB|PROD_DB|CI_CD_Pipeline,33.7,8-20,3199,False,company_laptop,restricted,False,3.5,True,3,True,2026-04-06
+USR-0003,aria.sharma,aria.sharma@societe-corp.com,IT,IT Manager,senior,49,PROD_DB|Dev_DB|Backup_System|Admin_Console|SIEM_Dashboard|Network_Logs|Infrastructure_DB,16.2,7-22,706,True,contractor_machine,confidential,False,3.3,True,25,True,2026-04-11
+USR-0004,benjamin.williams,benjamin.williams@societe-corp.com,Engineering,Tech Lead,admin,62,Code_Repository|SLA_Reports|Customer_Vault|PROD_DB,18.9,8-20,2460,False,byod_device,restricted,False,4.9,True,1,True,2026-04-08
+USR-0005,simran.anderson,simran.anderson@societe-corp.com,Sales,VP Sales,senior,28,Code_Repository|Customer_Reports|CRM_Database|Lead_Database|Sales_Pipeline|PROD_DB,32.0,8-19,1239,False,byod_device,restricted,False,3.4,True,3,False,2026-04-09
+USR-0006,liam.sanchez,liam.sanchez@societe-corp.com,Engineering,DevOps Engineer,standard,33,Code_Repository|Dev_DB|PROD_DB|CI_CD_Pipeline,5.3,8-20,330,True,company_laptop,confidential,True,3.0,True,1,False,2026-04-11
+USR-0007,tyler.perez,tyler.perez@societe-corp.com,Executive,CFO,senior,91,Social_Media_DB|Executive_Dashboard|Market_Research|All_Financial|Strategic_Plans|Board_Materials|Merger_Documents,21.7,7-21,956,False,company_laptop,confidential,False,2.3,True,2,False,2025-11-08
+USR-0008,austin.hernandez,austin.hernandez@societe-corp.com,Finance,VP Finance,admin,112,AR_System|GL_Ledger|All_Financial|Merger_Documents|AP_System,22.5,8-18,1559,True,byod_device,restricted,False,1.7,False,3,True,2026-04-20
+USR-0009,blake.garcia,blake.garcia@societe-corp.com,Legal,Compliance Officer,junior,45,Contract_Repository|Legal_Documents|Compliance_DB,2.3,9-18,22,True,company_laptop,public,False,3.4,True,23,False,2026-04-16
+USR-0010,maria.sharma,maria.sharma@societe-corp.com,IT,IT Manager,senior,12,Network_Logs|Financial_Reports|Admin_Console|GL_Ledger,11.8,7-22,1340,False,company_desktop,restricted,False,4.1,True,0,False,2026-04-19
+USR-0011,grace.quinn,grace.quinn@societe-corp.com,Finance,Analyst,admin,19,AR_System|Customer_Reports|GL_Ledger|Financial_Reports|Sales_Pipeline|AP_System,39.1,8-18,3457,False,company_laptop,restricted,False,2.7,True,1,False,2026-04-20
+USR-0012,elena.gonzalez,elena.gonzalez@societe-corp.com,Support,Support Manager,admin,45,Budget_DB|Ticketing_System|Knowledge_Base|Customer_Vault|AP_System,46.5,6-22,2263,False,contractor_machine,confidential,False,4.1,True,1,False,2026-04-06
+USR-0013,nathan.chen,nathan.chen@societe-corp.com,IT,Network Engineer,admin,39,Marketing_Analytics|Campaign_DB|Admin_Console|SIEM_Dashboard|Network_Logs,28.4,7-22,3913,False,company_laptop,restricted,False,3.7,True,0,False,2026-04-14
+USR-0014,jack.moreau,jack.moreau@societe-corp.com,HR,HR Analyst,junior,44,Employee_Records|HR_Database|Benefits_DB|Payroll_System,2.2,9-17,200,True,byod_device,internal,False,3.6,True,1,False,2026-04-11
+USR-0015,uma.johnson,uma.johnson@societe-corp.com,Legal,Paralegal,senior,68,Litigation_DB|Strategic_Plans|Board_Materials|Contract_Repository|Legal_Documents|Compliance_DB,14.8,9-18,813,False,company_desktop,confidential,False,2.8,True,2,False,2026-04-13
+USR-0016,hugo.lopez,hugo.lopez@societe-corp.com,Marketing,Content Strategist,senior,31,Customer_Reports|Marketing_Analytics|Customer_Segments|Revenue_Dashboard|Campaign_DB,13.7,9-18,1804,False,company_desktop,confidential,False,3.3,True,0,False,2026-04-08
+USR-0017,eric.nair,eric.nair@societe-corp.com,IT,Security Engineer,senior,31,Network_Logs|Admin_Console|Inventory_DB|Supply_Chain_DB,26.7,7-22,1687,False,company_laptop,confidential,False,3.4,False,3,False,2026-04-16
+USR-0018,dean.bernard,dean.bernard@societe-corp.com,Engineering,Senior Developer,senior,54,Code_Repository|Knowledge_Base|Ticketing_System|Dev_DB|PROD_DB|CI_CD_Pipeline,13.8,8-20,1418,True,company_laptop,internal,True,3.9,True,0,False,2026-04-14
+USR-0019,ananya.anderson,ananya.anderson@societe-corp.com,Support,Help Desk Analyst,admin,34,Inventory_DB|SLA_Reports|Vendor_Portal|Ticketing_System|Knowledge_Base|Customer_Vault|FAQ_Database,32.1,6-22,2401,False,contractor_machine,restricted,False,4.4,True,0,True,2026-04-18
+USR-0020,andrew.quinn,andrew.quinn@societe-corp.com,HR,HR Manager,senior,77,Employee_Records|Marketing_Analytics|Social_Media_DB|Benefits_DB|Payroll_System|HR_Database|Recruitment_Portal,10.5,9-17,786,False,company_laptop,confidential,False,4.0,True,1,False,2026-04-13
+USR-0021,rhea.pillai,rhea.pillai@societe-corp.com,Legal,Legal Counsel,senior,53,Employee_Records|HR_Database|Legal_Documents|Compliance_DB,24.5,9-18,1610,False,byod_device,restricted,False,3.0,True,0,False,2025-12-13
+USR-0022,eric.verma,eric.verma@societe-corp.com,Finance,Controller,junior,4,GL_Ledger|Financial_Reports|AR_System|AP_System,5.8,8-18,112,False,company_laptop,confidential,False,2.6,True,2,True,2026-04-16
+USR-0023,riya.perez,riya.perez@societe-corp.com,Legal,Chief Compliance Officer,admin,51,Inventory_DB|Logistics_System|Legal_Documents|Compliance_DB,32.1,9-18,2032,False,company_laptop,restricted,False,4.0,True,1,False,2026-04-08
+USR-0024,aisha.harris,aisha.harris@societe-corp.com,HR,Benefits Specialist,senior,30,Employee_Records|Strategic_Plans|Benefits_DB|Merger_Documents|Payroll_System|HR_Database,18.8,9-17,786,False,company_laptop,internal,False,3.3,True,2,False,2026-04-15
+USR-0025,karan.rodriguez,karan.rodriguez@societe-corp.com,Finance,VP Finance,senior,41,Knowledge_Base|GL_Ledger|Customer_Vault|AR_System,25.9,8-18,1053,True,company_laptop,confidential,False,3.1,True,20,True,2026-04-20
+USR-0026,isha.lee,isha.lee@societe-corp.com,Executive,CTO,senior,30,Executive_Dashboard|SLA_Reports|Strategic_Plans|Board_Materials|FAQ_Database,32.7,7-21,874,True,company_laptop,confidential,False,3.6,True,12,True,2026-02-19
+USR-0027,nathan.park,nathan.park@societe-corp.com,Marketing,Marketing Director,senior,18,Ops_Dashboard|Inventory_DB|Social_Media_DB|Marketing_Analytics|Customer_Segments|Campaign_DB,33.1,9-18,1206,False,company_laptop,confidential,False,2.4,True,2,False,2026-04-13
+USR-0028,fatima.fischer,fatima.fischer@societe-corp.com,Marketing,Marketing Director,executive,47,Campaign_DB|Strategic_Plans|Marketing_Analytics|Merger_Documents,3.2,9-18,55,False,company_laptop,internal,False,2.3,True,3,False,2026-04-10
+USR-0029,marcus.harris,marcus.harris@societe-corp.com,Engineering,Tech Lead,senior,36,Code_Repository|Litigation_DB|Dev_DB|PROD_DB|Regulatory_Filings,17.2,8-20,1869,False,company_desktop,confidential,False,3.0,False,3,False,2026-04-08
+USR-0030,diya.zhang,diya.zhang@societe-corp.com,Legal,Legal Counsel,standard,15,Litigation_DB|Contract_Repository|Regulatory_Filings|Legal_Documents|Compliance_DB,6.8,9-18,500,False,company_laptop,confidential,False,5.0,True,9,False,2026-04-16
+USR-0031,divya.becker,divya.becker@societe-corp.com,Support,Support Manager,senior,56,Ops_Dashboard|Inventory_DB|Ticketing_System|Knowledge_Base|Customer_Vault,16.9,6-22,1172,False,company_laptop,restricted,False,2.7,True,3,True,2026-04-13
+USR-0032,victor.menon,victor.menon@societe-corp.com,Support,Support Manager,admin,61,Litigation_DB|SLA_Reports|Ticketing_System|Knowledge_Base|Customer_Vault|FAQ_Database|Compliance_DB,32.3,6-22,2246,False,company_laptop,restricted,False,2.3,True,1,True,2026-04-11
+USR-0033,evan.wilson,evan.wilson@societe-corp.com,Marketing,Content Strategist,executive,72,Social_Media_DB|Marketing_Analytics|Litigation_DB|Market_Research|Customer_Segments|Campaign_DB|Legal_Documents,8.6,9-18,58,False,contractor_machine,restricted,False,4.7,True,0,True,2026-04-15
+USR-0034,shreya.kumar,shreya.kumar@societe-corp.com,IT,IT Manager,admin,65,Customer_Reports|Lead_Database|Backup_System|Admin_Console|SIEM_Dashboard|Network_Logs|Infrastructure_DB,23.1,7-22,3026,False,company_desktop,restricted,False,5.0,False,3,False,2026-04-14
+USR-0035,ananya.iyer,ananya.iyer@societe-corp.com,IT,Security Engineer,standard,43,SIEM_Dashboard|Network_Logs|Admin_Console|Infrastructure_DB,5.3,7-22,329,False,company_laptop,restricted,False,2.8,False,1,False,2026-04-11
+USR-0036,rachel.kim,rachel.kim@societe-corp.com,Sales,Sales Rep,standard,1,CRM_Database|Customer_Reports,18.6,8-19,187,False,company_laptop,internal,False,3.4,False,2,False,2026-04-19
+USR-0037,haruto.nair,haruto.nair@societe-corp.com,Operations,Logistics Coordinator,contractor,8,Ops_Dashboard|Inventory_DB|Supply_Chain_DB|Logistics_System,4.1,8-18,378,False,contractor_machine,internal,False,3.9,True,2,False,2025-11-06
+USR-0038,nisha.rodriguez,nisha.rodriguez@societe-corp.com,Marketing,Marketing Analyst,junior,16,Campaign_DB|Marketing_Analytics,3.4,9-18,159,False,byod_device,internal,False,3.3,True,3,False,2026-04-17
+USR-0039,patrick.zhang,patrick.zhang@societe-corp.com,Support,Help Desk Analyst,junior,1,Knowledge_Base|Customer_Vault|FAQ_Database|Ticketing_System,2.4,6-22,90,True,company_desktop,confidential,True,5.0,True,1,True,2026-04-17
+USR-0040,leela.murphy,leela.murphy@societe-corp.com,Executive,COO,senior,61,Employee_Records|Executive_Dashboard|Strategic_Plans|Board_Materials|Recruitment_Portal,30.0,7-21,1029,True,company_laptop,internal,True,3.5,True,7,False,2026-04-12
+USR-0041,leela.iyer,leela.iyer@societe-corp.com,Engineering,Senior Developer,executive,75,Code_Repository|Ops_Dashboard|Vendor_Portal|Dev_DB|PROD_DB|CI_CD_Pipeline,12.0,8-20,68,False,company_laptop,restricted,False,2.8,True,2,False,2026-04-12
+USR-0042,jaya.li,jaya.li@societe-corp.com,Finance,Analyst,executive,65,AR_System|GL_Ledger|All_Financial|Board_Materials|AP_System,6.7,8-18,19,True,company_desktop,restricted,False,3.1,True,18,True,2026-04-08
+USR-0043,george.garcia,george.garcia@societe-corp.com,Sales,Business Dev,senior,28,Customer_Reports|Litigation_DB|CRM_Database|Lead_Database|Revenue_Dashboard|Sales_Pipeline|Legal_Documents,34.2,8-19,692,False,company_desktop,confidential,False,3.1,True,3,False,2026-04-11
+USR-0044,jack.chen,jack.chen@societe-corp.com,Sales,Sales Manager,senior,65,AR_System|Customer_Reports|Budget_DB|CRM_Database|Lead_Database|Sales_Pipeline,24.2,8-19,100,False,company_laptop,confidential,False,3.1,True,0,False,2026-04-20
+USR-0045,jack.gupta,jack.gupta@societe-corp.com,IT,IT Manager,senior,84,CRM_Database|Revenue_Dashboard|Admin_Console|SIEM_Dashboard|Network_Logs|Infrastructure_DB,18.6,7-22,1598,False,company_laptop,confidential,False,4.3,False,2,True,2026-04-14
+USR-0046,karan.jones,karan.jones@societe-corp.com,Engineering,Senior Developer,admin,64,Code_Repository|PROD_DB|Executive_Dashboard|All_Financial,47.2,8-20,2164,True,contractor_machine,restricted,True,2.8,True,2,True,2026-04-17
+USR-0047,shreya.young,shreya.young@societe-corp.com,Engineering,Tech Lead,executive,108,Code_Repository|Dev_DB|PROD_DB|Legal_Documents|Compliance_DB,7.6,8-20,75,False,company_desktop,restricted,False,4.1,True,0,True,2026-04-08
+USR-0048,gavin.park,gavin.park@societe-corp.com,Marketing,Growth Lead,admin,24,Social_Media_DB|Marketing_Analytics|Customer_Segments|Campaign_DB|Benefits_DB|HR_Database,31.4,9-18,5000,True,byod_device,confidential,True,3.1,True,0,False,2026-04-13
+USR-0049,blake.das,blake.das@societe-corp.com,Engineering,Principal Engineer,admin,78,Code_Repository|Knowledge_Base|Ticketing_System|Dev_DB|Test_Environment|PROD_DB|CI_CD_Pipeline,30.8,8-20,3454,False,company_laptop,internal,False,2.1,True,2,False,2026-04-20
+USR-0050,troy.smith,troy.smith@societe-corp.com,Finance,Analyst,senior,59,AR_System|AP_System|GL_Ledger|Legal_Documents|Compliance_DB,32.9,8-18,1977,False,company_laptop,confidential,False,3.1,True,0,False,2026-04-15
+USR-0051,tatiana.martinez,tatiana.martinez@societe-corp.com,Support,Help Desk Analyst,contractor,3,SLA_Reports|Ticketing_System|Knowledge_Base|Customer_Vault|FAQ_Database,5.3,6-22,662,True,contractor_machine,internal,False,3.5,False,3,True,2026-04-09
+USR-0052,dean.lopez,dean.lopez@societe-corp.com,Legal,Compliance Officer,standard,25,Litigation_DB|Contract_Repository|Legal_Documents|Compliance_DB,16.3,9-18,396,False,company_desktop,internal,False,3.0,True,3,False,2026-04-17
+USR-0053,jaya.kim,jaya.kim@societe-corp.com,Operations,Ops Analyst,senior,24,Ops_Dashboard|Inventory_DB|Customer_Vault|Ticketing_System,12.1,8-18,1327,False,contractor_machine,internal,False,4.2,True,2,True,2026-04-20
+USR-0054,uma.hernandez,uma.hernandez@societe-corp.com,Operations,Supply Chain Lead,admin,47,Ops_Dashboard|Inventory_DB|Executive_Dashboard|All_Financial|Logistics_System,46.7,8-18,4797,False,company_laptop,restricted,False,3.5,True,3,True,2026-04-12
+USR-0055,aisha.rossi,aisha.rossi@societe-corp.com,Sales,Account Executive,standard,33,Lead_Database|CRM_Database|Sales_Pipeline|Customer_Reports,8.6,8-19,131,False,company_laptop,restricted,False,4.1,True,3,False,2025-11-11
+USR-0056,benjamin.taylor,benjamin.taylor@societe-corp.com,IT,Sysadmin,admin,55,Admin_Console|SIEM_Dashboard|Network_Logs|Test_Environment|Infrastructure_DB|CI_CD_Pipeline,37.1,7-22,2913,False,company_desktop,confidential,False,5.0,True,3,True,2026-04-15
+USR-0057,iris.dubois,iris.dubois@societe-corp.com,Operations,Supply Chain Lead,senior,78,Ops_Dashboard|Inventory_DB|Supply_Chain_DB|Litigation_DB|Vendor_Portal|Regulatory_Filings|Logistics_System,18.5,8-18,1331,False,company_desktop,confidential,False,4.6,True,0,True,2026-04-11
+USR-0058,aria.wang,aria.wang@societe-corp.com,IT,IT Manager,senior,79,Marketing_Analytics|Market_Research|Backup_System|Admin_Console|SIEM_Dashboard|Network_Logs|Infrastructure_DB,26.8,7-22,727,False,company_laptop,restricted,False,3.1,True,2,False,2026-04-10
+USR-0059,riya.verma,riya.verma@societe-corp.com,HR,HR Analyst,senior,65,Employee_Records|Contract_Repository|Benefits_DB|Payroll_System|HR_Database|Recruitment_Portal|Compliance_DB,34.0,9-17,1350,False,company_laptop,internal,False,3.6,True,1,True,2026-04-06
+USR-0060,aria.zhang,aria.zhang@societe-corp.com,Support,Help Desk Analyst,senior,36,Employee_Records|Payroll_System|Ticketing_System|Knowledge_Base|Customer_Vault|FAQ_Database,22.7,6-22,928,True,company_desktop,internal,False,3.8,True,14,False,2026-04-13
+USR-0061,simran.brown,simran.brown@societe-corp.com,Legal,Chief Compliance Officer,senior,24,Logistics_System|Supply_Chain_DB|Legal_Documents|Compliance_DB,13.2,9-18,1336,False,byod_device,internal,False,2.6,True,1,True,2026-04-07
+USR-0062,catherine.pillai,catherine.pillai@societe-corp.com,IT,Security Engineer,standard,18,SIEM_Dashboard|Network_Logs|Admin_Console,13.9,7-22,242,True,company_desktop,internal,True,3.7,False,2,False,2026-04-14
+USR-0063,amara.chen,amara.chen@societe-corp.com,Engineering,Principal Engineer,senior,50,Code_Repository|Lead_Database|Sales_Pipeline|Dev_DB|Test_Environment|PROD_DB|CI_CD_Pipeline,21.3,8-20,945,False,byod_device,confidential,False,3.1,True,2,False,2026-04-19
+USR-0064,robert.park,robert.park@societe-corp.com,IT,Sysadmin,junior,36,SIEM_Dashboard|Network_Logs|Admin_Console,6.9,7-22,74,False,byod_device,confidential,False,3.2,True,1,True,2025-12-18
+USR-0065,chase.meyer,chase.meyer@societe-corp.com,HR,HR Analyst,admin,60,Employee_Records|Litigation_DB|Benefits_DB|Payroll_System|HR_Database|Contract_Repository,16.6,9-17,4062,False,company_laptop,confidential,False,3.8,True,0,False,2026-04-15
+USR-0066,finn.kumar,finn.kumar@societe-corp.com,IT,Security Engineer,standard,51,Backup_System|Admin_Console|SIEM_Dashboard|Network_Logs|Infrastructure_DB,12.8,7-22,318,False,company_laptop,restricted,False,4.1,True,3,False,2026-04-15
+USR-0067,wei.jackson,wei.jackson@societe-corp.com,Support,Escalation Lead,senior,26,Knowledge_Base|Board_Materials|Strategic_Plans|Ticketing_System,28.0,6-22,798,True,contractor_machine,restricted,False,3.3,True,15,False,2026-04-17
+USR-0068,nathan.colombo,nathan.colombo@societe-corp.com,Legal,Risk Analyst,executive,75,Legal_Documents|Customer_Vault|Contract_Repository|FAQ_Database|Compliance_DB,7.7,9-18,59,False,company_desktop,restricted,False,2.7,True,1,True,2026-04-16
+USR-0069,dean.reddy,dean.reddy@societe-corp.com,Marketing,Marketing Director,senior,23,Social_Media_DB|Marketing_Analytics|CRM_Database|Customer_Segments|Lead_Database|Campaign_DB,32.4,9-18,705,False,company_laptop,public,False,4.0,True,2,False,2026-04-11
+USR-0070,hugo.patel,hugo.patel@societe-corp.com,IT,Security Engineer,standard,37,Backup_System|Admin_Console|SIEM_Dashboard|Network_Logs|Infrastructure_DB,6.5,7-22,334,False,company_laptop,public,False,3.0,False,0,False,2026-04-12
+USR-0071,hugo.clark,hugo.clark@societe-corp.com,Operations,Ops Manager,senior,62,Ops_Dashboard|Inventory_DB|Compliance_DB|Litigation_DB,33.4,8-18,2000,False,contractor_machine,confidential,False,3.1,True,1,False,2026-04-19
+USR-0072,wei.lewis,wei.lewis@societe-corp.com,Legal,Paralegal,admin,46,Contract_Repository|Benefits_DB|Recruitment_Portal|Legal_Documents|Compliance_DB,43.9,9-18,3456,False,company_laptop,confidential,False,3.5,True,2,False,2026-04-15
+USR-0073,evan.patel,evan.patel@societe-corp.com,Finance,Analyst,senior,81,Employee_Records|AR_System|GL_Ledger|Financial_Reports|Recruitment_Portal|AP_System,25.4,8-18,1099,False,company_laptop,confidential,False,3.9,True,1,False,2026-04-12
+USR-0074,riya.petit,riya.petit@societe-corp.com,Marketing,Marketing Analyst,contractor,11,Campaign_DB|Customer_Segments|Marketing_Analytics,9.9,9-18,814,True,contractor_machine,internal,False,2.0,True,3,False,2026-04-10
+USR-0075,tatiana.burke,tatiana.burke@societe-corp.com,Engineering,Developer,admin,56,Code_Repository|PROD_DB|Strategic_Plans|Executive_Dashboard,33.9,8-20,4963,False,company_laptop,confidential,False,4.1,False,3,False,2026-04-19
+USR-0076,lena.kim,lena.kim@societe-corp.com,Marketing,Content Strategist,junior,16,Campaign_DB|Customer_Segments|Marketing_Analytics,7.0,9-18,124,False,byod_device,internal,False,3.0,True,0,True,2026-04-06
+USR-0077,aisha.patel,aisha.patel@societe-corp.com,IT,Sysadmin,senior,64,Network_Logs|Lead_Database|Admin_Console|CRM_Database,21.0,7-22,278,False,company_laptop,restricted,False,3.2,True,1,True,2026-04-17
+USR-0078,nathan.rodriguez,nathan.rodriguez@societe-corp.com,IT,Security Engineer,contractor,12,Backup_System|Admin_Console|SIEM_Dashboard|Network_Logs|Infrastructure_DB,9.7,7-22,166,True,contractor_machine,internal,False,3.3,True,1,True,2026-04-08
+USR-0079,nisha.garcia,nisha.garcia@societe-corp.com,Sales,VP Sales,admin,78,Customer_Reports|CRM_Database|Customer_Segments|Campaign_DB|Sales_Pipeline,37.6,8-19,4653,False,company_laptop,confidential,False,2.8,True,1,False,2026-04-06
+USR-0080,aditi.murphy,aditi.murphy@societe-corp.com,Support,Support Engineer,admin,99,Ticketing_System|Knowledge_Base|Customer_Vault|Contract_Repository|Compliance_DB,42.1,6-22,1652,True,company_desktop,confidential,False,4.4,True,2,True,2026-04-20
+USR-0081,rahul.davis,rahul.davis@societe-corp.com,HR,HR Manager,senior,56,Employee_Records|Vendor_Portal|Payroll_System|HR_Database|Logistics_System,16.4,9-17,1588,True,company_laptop,internal,False,1.6,False,0,False,2026-04-19
+USR-0082,siri.dubois,siri.dubois@societe-corp.com,Legal,Risk Analyst,junior,33,Contract_Repository|Legal_Documents|Compliance_DB,5.0,9-18,120,True,company_desktop,public,True,3.4,True,2,True,2026-04-10
+USR-0083,shreya.martin,shreya.martin@societe-corp.com,Finance,Analyst,senior,58,AR_System|Litigation_DB|GL_Ledger|Financial_Reports|Contract_Repository|AP_System,12.0,8-18,1559,True,company_laptop,confidential,False,3.3,True,3,False,2026-04-19
+USR-0084,diya.li,diya.li@societe-corp.com,Marketing,Content Strategist,senior,90,Campaign_DB|PROD_DB|Marketing_Analytics|CI_CD_Pipeline,16.8,9-18,1378,False,contractor_machine,confidential,False,4.0,True,3,False,2026-04-11
+USR-0085,emma.smith,emma.smith@societe-corp.com,Engineering,Senior Developer,admin,62,Code_Repository|Customer_Vault|PROD_DB|Ticketing_System,18.4,8-20,2653,False,company_desktop,restricted,False,3.8,True,3,False,2026-04-19
+USR-0086,dean.robinson,dean.robinson@societe-corp.com,Executive,CEO,senior,49,Marketing_Analytics|Executive_Dashboard|Customer_Segments|All_Financial|Strategic_Plans|Board_Materials|Merger_Documents,12.3,7-21,396,True,company_laptop,restricted,False,3.1,True,2,False,2026-04-19
+USR-0087,brett.perez,brett.perez@societe-corp.com,Sales,Account Executive,senior,58,Customer_Reports|Social_Media_DB|CRM_Database|Lead_Database|Customer_Segments|Sales_Pipeline,13.6,8-19,1239,False,company_laptop,confidential,False,4.1,True,0,False,2026-04-08
+USR-0088,wei.zhang,wei.zhang@societe-corp.com,HR,CHRO,senior,78,Employee_Records|Dev_DB|Benefits_DB|Payroll_System|HR_Database|CI_CD_Pipeline,17.3,9-17,946,False,company_laptop,confidential,False,4.3,True,0,False,2026-04-13
+USR-0089,sarah.ghosh,sarah.ghosh@societe-corp.com,Executive,CFO,admin,85,Executive_Dashboard|All_Financial|Strategic_Plans|Board_Materials|Dev_DB|PROD_DB,40.0,7-21,2714,False,company_laptop,restricted,False,3.2,True,0,True,2026-04-18
+USR-0090,wade.das,wade.das@societe-corp.com,Sales,VP Sales,executive,64,Campaign_DB|CRM_Database|Market_Research|Customer_Reports,7.0,8-19,44,True,company_laptop,restricted,False,1.7,True,1,True,2026-04-08
+USR-0091,maria.bernard,maria.bernard@societe-corp.com,Engineering,Tech Lead,senior,98,Code_Repository|Dev_DB|Test_Environment|PROD_DB|Contract_Repository|Legal_Documents|CI_CD_Pipeline,11.1,8-20,1025,False,company_desktop,restricted,False,3.3,True,3,True,2026-04-10
+USR-0092,luke.li,luke.li@societe-corp.com,Engineering,Principal Engineer,executive,57,Code_Repository|CRM_Database|Sales_Pipeline|Dev_DB|PROD_DB,8.2,8-20,55,False,company_laptop,confidential,False,4.2,True,0,True,2026-04-07
+USR-0093,jack.rodriguez,jack.rodriguez@societe-corp.com,Operations,Process Engineer,junior,20,Ops_Dashboard|Inventory_DB,3.4,8-18,142,False,company_laptop,public,False,4.0,False,1,False,2026-04-15
+USR-0094,riya.dubois,riya.dubois@societe-corp.com,Operations,Ops Analyst,senior,31,Ops_Dashboard|Inventory_DB|Supply_Chain_DB|Litigation_DB|Vendor_Portal|Regulatory_Filings|Logistics_System,27.8,8-18,1456,False,company_laptop,confidential,False,3.2,True,3,False,2026-04-08
+USR-0095,tara.thompson,tara.thompson@societe-corp.com,Sales,Sales Rep,admin,110,Customer_Reports|Executive_Dashboard|CRM_Database|Sales_Pipeline|Board_Materials,25.4,8-19,3911,False,company_laptop,restricted,False,3.5,True,3,True,2026-04-17
+USR-0096,anjali.taylor,anjali.taylor@societe-corp.com,Sales,Business Dev,senior,52,Customer_Reports|CRM_Database|Lead_Database|Sales_Pipeline|Ticketing_System|Knowledge_Base,34.1,8-19,673,False,company_laptop,restricted,False,3.1,True,3,True,2026-04-14
+USR-0097,riya.gonzalez,riya.gonzalez@societe-corp.com,Marketing,Marketing Analyst,standard,1,Campaign_DB|Customer_Segments|Social_Media_DB|Marketing_Analytics,11.8,9-18,126,False,company_desktop,confidential,False,3.6,True,3,False,2026-04-16
+USR-0098,xiulan.jones,xiulan.jones@societe-corp.com,Sales,VP Sales,admin,60,AR_System|Customer_Reports|CRM_Database|Lead_Database|Revenue_Dashboard|GL_Ledger|Sales_Pipeline,30.4,8-19,2233,False,contractor_machine,restricted,False,4.1,True,2,False,2025-12-01
+USR-0099,tatiana.o'brien,tatiana.o'brien@societe-corp.com,Engineering,Developer,admin,50,Code_Repository|Backup_System|Network_Logs|Dev_DB|Test_Environment|PROD_DB|CI_CD_Pipeline,33.2,8-20,2456,True,company_laptop,restricted,False,3.5,True,16,False,2026-04-08

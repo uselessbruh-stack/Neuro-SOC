@@ -1,0 +1,1201 @@
+access_id,is_anomaly,anomaly_type,severity,explanation
+ACC-000000,True,BULK_EXPORT,HIGH,Exported 14518 records from Customer_Vault (avg is 166). Volume is 87x normal.
+ACC-000001,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Board_Materials (restricted). Exceeds privilege level.
+ACC-000002,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000003,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000004,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000005,True,BULK_EXPORT,HIGH,Exported 103832 records from Legal_Documents (avg is 1598). Volume is 65x normal.
+ACC-000006,True,BULK_EXPORT,HIGH,Exported 7246 records from Executive_Dashboard (avg is 142). Volume is 51x normal.
+ACC-000007,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000008,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000009,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000010,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000011,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000012,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000013,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000014,True,EXFILTRATION_RISK,CRITICAL,Exported 1946 records from Legal_Documents to personal_device. High exfiltration risk.
+ACC-000015,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000016,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000017,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Backup_System (high). Exceeds privilege level.
+ACC-000018,True,EXFILTRATION_RISK,CRITICAL,Exported 819 records from PROD_DB to usb_drive. High exfiltration risk.
+ACC-000019,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 3485 records from Customer_Vault to cloud_storage. Tenure: 1mo, notice_period=True."
+ACC-000020,True,CROSS_DEPT_ACCESS,MEDIUM,HR employee accessed GL_Ledger (high sensitivity) — not in approved assets.
+ACC-000021,True,EXFILTRATION_RISK,CRITICAL,Exported 27414 records from Merger_Documents to usb_drive. High exfiltration risk.
+ACC-000022,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000023,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000024,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000025,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000026,True,CROSS_DEPT_ACCESS,MEDIUM,Operations employee accessed Employee_Records (restricted sensitivity) — not in approved assets.
+ACC-000027,True,CROSS_DEPT_ACCESS,MEDIUM,Support employee accessed Merger_Documents (restricted sensitivity) — not in approved assets.
+ACC-000028,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000029,True,EXFILTRATION_RISK,CRITICAL,Exported 4035 records from Infrastructure_DB to external_email. High exfiltration risk.
+ACC-000030,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Mumbai (IP: 10.128.118.146). Part of burst pattern.
+ACC-000031,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000032,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000033,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000034,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000035,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000036,True,EXFILTRATION_RISK,CRITICAL,Exported 16036 records from Backup_System to print. High exfiltration risk.
+ACC-000037,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000038,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000039,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000040,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000041,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000042,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000043,True,CROSS_DEPT_ACCESS,MEDIUM,Finance employee accessed AP_System (high sensitivity) — not in approved assets.
+ACC-000044,True,BULK_EXPORT,HIGH,Exported 17380 records from Backup_System (avg is 330). Volume is 53x normal.
+ACC-000045,True,BULK_EXPORT,HIGH,Exported 83960 records from Executive_Dashboard (avg is 2714). Volume is 31x normal.
+ACC-000046,True,CROSS_DEPT_ACCESS,MEDIUM,HR employee accessed CRM_Database (high sensitivity) — not in approved assets.
+ACC-000047,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000048,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000049,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000050,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Mumbai (IP: 10.31.184.199). Part of burst pattern.
+ACC-000051,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000052,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000053,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 20595 records bulk exported from Financial_Reports at 03:55 to external_email. Weak auth (API_Key), geo: Unknown_VPN."
+ACC-000054,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Benefits_DB at 04:03 (outside 8-18 hours).
+ACC-000055,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Benefits_DB at 01:27 (outside 9-18 hours).
+ACC-000056,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000057,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000058,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000059,True,EXFILTRATION_RISK,CRITICAL,Exported 5525 records from Compliance_DB to personal_device. High exfiltration risk.
+ACC-000060,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000061,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000062,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000063,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000064,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000065,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000066,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000067,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000068,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Mumbai (IP: 10.173.211.124). Part of burst pattern.
+ACC-000069,True,EXFILTRATION_RISK,CRITICAL,Exported 781 records from Strategic_Plans to personal_device. High exfiltration risk.
+ACC-000070,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000071,True,CROSS_DEPT_ACCESS,MEDIUM,Executive employee accessed Payroll_System (restricted sensitivity) — not in approved assets.
+ACC-000072,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity AR_System. Equipment policy violation.
+ACC-000073,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Pyongyang (IP: 178.92.192.82). Part of burst pattern.
+ACC-000074,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 24590 records bulk exported from HR_Database at 02:41 to usb_drive. Weak auth (Password_Only), geo: Lagos."
+ACC-000075,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000076,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000077,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000078,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-08; sudden access to All_Financial after extended dormancy.
+ACC-000079,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity CRM_Database. Equipment policy violation.
+ACC-000080,True,BULK_EXPORT,HIGH,Exported 14534 records from Litigation_DB (avg is 385). Volume is 38x normal.
+ACC-000081,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 12582 records from PROD_DB to usb_drive. Tenure: 33mo, notice_period=True."
+ACC-000082,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity Executive_Dashboard. Equipment policy violation.
+ACC-000083,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Strategic_Plans at 02:33 (outside 8-18 hours).
+ACC-000084,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed All_Financial (restricted). Exceeds privilege level.
+ACC-000085,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2026-02-19; sudden access to SLA_Reports after extended dormancy.
+ACC-000086,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000087,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000088,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000089,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 88814 records bulk exported from Merger_Documents at 01:27 to external_email. Weak auth (Password_Only), geo: Mumbai."
+ACC-000090,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Strategic_Plans (restricted). Exceeds privilege level.
+ACC-000091,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000092,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000093,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Admin_Console (medium). Exceeds privilege level.
+ACC-000094,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000095,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000096,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000097,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000098,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000099,True,CROSS_DEPT_ACCESS,MEDIUM,Marketing employee accessed CRM_Database (high sensitivity) — not in approved assets.
+ACC-000100,True,BULK_EXPORT,HIGH,Exported 313436 records from Strategic_Plans (avg is 3456). Volume is 91x normal.
+ACC-000101,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 35998 records bulk exported from Infrastructure_DB at 04:43 to cloud_storage. Weak auth (Password_Only), geo: New_York."
+ACC-000102,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity AP_System. Equipment policy violation.
+ACC-000103,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000104,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000105,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000106,True,CROSS_DEPT_ACCESS,MEDIUM,IT employee accessed CRM_Database (high sensitivity) — not in approved assets.
+ACC-000107,True,BULK_EXPORT,HIGH,Exported 86448 records from All_Financial (avg is 4963). Volume is 17x normal.
+ACC-000108,True,CROSS_DEPT_ACCESS,MEDIUM,IT employee accessed GL_Ledger (high sensitivity) — not in approved assets.
+ACC-000109,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000110,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000111,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000112,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Sydney (IP: 10.176.24.244). Part of burst pattern.
+ACC-000113,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000114,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 31309 records from Board_Materials to external_email. Tenure: 61mo, notice_period=True."
+ACC-000115,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000116,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000117,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Board_Materials (restricted). Exceeds privilege level.
+ACC-000118,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000119,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000120,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000121,True,EXFILTRATION_RISK,CRITICAL,Exported 32038 records from Financial_Reports to cloud_storage. High exfiltration risk.
+ACC-000122,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000123,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000124,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 185.134.170.155) using Custom_ETL. Not matching registered equipment.
+ACC-000125,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000126,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000127,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000128,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000129,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000130,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Admin_Console (medium). Exceeds privilege level.
+ACC-000131,True,BULK_EXPORT,HIGH,Exported 22469 records from GL_Ledger (avg is 1172). Volume is 19x normal.
+ACC-000132,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2026-02-19; sudden access to Executive_Dashboard after extended dormancy.
+ACC-000133,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity AP_System at 05:59 (outside 8-18 hours).
+ACC-000134,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000135,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Singapore (IP: 10.26.139.151). Part of burst pattern.
+ACC-000136,True,CROSS_DEPT_ACCESS,MEDIUM,Finance employee accessed Infrastructure_DB (high sensitivity) — not in approved assets.
+ACC-000137,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000138,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Customer_Vault at 05:44 (outside 8-20 hours).
+ACC-000139,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000140,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000141,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000142,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Tokyo (IP: 10.192.19.84). Part of burst pattern.
+ACC-000143,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Benefits_DB at 01:47 (outside 8-18 hours).
+ACC-000144,True,BULK_EXPORT,HIGH,Exported 355564 records from Merger_Documents (avg is 4062). Volume is 88x normal.
+ACC-000145,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000146,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000147,True,EXFILTRATION_RISK,CRITICAL,Exported 13266 records from CRM_Database to personal_device. High exfiltration risk.
+ACC-000148,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000149,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000150,True,BULK_EXPORT,HIGH,Exported 9486 records from Benefits_DB (avg is 385). Volume is 25x normal.
+ACC-000151,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-18; sudden access to Network_Logs after extended dormancy.
+ACC-000152,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000153,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Board_Materials (restricted). Exceeds privilege level.
+ACC-000154,True,EXFILTRATION_RISK,CRITICAL,Exported 4945 records from Benefits_DB to usb_drive. High exfiltration risk.
+ACC-000155,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Backup_System at 00:03 (outside 7-21 hours).
+ACC-000156,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 3758 records bulk exported from Payroll_System at 00:11 to cloud_storage. Weak auth (API_Key), geo: Tor_Exit_Node."
+ACC-000157,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity GL_Ledger at 03:49 (outside 7-21 hours).
+ACC-000158,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 8956 records from Infrastructure_DB to external_email. Tenure: 18mo, notice_period=True."
+ACC-000159,True,CROSS_DEPT_ACCESS,MEDIUM,Finance employee accessed Customer_Vault (high sensitivity) — not in approved assets.
+ACC-000160,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000161,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000162,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity AR_System at 01:00 (outside 9-18 hours).
+ACC-000163,True,CROSS_DEPT_ACCESS,MEDIUM,IT employee accessed Legal_Documents (high sensitivity) — not in approved assets.
+ACC-000164,True,CROSS_DEPT_ACCESS,MEDIUM,Legal employee accessed Merger_Documents (restricted sensitivity) — not in approved assets.
+ACC-000165,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000166,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000167,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000168,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-01; sudden access to CRM_Database after extended dormancy.
+ACC-000169,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000170,True,BULK_EXPORT,HIGH,Exported 20931 records from Financial_Reports (avg is 1025). Volume is 20x normal.
+ACC-000171,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000172,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000173,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000174,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000175,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Board_Materials (restricted). Exceeds privilege level.
+ACC-000176,True,BULK_EXPORT,HIGH,Exported 134228 records from AR_System (avg is 2456). Volume is 55x normal.
+ACC-000177,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000178,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000179,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Merger_Documents at 05:45 (outside 7-22 hours).
+ACC-000180,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000181,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Contract_Repository at 23:02 (outside 9-18 hours).
+ACC-000182,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000183,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 91520 records bulk exported from GL_Ledger at 01:01 to cloud_storage. Weak auth (API_Key), geo: Caracas."
+ACC-000184,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000185,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000186,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000187,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Executive_Dashboard at 22:12 (outside 9-18 hours).
+ACC-000188,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000189,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity AR_System at 03:59 (outside 8-20 hours).
+ACC-000190,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000191,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000192,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Infrastructure_DB (high). Exceeds privilege level.
+ACC-000193,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000194,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000195,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000196,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000197,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000198,True,BULK_EXPORT,HIGH,Exported 8193 records from Financial_Reports (avg is 124). Volume is 66x normal.
+ACC-000199,True,BULK_EXPORT,HIGH,Exported 116717 records from Strategic_Plans (avg is 3456). Volume is 34x normal.
+ACC-000200,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Contract_Repository at 05:23 (outside 9-18 hours).
+ACC-000201,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Benefits_DB at 04:51 (outside 8-18 hours).
+ACC-000202,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000203,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000204,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Merger_Documents at 23:38 (outside 9-18 hours).
+ACC-000205,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 214321 records from Merger_Documents to cloud_storage. Tenure: 24mo, notice_period=True."
+ACC-000206,True,CROSS_DEPT_ACCESS,MEDIUM,HR employee accessed CRM_Database (high sensitivity) — not in approved assets.
+ACC-000207,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000208,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 7275 records from PROD_DB to cloud_storage. Tenure: 33mo, notice_period=True."
+ACC-000209,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Strategic_Plans (restricted). Exceeds privilege level.
+ACC-000210,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000211,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Caracas (IP: 45.27.176.77). Part of burst pattern.
+ACC-000212,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000213,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000214,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000215,True,BULK_EXPORT,HIGH,Exported 98170 records from PROD_DB (avg is 1350). Volume is 73x normal.
+ACC-000216,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000217,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000218,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000219,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 35930 records from Strategic_Plans to personal_device. Tenure: 61mo, notice_period=True."
+ACC-000220,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 203480 records bulk exported from Customer_Vault at 04:56 to cloud_storage. Weak auth (Password_Only), geo: Unknown_VPN."
+ACC-000221,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing restricted-sensitivity Board_Materials. Equipment policy violation.
+ACC-000222,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Strategic_Plans (restricted). Exceeds privilege level.
+ACC-000223,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Strategic_Plans at 04:49 (outside 7-22 hours).
+ACC-000224,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000225,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000226,True,CROSS_DEPT_ACCESS,MEDIUM,HR employee accessed Merger_Documents (restricted sensitivity) — not in approved assets.
+ACC-000227,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000228,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000229,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Tor_Exit_Node (IP: 178.251.186.164). Part of burst pattern.
+ACC-000230,True,CROSS_DEPT_ACCESS,MEDIUM,Engineering employee accessed Backup_System (high sensitivity) — not in approved assets.
+ACC-000231,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000232,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000233,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000234,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000235,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000236,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000237,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000238,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-13; sudden access to Legal_Documents after extended dormancy.
+ACC-000239,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000240,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Backup_System at 01:04 (outside 8-20 hours).
+ACC-000241,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 8220 records bulk exported from Infrastructure_DB at 04:32 to external_email. Weak auth (Password_Only), geo: Pyongyang."
+ACC-000242,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000243,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000244,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000245,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000246,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity GL_Ledger. Equipment policy violation.
+ACC-000247,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000248,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000249,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000250,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000251,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000252,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000253,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Tor_Exit_Node (IP: 178.28.108.110). Part of burst pattern.
+ACC-000254,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000255,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 25224 records from PROD_DB to external_email. Tenure: 54mo, notice_period=True."
+ACC-000256,True,BULK_EXPORT,HIGH,Exported 29135 records from AR_System (avg is 318). Volume is 92x normal.
+ACC-000257,True,CROSS_DEPT_ACCESS,MEDIUM,Finance employee accessed HR_Database (high sensitivity) — not in approved assets.
+ACC-000258,True,CROSS_DEPT_ACCESS,MEDIUM,Support employee accessed Litigation_DB (restricted sensitivity) — not in approved assets.
+ACC-000259,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Benefits_DB at 23:00 (outside 9-18 hours).
+ACC-000260,True,CROSS_DEPT_ACCESS,MEDIUM,Engineering employee accessed AR_System (high sensitivity) — not in approved assets.
+ACC-000261,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000262,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000263,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 65397 records from PROD_DB to cloud_storage. Tenure: 64mo, notice_period=True."
+ACC-000264,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Board_Materials (restricted). Exceeds privilege level.
+ACC-000265,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000266,True,BULK_EXPORT,HIGH,Exported 58942 records from Strategic_Plans (avg is 814). Volume is 72x normal.
+ACC-000267,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000268,True,BULK_EXPORT,HIGH,Exported 11738 records from Strategic_Plans (avg is 1053). Volume is 11x normal.
+ACC-000269,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000270,True,BULK_EXPORT,HIGH,Exported 6404 records from AP_System (avg is 75). Volume is 85x normal.
+ACC-000271,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000272,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Sydney (IP: 10.198.198.18). Part of burst pattern.
+ACC-000273,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000274,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000275,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 28376 records bulk exported from Benefits_DB at 00:31 to usb_drive. Weak auth (Password_Only), geo: New_York."
+ACC-000276,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-06; sudden access to Supply_Chain_DB after extended dormancy.
+ACC-000277,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 237057 records from All_Financial to personal_device. Tenure: 24mo, notice_period=True."
+ACC-000278,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000279,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000280,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000281,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000282,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 203845 records bulk exported from GL_Ledger at 00:27 to usb_drive. Weak auth (Password_Only), geo: Pyongyang."
+ACC-000283,True,EXFILTRATION_RISK,CRITICAL,Exported 454 records from GL_Ledger to usb_drive. High exfiltration risk.
+ACC-000284,True,BULK_EXPORT,HIGH,Exported 197468 records from Customer_Vault (avg is 2653). Volume is 74x normal.
+ACC-000285,True,BULK_EXPORT,HIGH,Exported 62120 records from Customer_Vault (avg is 1025). Volume is 61x normal.
+ACC-000286,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000287,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2026-02-19; sudden access to Executive_Dashboard after extended dormancy.
+ACC-000288,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000289,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Merger_Documents (restricted). Exceeds privilege level.
+ACC-000290,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Pyongyang (IP: 45.102.207.125). Part of burst pattern.
+ACC-000291,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000292,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000293,True,EXFILTRATION_RISK,CRITICAL,Exported 8002 records from HR_Database to external_email. High exfiltration risk.
+ACC-000294,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000295,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000296,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000297,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000298,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000299,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000300,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000301,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000302,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000303,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000304,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000305,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000306,True,EXFILTRATION_RISK,CRITICAL,Exported 1008 records from Merger_Documents to print. High exfiltration risk.
+ACC-000307,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000308,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000309,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000310,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 185.148.224.33) using Python_Script. Not matching registered equipment.
+ACC-000311,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity All_Financial at 01:33 (outside 8-18 hours).
+ACC-000312,True,CROSS_DEPT_ACCESS,MEDIUM,Marketing employee accessed GL_Ledger (high sensitivity) — not in approved assets.
+ACC-000313,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000314,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000315,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000316,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-13; sudden access to HR_Database after extended dormancy.
+ACC-000317,True,EXFILTRATION_RISK,CRITICAL,Exported 12975 records from Merger_Documents to external_email. High exfiltration risk.
+ACC-000318,True,CROSS_DEPT_ACCESS,MEDIUM,Legal employee accessed Infrastructure_DB (high sensitivity) — not in approved assets.
+ACC-000319,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000320,True,CROSS_DEPT_ACCESS,MEDIUM,Sales employee accessed All_Financial (restricted sensitivity) — not in approved assets.
+ACC-000321,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000322,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-01; sudden access to GL_Ledger after extended dormancy.
+ACC-000323,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 5715 records bulk exported from Litigation_DB at 01:44 to external_email. Weak auth (Password_Only), geo: New_York."
+ACC-000324,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000325,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 203.134.203.251) using Custom_ETL. Not matching registered equipment.
+ACC-000326,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Employee_Records at 22:40 (outside 6-22 hours).
+ACC-000327,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000328,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000329,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Unknown_VPN (IP: 91.188.10.137). Part of burst pattern.
+ACC-000330,True,BULK_EXPORT,HIGH,Exported 178018 records from Financial_Reports (avg is 2714). Volume is 66x normal.
+ACC-000331,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 91.2.253.44) using Custom_ETL. Not matching registered equipment.
+ACC-000332,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000333,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000334,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000335,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-08; sudden access to Merger_Documents after extended dormancy.
+ACC-000336,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Caracas (IP: 178.43.160.91). Part of burst pattern.
+ACC-000337,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000338,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000339,True,CROSS_DEPT_ACCESS,MEDIUM,Legal employee accessed Infrastructure_DB (high sensitivity) — not in approved assets.
+ACC-000340,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Tor_Exit_Node (IP: 91.70.2.105). Part of burst pattern.
+ACC-000341,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Admin_Console (medium). Exceeds privilege level.
+ACC-000342,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000343,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000344,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000345,True,BULK_EXPORT,HIGH,Exported 8721 records from Customer_Vault (avg is 120). Volume is 73x normal.
+ACC-000346,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 24040 records bulk exported from Backup_System at 02:57 to external_email. Weak auth (API_Key), geo: Lagos."
+ACC-000347,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Tokyo (IP: 10.79.109.145). Part of burst pattern.
+ACC-000348,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Payroll_System at 02:51 (outside 7-22 hours).
+ACC-000349,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000350,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000351,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000352,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000353,True,CROSS_DEPT_ACCESS,MEDIUM,Operations employee accessed Strategic_Plans (restricted sensitivity) — not in approved assets.
+ACC-000354,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000355,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000356,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 49119 records from Board_Materials to external_email. Tenure: 61mo, notice_period=True."
+ACC-000357,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000358,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000359,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000360,True,BULK_EXPORT,HIGH,Exported 6812 records from Payroll_System (avg is 90). Volume is 76x normal.
+ACC-000361,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 38917 records bulk exported from All_Financial at 02:51 to external_email. Weak auth (API_Key), geo: Pyongyang."
+ACC-000362,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 45.174.237.249) using Custom_ETL. Not matching registered equipment.
+ACC-000363,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000364,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000365,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-08; sudden access to All_Financial after extended dormancy.
+ACC-000366,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000367,True,EXFILTRATION_RISK,CRITICAL,Exported 2714 records from Customer_Vault to print. High exfiltration risk.
+ACC-000368,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Financial_Reports at 04:23 (outside 9-18 hours).
+ACC-000369,True,EXFILTRATION_RISK,CRITICAL,Exported 926 records from Strategic_Plans to personal_device. High exfiltration risk.
+ACC-000370,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity AP_System. Equipment policy violation.
+ACC-000371,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Unknown_VPN (IP: 178.58.36.157). Part of burst pattern.
+ACC-000372,True,CROSS_DEPT_ACCESS,MEDIUM,Engineering employee accessed Litigation_DB (restricted sensitivity) — not in approved assets.
+ACC-000373,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 46805 records from PROD_DB to personal_device. Tenure: 64mo, notice_period=True."
+ACC-000374,True,BULK_EXPORT,HIGH,Exported 101237 records from Merger_Documents (avg is 1239). Volume is 82x normal.
+ACC-000375,True,EXFILTRATION_RISK,CRITICAL,Exported 863 records from Customer_Vault to personal_device. High exfiltration risk.
+ACC-000376,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000377,True,EXFILTRATION_RISK,CRITICAL,Exported 18666 records from AP_System to personal_device. High exfiltration risk.
+ACC-000378,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000379,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000380,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000381,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity GL_Ledger at 03:28 (outside 8-20 hours).
+ACC-000382,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Executive_Dashboard at 04:12 (outside 9-18 hours).
+ACC-000383,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000384,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000385,True,CROSS_DEPT_ACCESS,MEDIUM,Legal employee accessed CRM_Database (high sensitivity) — not in approved assets.
+ACC-000386,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000387,True,BULK_EXPORT,HIGH,Exported 4104 records from CRM_Database (avg is 142). Volume is 29x normal.
+ACC-000388,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000389,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000390,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000391,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000392,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000393,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 33747 records bulk exported from GL_Ledger at 01:26 to usb_drive. Weak auth (API_Key), geo: Tor_Exit_Node."
+ACC-000394,True,CROSS_DEPT_ACCESS,MEDIUM,Sales employee accessed Strategic_Plans (restricted sensitivity) — not in approved assets.
+ACC-000395,True,CROSS_DEPT_ACCESS,MEDIUM,Operations employee accessed Compliance_DB (high sensitivity) — not in approved assets.
+ACC-000396,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity HR_Database at 05:15 (outside 8-18 hours).
+ACC-000397,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000398,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000399,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-13; sudden access to Compliance_DB after extended dormancy.
+ACC-000400,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity HR_Database at 00:49 (outside 8-18 hours).
+ACC-000401,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000402,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 3455 records from Backup_System to cloud_storage. Tenure: 18mo, notice_period=True."
+ACC-000403,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000404,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000405,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000406,True,BULK_EXPORT,HIGH,Exported 287235 records from Backup_System (avg is 3913). Volume is 73x normal.
+ACC-000407,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000408,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000409,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000410,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000411,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Tor_Exit_Node (IP: 203.7.137.155). Part of burst pattern.
+ACC-000412,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Strategic_Plans at 00:41 (outside 9-18 hours).
+ACC-000413,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000414,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000415,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Merger_Documents (restricted). Exceeds privilege level.
+ACC-000416,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Admin_Console (medium). Exceeds privilege level.
+ACC-000417,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Pyongyang (IP: 185.67.220.58). Part of burst pattern.
+ACC-000418,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000419,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000420,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000421,True,BULK_EXPORT,HIGH,Exported 43053 records from AR_System (avg is 1239). Volume is 35x normal.
+ACC-000422,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000423,True,CROSS_DEPT_ACCESS,MEDIUM,Executive employee accessed HR_Database (high sensitivity) — not in approved assets.
+ACC-000424,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed SIEM_Dashboard (medium). Exceeds privilege level.
+ACC-000425,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000426,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000427,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000428,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000429,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000430,True,CROSS_DEPT_ACCESS,MEDIUM,Legal employee accessed Backup_System (high sensitivity) — not in approved assets.
+ACC-000431,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 2856 records bulk exported from Financial_Reports at 04:06 to external_email. Weak auth (API_Key), geo: Lagos."
+ACC-000432,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000433,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000434,True,EXFILTRATION_RISK,CRITICAL,Exported 2782 records from All_Financial to cloud_storage. High exfiltration risk.
+ACC-000435,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity CRM_Database at 03:26 (outside 8-20 hours).
+ACC-000436,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000437,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000438,True,CROSS_DEPT_ACCESS,MEDIUM,HR employee accessed Backup_System (high sensitivity) — not in approved assets.
+ACC-000439,True,BULK_EXPORT,HIGH,Exported 6111 records from Executive_Dashboard (avg is 500). Volume is 12x normal.
+ACC-000440,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Employee_Records at 00:35 (outside 8-19 hours).
+ACC-000441,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000442,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 7332 records from Backup_System to personal_device. Tenure: 18mo, notice_period=True."
+ACC-000443,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000444,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000445,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing restricted-sensitivity Employee_Records. Equipment policy violation.
+ACC-000446,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000447,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity All_Financial at 23:24 (outside 7-21 hours).
+ACC-000448,True,CROSS_DEPT_ACCESS,MEDIUM,Engineering employee accessed Strategic_Plans (restricted sensitivity) — not in approved assets.
+ACC-000449,True,EXFILTRATION_RISK,CRITICAL,Exported 42888 records from Financial_Reports to usb_drive. High exfiltration risk.
+ACC-000450,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000451,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Merger_Documents at 22:29 (outside 9-18 hours).
+ACC-000452,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000453,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000454,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000455,True,EXFILTRATION_RISK,CRITICAL,Exported 4671 records from Strategic_Plans to print. High exfiltration risk.
+ACC-000456,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000457,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000458,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed All_Financial (restricted). Exceeds privilege level.
+ACC-000459,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 7178 records from Strategic_Plans to personal_device. Tenure: 61mo, notice_period=True."
+ACC-000460,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Pyongyang (IP: 91.202.116.180). Part of burst pattern.
+ACC-000461,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000462,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000463,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-18; sudden access to Admin_Console after extended dormancy.
+ACC-000464,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000465,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000466,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000467,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000468,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000469,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000470,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000471,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000472,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Board_Materials (restricted). Exceeds privilege level.
+ACC-000473,True,EXFILTRATION_RISK,CRITICAL,Exported 28289 records from Contract_Repository to personal_device. High exfiltration risk.
+ACC-000474,True,EXFILTRATION_RISK,CRITICAL,Exported 18532 records from Litigation_DB to print. High exfiltration risk.
+ACC-000475,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Merger_Documents (restricted). Exceeds privilege level.
+ACC-000476,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed SIEM_Dashboard (medium). Exceeds privilege level.
+ACC-000477,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from New_York (IP: 10.192.66.185). Part of burst pattern.
+ACC-000478,True,EXFILTRATION_RISK,CRITICAL,Exported 6933 records from Financial_Reports to cloud_storage. High exfiltration risk.
+ACC-000479,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Backup_System (high). Exceeds privilege level.
+ACC-000480,True,BULK_EXPORT,HIGH,Exported 309998 records from Legal_Documents (avg is 4797). Volume is 65x normal.
+ACC-000481,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 1559 records from Customer_Vault to external_email. Tenure: 1mo, notice_period=True."
+ACC-000482,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000483,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000484,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000485,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000486,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000487,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000488,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000489,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000490,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000491,True,EXFILTRATION_RISK,CRITICAL,Exported 11805 records from GL_Ledger to external_email. High exfiltration risk.
+ACC-000492,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000493,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000494,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Legal_Documents at 01:31 (outside 9-18 hours).
+ACC-000495,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000496,True,CROSS_DEPT_ACCESS,MEDIUM,IT employee accessed CRM_Database (high sensitivity) — not in approved assets.
+ACC-000497,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000498,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000499,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000500,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000501,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000502,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000503,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity AR_System at 05:22 (outside 7-22 hours).
+ACC-000504,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000505,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Tokyo (IP: 10.82.33.148). Part of burst pattern.
+ACC-000506,True,BULK_EXPORT,HIGH,Exported 14055 records from Strategic_Plans (avg is 727). Volume is 19x normal.
+ACC-000507,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity Backup_System. Equipment policy violation.
+ACC-000508,True,CROSS_DEPT_ACCESS,MEDIUM,Marketing employee accessed AP_System (high sensitivity) — not in approved assets.
+ACC-000509,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-18; sudden access to Admin_Console after extended dormancy.
+ACC-000510,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 12740 records from PROD_DB to cloud_storage. Tenure: 33mo, notice_period=True."
+ACC-000511,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000512,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000513,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000514,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000515,True,EXFILTRATION_RISK,CRITICAL,Exported 1246 records from All_Financial to personal_device. High exfiltration risk.
+ACC-000516,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000517,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000518,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000519,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-01; sudden access to Revenue_Dashboard after extended dormancy.
+ACC-000520,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Sydney (IP: 10.184.66.76). Part of burst pattern.
+ACC-000521,True,EXFILTRATION_RISK,CRITICAL,Exported 62 records from Merger_Documents to external_email. High exfiltration risk.
+ACC-000522,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000523,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000524,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000525,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-08; sudden access to Board_Materials after extended dormancy.
+ACC-000526,True,BULK_EXPORT,HIGH,Exported 1989 records from Employee_Records (avg is 120). Volume is 17x normal.
+ACC-000527,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000528,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000529,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000530,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000531,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Singapore (IP: 10.5.182.84). Part of burst pattern.
+ACC-000532,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000533,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000534,True,BULK_EXPORT,HIGH,Exported 279656 records from Benefits_DB (avg is 3911). Volume is 72x normal.
+ACC-000535,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000536,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000537,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000538,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Board_Materials at 00:23 (outside 9-18 hours).
+ACC-000539,True,BULK_EXPORT,HIGH,Exported 8707 records from Financial_Reports (avg is 200). Volume is 44x normal.
+ACC-000540,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000541,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000542,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000543,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000544,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000545,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from London (IP: 10.154.70.127). Part of burst pattern.
+ACC-000546,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000547,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000548,True,CROSS_DEPT_ACCESS,MEDIUM,Finance employee accessed Employee_Records (restricted sensitivity) — not in approved assets.
+ACC-000549,True,CROSS_DEPT_ACCESS,MEDIUM,Engineering employee accessed Contract_Repository (high sensitivity) — not in approved assets.
+ACC-000550,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Employee_Records at 05:19 (outside 9-18 hours).
+ACC-000551,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity Compliance_DB. Equipment policy violation.
+ACC-000552,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000553,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000554,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000555,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000556,True,BULK_EXPORT,HIGH,Exported 35939 records from Executive_Dashboard (avg is 1239). Volume is 29x normal.
+ACC-000557,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000558,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000559,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000560,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000561,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Strategic_Plans (restricted). Exceeds privilege level.
+ACC-000562,True,BULK_EXPORT,HIGH,Exported 2606 records from GL_Ledger (avg is 166). Volume is 16x normal.
+ACC-000563,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Backup_System (high). Exceeds privilege level.
+ACC-000564,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 101694 records from PROD_DB to cloud_storage. Tenure: 64mo, notice_period=True."
+ACC-000565,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Singapore (IP: 10.236.233.41). Part of burst pattern.
+ACC-000566,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000567,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 3464 records from Customer_Vault to usb_drive. Tenure: 1mo, notice_period=True."
+ACC-000568,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-06; sudden access to Logistics_System after extended dormancy.
+ACC-000569,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000570,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000571,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000572,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000573,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000574,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000575,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000576,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000577,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000578,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000579,True,CROSS_DEPT_ACCESS,MEDIUM,Support employee accessed AR_System (high sensitivity) — not in approved assets.
+ACC-000580,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000581,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000582,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity Backup_System. Equipment policy violation.
+ACC-000583,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000584,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Legal_Documents at 23:33 (outside 8-20 hours).
+ACC-000585,True,BULK_EXPORT,HIGH,Exported 76043 records from AR_System (avg is 786). Volume is 97x normal.
+ACC-000586,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity CRM_Database at 03:51 (outside 9-18 hours).
+ACC-000587,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-01; sudden access to Lead_Database after extended dormancy.
+ACC-000588,True,CROSS_DEPT_ACCESS,MEDIUM,Engineering employee accessed Customer_Vault (high sensitivity) — not in approved assets.
+ACC-000589,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Employee_Records at 02:45 (outside 8-20 hours).
+ACC-000590,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000591,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000592,True,CROSS_DEPT_ACCESS,MEDIUM,HR employee accessed AP_System (high sensitivity) — not in approved assets.
+ACC-000593,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2026-02-19; sudden access to Board_Materials after extended dormancy.
+ACC-000594,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000595,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000596,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-08; sudden access to All_Financial after extended dormancy.
+ACC-000597,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000598,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000599,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-01; sudden access to Lead_Database after extended dormancy.
+ACC-000600,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Admin_Console (medium). Exceeds privilege level.
+ACC-000601,True,BULK_EXPORT,HIGH,Exported 1323 records from Employee_Records (avg is 112). Volume is 12x normal.
+ACC-000602,True,CROSS_DEPT_ACCESS,MEDIUM,Legal employee accessed PROD_DB (high sensitivity) — not in approved assets.
+ACC-000603,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Merger_Documents (restricted). Exceeds privilege level.
+ACC-000604,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000605,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000606,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000607,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2026-02-19; sudden access to Strategic_Plans after extended dormancy.
+ACC-000608,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-13; sudden access to Legal_Documents after extended dormancy.
+ACC-000609,True,CROSS_DEPT_ACCESS,MEDIUM,Sales employee accessed PROD_DB (high sensitivity) — not in approved assets.
+ACC-000610,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 14011 records bulk exported from HR_Database at 03:52 to external_email. Weak auth (API_Key), geo: New_York."
+ACC-000611,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 3703 records bulk exported from Merger_Documents at 04:38 to external_email. Weak auth (Password_Only), geo: Tor_Exit_Node."
+ACC-000612,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-11; sudden access to Customer_Reports after extended dormancy.
+ACC-000613,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 46428 records from PROD_DB to external_email. Tenure: 54mo, notice_period=True."
+ACC-000614,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Board_Materials at 03:51 (outside 6-22 hours).
+ACC-000615,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 17197 records from Strategic_Plans to personal_device. Tenure: 61mo, notice_period=True."
+ACC-000616,True,BULK_EXPORT,HIGH,Exported 273078 records from Financial_Reports (avg is 3456). Volume is 79x normal.
+ACC-000617,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-06; sudden access to Logistics_System after extended dormancy.
+ACC-000618,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-08; sudden access to Social_Media_DB after extended dormancy.
+ACC-000619,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000620,True,EXFILTRATION_RISK,CRITICAL,Exported 13708 records from PROD_DB to external_email. High exfiltration risk.
+ACC-000621,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000622,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000623,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-18; sudden access to Admin_Console after extended dormancy.
+ACC-000624,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000625,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000626,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 45663 records from All_Financial to external_email. Tenure: 61mo, notice_period=True."
+ACC-000627,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000628,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity AR_System. Equipment policy violation.
+ACC-000629,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000630,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000631,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000632,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000633,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000634,True,BULK_EXPORT,HIGH,Exported 306541 records from Customer_Vault (avg is 3457). Volume is 89x normal.
+ACC-000635,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Executive_Dashboard at 05:57 (outside 9-18 hours).
+ACC-000636,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Litigation_DB at 01:06 (outside 7-22 hours).
+ACC-000637,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000638,True,CROSS_DEPT_ACCESS,MEDIUM,Operations employee accessed CRM_Database (high sensitivity) — not in approved assets.
+ACC-000639,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Payroll_System at 05:49 (outside 8-18 hours).
+ACC-000640,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000641,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000642,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000643,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000644,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000645,True,BULK_EXPORT,HIGH,Exported 7010 records from Customer_Vault (avg is 242). Volume is 29x normal.
+ACC-000646,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000647,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000648,True,EXFILTRATION_RISK,CRITICAL,Exported 19114 records from GL_Ledger to usb_drive. High exfiltration risk.
+ACC-000649,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity Customer_Vault. Equipment policy violation.
+ACC-000650,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000651,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity GL_Ledger at 01:33 (outside 8-20 hours).
+ACC-000652,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-01; sudden access to Sales_Pipeline after extended dormancy.
+ACC-000653,True,BULK_EXPORT,HIGH,Exported 2434 records from CRM_Database (avg is 75). Volume is 32x normal.
+ACC-000654,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000655,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000656,True,EXFILTRATION_RISK,CRITICAL,Exported 4772 records from Backup_System to cloud_storage. High exfiltration risk.
+ACC-000657,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000658,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-01; sudden access to Lead_Database after extended dormancy.
+ACC-000659,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000660,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Unknown_VPN (IP: 178.200.29.137). Part of burst pattern.
+ACC-000661,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000662,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000663,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000664,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000665,True,CROSS_DEPT_ACCESS,MEDIUM,Engineering employee accessed AP_System (high sensitivity) — not in approved assets.
+ACC-000666,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000667,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000668,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000669,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000670,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity HR_Database at 01:31 (outside 7-21 hours).
+ACC-000671,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Tokyo (IP: 10.129.211.1). Part of burst pattern.
+ACC-000672,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-08; sudden access to All_Financial after extended dormancy.
+ACC-000673,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity AR_System at 00:16 (outside 7-22 hours).
+ACC-000674,True,EXFILTRATION_RISK,CRITICAL,Exported 3608 records from Contract_Repository to usb_drive. High exfiltration risk.
+ACC-000675,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000676,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Pyongyang (IP: 203.114.223.191). Part of burst pattern.
+ACC-000677,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000678,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000679,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000680,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000681,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000682,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000683,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000684,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000685,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000686,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000687,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000688,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Lagos (IP: 91.210.173.187). Part of burst pattern.
+ACC-000689,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 185.68.166.20) using Python_Script. Not matching registered equipment.
+ACC-000690,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000691,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000692,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000693,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Singapore (IP: 10.17.229.8). Part of burst pattern.
+ACC-000694,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 45.10.3.65) using curl. Not matching registered equipment.
+ACC-000695,True,EXFILTRATION_RISK,CRITICAL,Exported 67618 records from PROD_DB to personal_device. High exfiltration risk.
+ACC-000696,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed All_Financial (restricted). Exceeds privilege level.
+ACC-000697,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000698,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000699,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Admin_Console (medium). Exceeds privilege level.
+ACC-000700,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 57419 records from PROD_DB to usb_drive. Tenure: 54mo, notice_period=True."
+ACC-000701,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 2745 records from Litigation_DB to usb_drive. Tenure: 33mo, notice_period=True."
+ACC-000702,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000703,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000704,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000705,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000706,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000707,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000708,True,BULK_EXPORT,HIGH,Exported 2914 records from Infrastructure_DB (avg is 131). Volume is 22x normal.
+ACC-000709,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000710,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Unknown_VPN (IP: 178.169.162.48). Part of burst pattern.
+ACC-000711,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Merger_Documents at 03:38 (outside 8-18 hours).
+ACC-000712,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000713,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000714,True,BULK_EXPORT,HIGH,Exported 136585 records from Executive_Dashboard (avg is 1869). Volume is 73x normal.
+ACC-000715,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed All_Financial (restricted). Exceeds privilege level.
+ACC-000716,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from London (IP: 10.135.51.244). Part of burst pattern.
+ACC-000717,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000718,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000719,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000720,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000721,True,CROSS_DEPT_ACCESS,MEDIUM,Engineering employee accessed Board_Materials (restricted sensitivity) — not in approved assets.
+ACC-000722,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000723,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 91.171.103.97) using curl. Not matching registered equipment.
+ACC-000724,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 50437 records bulk exported from AP_System at 01:16 to usb_drive. Weak auth (API_Key), geo: Lagos."
+ACC-000725,True,BULK_EXPORT,HIGH,Exported 20823 records from Legal_Documents (avg is 692). Volume is 30x normal.
+ACC-000726,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000727,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000728,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000729,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Unknown_VPN (IP: 185.234.92.79). Part of burst pattern.
+ACC-000730,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000731,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000732,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000733,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 4381 records from Infrastructure_DB to cloud_storage. Tenure: 18mo, notice_period=True."
+ACC-000734,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000735,True,CROSS_DEPT_ACCESS,MEDIUM,IT employee accessed Backup_System (high sensitivity) — not in approved assets.
+ACC-000736,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000737,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000738,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Compliance_DB at 02:23 (outside 7-22 hours).
+ACC-000739,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 141477 records from Benefits_DB to external_email. Tenure: 24mo, notice_period=True."
+ACC-000740,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-08; sudden access to Market_Research after extended dormancy.
+ACC-000741,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from London (IP: 10.75.79.242). Part of burst pattern.
+ACC-000742,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000743,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000744,True,EXFILTRATION_RISK,CRITICAL,Exported 8453 records from Legal_Documents to cloud_storage. High exfiltration risk.
+ACC-000745,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000746,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000747,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000748,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000749,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000750,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000751,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000752,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 962 records from Contract_Repository to cloud_storage. Tenure: 33mo, notice_period=True."
+ACC-000753,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 14096 records from PROD_DB to external_email. Tenure: 33mo, notice_period=True."
+ACC-000754,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000755,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000756,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing restricted-sensitivity Payroll_System. Equipment policy violation.
+ACC-000757,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 18795 records from PROD_DB to cloud_storage. Tenure: 54mo, notice_period=True."
+ACC-000758,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity All_Financial at 01:02 (outside 7-22 hours).
+ACC-000759,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000760,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from London (IP: 10.238.125.166). Part of burst pattern.
+ACC-000761,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity AR_System at 05:34 (outside 8-20 hours).
+ACC-000762,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000763,True,BULK_EXPORT,HIGH,Exported 94196 records from Board_Materials (avg is 1172). Volume is 80x normal.
+ACC-000764,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000765,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000766,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000767,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000768,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 7478 records from Backup_System to personal_device. Tenure: 18mo, notice_period=True."
+ACC-000769,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000770,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000771,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Board_Materials at 00:44 (outside 9-18 hours).
+ACC-000772,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000773,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 178.126.7.48) using curl. Not matching registered equipment.
+ACC-000774,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 64643 records from Customer_Vault to personal_device. Tenure: 24mo, notice_period=True."
+ACC-000775,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 5827 records from Executive_Dashboard to usb_drive. Tenure: 61mo, notice_period=True."
+ACC-000776,True,EXFILTRATION_RISK,CRITICAL,Exported 73550 records from Board_Materials to personal_device. High exfiltration risk.
+ACC-000777,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000778,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-18; sudden access to Network_Logs after extended dormancy.
+ACC-000779,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000780,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Admin_Console (medium). Exceeds privilege level.
+ACC-000781,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000782,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000783,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000784,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000785,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000786,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000787,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 33827 records bulk exported from Legal_Documents at 03:45 to usb_drive. Weak auth (API_Key), geo: Unknown_VPN."
+ACC-000788,True,CROSS_DEPT_ACCESS,MEDIUM,IT employee accessed Benefits_DB (high sensitivity) — not in approved assets.
+ACC-000789,True,BULK_EXPORT,HIGH,Exported 36387 records from Contract_Repository (avg is 786). Volume is 46x normal.
+ACC-000790,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2026-02-19; sudden access to Executive_Dashboard after extended dormancy.
+ACC-000791,True,CROSS_DEPT_ACCESS,MEDIUM,Legal employee accessed Backup_System (high sensitivity) — not in approved assets.
+ACC-000792,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from London (IP: 10.29.251.194). Part of burst pattern.
+ACC-000793,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Backup_System at 23:13 (outside 7-22 hours).
+ACC-000794,True,BULK_EXPORT,HIGH,Exported 21443 records from Litigation_DB (avg is 500). Volume is 43x normal.
+ACC-000795,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000796,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000797,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 203.17.223.126) using Custom_ETL. Not matching registered equipment.
+ACC-000798,True,EXFILTRATION_RISK,CRITICAL,Exported 33851 records from Merger_Documents to personal_device. High exfiltration risk.
+ACC-000799,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000800,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000801,True,BULK_EXPORT,HIGH,Exported 78219 records from CRM_Database (avg is 3026). Volume is 26x normal.
+ACC-000802,True,EXFILTRATION_RISK,CRITICAL,Exported 1376 records from PROD_DB to usb_drive. High exfiltration risk.
+ACC-000803,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity Legal_Documents. Equipment policy violation.
+ACC-000804,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000805,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000806,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000807,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000808,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000809,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity CRM_Database at 22:41 (outside 7-22 hours).
+ACC-000810,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000811,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000812,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000813,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Lagos (IP: 185.177.240.167). Part of burst pattern.
+ACC-000814,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000815,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000816,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000817,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000818,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000819,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000820,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Toronto (IP: 10.116.129.96). Part of burst pattern.
+ACC-000821,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-13; sudden access to Employee_Records after extended dormancy.
+ACC-000822,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 91.114.14.154) using Python_Script. Not matching registered equipment.
+ACC-000823,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Toronto (IP: 10.84.245.133). Part of burst pattern.
+ACC-000824,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Mumbai (IP: 10.150.78.38). Part of burst pattern.
+ACC-000825,True,CROSS_DEPT_ACCESS,MEDIUM,HR employee accessed All_Financial (restricted sensitivity) — not in approved assets.
+ACC-000826,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-18; sudden access to Admin_Console after extended dormancy.
+ACC-000827,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000828,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000829,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000830,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-18; sudden access to Admin_Console after extended dormancy.
+ACC-000831,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 109266 records bulk exported from Infrastructure_DB at 01:22 to external_email. Weak auth (Password_Only), geo: Mumbai."
+ACC-000832,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000833,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000834,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000835,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000836,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000837,True,EXFILTRATION_RISK,CRITICAL,Exported 19146 records from Board_Materials to personal_device. High exfiltration risk.
+ACC-000838,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000839,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000840,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000841,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Infrastructure_DB at 00:30 (outside 8-19 hours).
+ACC-000842,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Compliance_DB at 04:33 (outside 6-22 hours).
+ACC-000843,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000844,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000845,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000846,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000847,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000848,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000849,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Board_Materials at 02:17 (outside 9-18 hours).
+ACC-000850,True,CROSS_DEPT_ACCESS,MEDIUM,Support employee accessed Backup_System (high sensitivity) — not in approved assets.
+ACC-000851,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity PROD_DB at 05:12 (outside 7-22 hours).
+ACC-000852,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 91.61.189.110) using curl. Not matching registered equipment.
+ACC-000853,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000854,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000855,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000856,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000857,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 185.240.216.96) using Custom_ETL. Not matching registered equipment.
+ACC-000858,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-01; sudden access to AR_System after extended dormancy.
+ACC-000859,True,CROSS_DEPT_ACCESS,MEDIUM,Operations employee accessed Employee_Records (restricted sensitivity) — not in approved assets.
+ACC-000860,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000861,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000862,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000863,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000864,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000865,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Legal_Documents at 22:46 (outside 8-19 hours).
+ACC-000866,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Customer_Vault at 02:42 (outside 8-20 hours).
+ACC-000867,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000868,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000869,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000870,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000871,True,CROSS_DEPT_ACCESS,MEDIUM,Finance employee accessed Board_Materials (restricted sensitivity) — not in approved assets.
+ACC-000872,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000873,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000874,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000875,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Backup_System at 22:16 (outside 8-18 hours).
+ACC-000876,True,BULK_EXPORT,HIGH,Exported 40048 records from Employee_Records (avg is 1099). Volume is 36x normal.
+ACC-000877,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Infrastructure_DB at 23:33 (outside 8-18 hours).
+ACC-000878,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 38687 records from PROD_DB to external_email. Tenure: 54mo, notice_period=True."
+ACC-000879,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 178.190.101.44) using curl. Not matching registered equipment.
+ACC-000880,True,BULK_EXPORT,HIGH,Exported 92696 records from Executive_Dashboard (avg is 2401). Volume is 39x normal.
+ACC-000881,True,EXFILTRATION_RISK,CRITICAL,Exported 3030 records from Payroll_System to cloud_storage. High exfiltration risk.
+ACC-000882,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000883,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Mumbai (IP: 10.34.134.78). Part of burst pattern.
+ACC-000884,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000885,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000886,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000887,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000888,True,CROSS_DEPT_ACCESS,MEDIUM,Support employee accessed Benefits_DB (high sensitivity) — not in approved assets.
+ACC-000889,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000890,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-01; sudden access to GL_Ledger after extended dormancy.
+ACC-000891,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000892,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity AP_System. Equipment policy violation.
+ACC-000893,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-08; sudden access to Strategic_Plans after extended dormancy.
+ACC-000894,True,EXFILTRATION_RISK,CRITICAL,Exported 13430 records from Backup_System to external_email. High exfiltration risk.
+ACC-000895,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 143251 records bulk exported from AR_System at 02:05 to usb_drive. Weak auth (API_Key), geo: Caracas."
+ACC-000896,True,CROSS_DEPT_ACCESS,MEDIUM,Operations employee accessed AR_System (high sensitivity) — not in approved assets.
+ACC-000897,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000898,True,CROSS_DEPT_ACCESS,MEDIUM,IT employee accessed Infrastructure_DB (high sensitivity) — not in approved assets.
+ACC-000899,True,BULK_EXPORT,HIGH,Exported 25540 records from Infrastructure_DB (avg is 378). Volume is 68x normal.
+ACC-000900,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000901,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000902,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Litigation_DB at 22:54 (outside 9-18 hours).
+ACC-000903,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed SIEM_Dashboard (medium). Exceeds privilege level.
+ACC-000904,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-01; sudden access to CRM_Database after extended dormancy.
+ACC-000905,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-11; sudden access to Sales_Pipeline after extended dormancy.
+ACC-000906,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000907,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Pyongyang (IP: 185.72.253.156). Part of burst pattern.
+ACC-000908,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000909,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000910,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000911,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000912,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000913,True,BULK_EXPORT,HIGH,Exported 16229 records from Employee_Records (avg is 500). Volume is 32x normal.
+ACC-000914,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 1602 records bulk exported from Benefits_DB at 04:13 to external_email. Weak auth (API_Key), geo: Lagos."
+ACC-000915,True,EXFILTRATION_RISK,CRITICAL,Exported 11798 records from Payroll_System to external_email. High exfiltration risk.
+ACC-000916,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000917,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000918,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Backup_System (high). Exceeds privilege level.
+ACC-000919,True,BULK_EXPORT,HIGH,Exported 35001 records from Compliance_DB (avg is 2460). Volume is 14x normal.
+ACC-000920,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000921,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000922,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000923,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 43745 records from All_Financial to usb_drive. Tenure: 61mo, notice_period=True."
+ACC-000924,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000925,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000926,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000927,True,CROSS_DEPT_ACCESS,MEDIUM,Sales employee accessed Benefits_DB (high sensitivity) — not in approved assets.
+ACC-000928,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000929,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000930,True,BULK_EXPORT,HIGH,Exported 24368 records from HR_Database (avg is 329). Volume is 74x normal.
+ACC-000931,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 37229 records from PROD_DB to external_email. Tenure: 54mo, notice_period=True."
+ACC-000932,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000933,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000934,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000935,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-13; sudden access to Employee_Records after extended dormancy.
+ACC-000936,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000937,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Executive_Dashboard at 23:45 (outside 8-20 hours).
+ACC-000938,True,CROSS_DEPT_ACCESS,MEDIUM,Engineering employee accessed Employee_Records (restricted sensitivity) — not in approved assets.
+ACC-000939,True,CROSS_DEPT_ACCESS,MEDIUM,Legal employee accessed All_Financial (restricted sensitivity) — not in approved assets.
+ACC-000940,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2026-02-19; sudden access to Strategic_Plans after extended dormancy.
+ACC-000941,True,CROSS_DEPT_ACCESS,MEDIUM,Legal employee accessed Infrastructure_DB (high sensitivity) — not in approved assets.
+ACC-000942,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity HR_Database at 01:44 (outside 8-20 hours).
+ACC-000943,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 104253 records from PROD_DB to usb_drive. Tenure: 64mo, notice_period=True."
+ACC-000944,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000945,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000946,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000947,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Board_Materials at 22:47 (outside 7-22 hours).
+ACC-000948,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity AR_System at 23:47 (outside 9-18 hours).
+ACC-000949,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Payroll_System at 02:36 (outside 8-20 hours).
+ACC-000950,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000951,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000952,True,CROSS_DEPT_ACCESS,MEDIUM,IT employee accessed CRM_Database (high sensitivity) — not in approved assets.
+ACC-000953,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000954,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000955,True,BULK_EXPORT,HIGH,Exported 19244 records from PROD_DB (avg is 786). Volume is 24x normal.
+ACC-000956,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000957,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000958,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000959,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000960,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000961,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000962,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000963,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000964,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000965,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000966,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Infrastructure_DB at 03:41 (outside 6-22 hours).
+ACC-000967,True,BULK_EXPORT,HIGH,Exported 221729 records from GL_Ledger (avg is 2456). Volume is 90x normal.
+ACC-000968,True,EXFILTRATION_RISK,CRITICAL,Exported 10552 records from Board_Materials to print. High exfiltration risk.
+ACC-000969,True,BULK_EXPORT,HIGH,Exported 78361 records from Financial_Reports (avg is 786). Volume is 100x normal.
+ACC-000970,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Merger_Documents (restricted). Exceeds privilege level.
+ACC-000971,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity AR_System at 00:49 (outside 9-17 hours).
+ACC-000972,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000973,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000974,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity PROD_DB at 04:51 (outside 7-22 hours).
+ACC-000975,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000976,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000977,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Payroll_System at 23:49 (outside 8-18 hours).
+ACC-000978,True,BULK_EXPORT,HIGH,Exported 138497 records from Litigation_DB (avg is 2401). Volume is 58x normal.
+ACC-000979,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000980,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000981,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000982,True,BULK_EXPORT,HIGH,Exported 2045 records from Legal_Documents (avg is 55). Volume is 37x normal.
+ACC-000983,True,BULK_EXPORT,HIGH,Exported 128688 records from Executive_Dashboard (avg is 1331). Volume is 97x normal.
+ACC-000984,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 60312 records from GL_Ledger to personal_device. Tenure: 24mo, notice_period=True."
+ACC-000985,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Executive_Dashboard at 23:13 (outside 7-21 hours).
+ACC-000986,True,CROSS_DEPT_ACCESS,MEDIUM,Operations employee accessed Merger_Documents (restricted sensitivity) — not in approved assets.
+ACC-000987,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 206668 records bulk exported from Benefits_DB at 04:47 to external_email. Weak auth (API_Key), geo: Mumbai."
+ACC-000988,True,BULK_EXPORT,HIGH,Exported 202849 records from Board_Materials (avg is 4797). Volume is 42x normal.
+ACC-000989,True,BULK_EXPORT,HIGH,Exported 6773 records from Executive_Dashboard (avg is 396). Volume is 17x normal.
+ACC-000990,True,BULK_EXPORT,HIGH,Exported 7900 records from Litigation_DB (avg is 126). Volume is 63x normal.
+ACC-000991,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Frankfurt (IP: 10.32.27.38). Part of burst pattern.
+ACC-000992,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000993,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000994,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000995,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000996,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000997,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000998,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-000999,True,CROSS_DEPT_ACCESS,MEDIUM,Engineering employee accessed Board_Materials (restricted sensitivity) — not in approved assets.
+ACC-001000,True,EXFILTRATION_RISK,CRITICAL,Exported 834 records from Infrastructure_DB to external_email. High exfiltration risk.
+ACC-001001,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001002,True,CROSS_DEPT_ACCESS,MEDIUM,Legal employee accessed Executive_Dashboard (high sensitivity) — not in approved assets.
+ACC-001003,True,CROSS_DEPT_ACCESS,MEDIUM,Engineering employee accessed Board_Materials (restricted sensitivity) — not in approved assets.
+ACC-001004,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001005,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001006,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity GL_Ledger at 02:38 (outside 8-20 hours).
+ACC-001007,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Toronto (IP: 10.114.39.119). Part of burst pattern.
+ACC-001008,True,EXFILTRATION_RISK,CRITICAL,Exported 31129 records from AP_System to usb_drive. High exfiltration risk.
+ACC-001009,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity CRM_Database at 04:22 (outside 8-18 hours).
+ACC-001010,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001011,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001012,True,BULK_EXPORT,HIGH,Exported 5017 records from AP_System (avg is 55). Volume is 91x normal.
+ACC-001013,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001014,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001015,True,EXFILTRATION_RISK,CRITICAL,Exported 29582 records from Compliance_DB to external_email. High exfiltration risk.
+ACC-001016,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001017,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Board_Materials (restricted). Exceeds privilege level.
+ACC-001018,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001019,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 17887 records from PROD_DB to personal_device. Tenure: 54mo, notice_period=True."
+ACC-001020,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001021,True,CROSS_DEPT_ACCESS,MEDIUM,Marketing employee accessed Employee_Records (restricted sensitivity) — not in approved assets.
+ACC-001022,True,BULK_EXPORT,HIGH,Exported 14501 records from Board_Materials (avg is 874). Volume is 17x normal.
+ACC-001023,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001024,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001025,True,EXFILTRATION_RISK,CRITICAL,Exported 12326 records from Customer_Vault to personal_device. High exfiltration risk.
+ACC-001026,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-13; sudden access to Employee_Records after extended dormancy.
+ACC-001027,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Toronto (IP: 10.111.210.71). Part of burst pattern.
+ACC-001028,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001029,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing restricted-sensitivity All_Financial. Equipment policy violation.
+ACC-001030,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001031,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001032,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001033,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Merger_Documents (restricted). Exceeds privilege level.
+ACC-001034,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001035,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001036,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-06; sudden access to Logistics_System after extended dormancy.
+ACC-001037,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001038,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001039,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001040,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001041,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-11-11; sudden access to CRM_Database after extended dormancy.
+ACC-001042,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Compliance_DB at 03:01 (outside 8-20 hours).
+ACC-001043,True,CROSS_DEPT_ACCESS,MEDIUM,Finance employee accessed Contract_Repository (high sensitivity) — not in approved assets.
+ACC-001044,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001045,True,BULK_EXPORT,HIGH,Exported 61645 records from Litigation_DB (avg is 1239). Volume is 50x normal.
+ACC-001046,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001047,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001048,True,BULK_EXPORT,HIGH,Exported 22762 records from Infrastructure_DB (avg is 1610). Volume is 14x normal.
+ACC-001049,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 91.198.234.193) using Python_Script. Not matching registered equipment.
+ACC-001050,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity GL_Ledger at 05:35 (outside 8-20 hours).
+ACC-001051,True,EXFILTRATION_RISK,CRITICAL,Exported 706 records from HR_Database to external_email. High exfiltration risk.
+ACC-001052,True,BULK_EXPORT,HIGH,Exported 245110 records from Board_Materials (avg is 2456). Volume is 100x normal.
+ACC-001053,True,BULK_EXPORT,HIGH,Exported 18203 records from Compliance_DB (avg is 814). Volume is 22x normal.
+ACC-001054,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001055,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001056,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001057,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001058,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001059,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Contract_Repository at 23:28 (outside 7-22 hours).
+ACC-001060,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 959 records bulk exported from Financial_Reports at 00:38 to external_email. Weak auth (Password_Only), geo: Caracas."
+ACC-001061,True,BULK_EXPORT,HIGH,Exported 18656 records from AR_System (avg is 798). Volume is 23x normal.
+ACC-001062,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001063,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 4405 records from Backup_System to personal_device. Tenure: 18mo, notice_period=True."
+ACC-001064,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001065,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001066,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001067,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Payroll_System at 02:30 (outside 7-21 hours).
+ACC-001068,True,PRE_RESIGNATION_DOWNLOAD,CRITICAL,"Employee on notice period downloaded 4370 records from Backup_System to usb_drive. Tenure: 18mo, notice_period=True."
+ACC-001069,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001070,True,CROSS_DEPT_ACCESS,MEDIUM,IT employee accessed Benefits_DB (high sensitivity) — not in approved assets.
+ACC-001071,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Backup_System at 02:29 (outside 6-22 hours).
+ACC-001072,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001073,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001074,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity PROD_DB. Equipment policy violation.
+ACC-001075,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing restricted-sensitivity All_Financial. Equipment policy violation.
+ACC-001076,True,CROSS_DEPT_ACCESS,MEDIUM,IT employee accessed HR_Database (high sensitivity) — not in approved assets.
+ACC-001077,True,CROSS_DEPT_ACCESS,MEDIUM,Operations employee accessed Strategic_Plans (restricted sensitivity) — not in approved assets.
+ACC-001078,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed restricted-sensitivity Merger_Documents at 04:48 (outside 9-18 hours).
+ACC-001079,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Merger_Documents (restricted). Exceeds privilege level.
+ACC-001080,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001081,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001082,True,BULK_EXPORT,HIGH,Exported 11371 records from Litigation_DB (avg is 786). Volume is 14x normal.
+ACC-001083,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Benefits_DB at 00:27 (outside 7-22 hours).
+ACC-001084,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001085,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001086,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001087,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001088,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001089,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2026-02-19; sudden access to Board_Materials after extended dormancy.
+ACC-001090,True,BULK_EXPORT,HIGH,Exported 57074 records from Backup_System (avg is 727). Volume is 79x normal.
+ACC-001091,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001092,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001093,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001094,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001095,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Infrastructure_DB (high). Exceeds privilege level.
+ACC-001096,True,BULK_EXPORT,HIGH,Exported 18741 records from HR_Database (avg is 1099). Volume is 17x normal.
+ACC-001097,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Tokyo (IP: 10.163.82.129). Part of burst pattern.
+ACC-001098,True,CROSS_DEPT_ACCESS,MEDIUM,Legal employee accessed Strategic_Plans (restricted sensitivity) — not in approved assets.
+ACC-001099,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing restricted-sensitivity All_Financial. Equipment policy violation.
+ACC-001100,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-01; sudden access to Customer_Reports after extended dormancy.
+ACC-001101,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Executive_Dashboard at 05:32 (outside 7-22 hours).
+ACC-001102,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001103,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001104,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity GL_Ledger. Equipment policy violation.
+ACC-001105,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001106,True,EXFILTRATION_RISK,CRITICAL,Exported 4015 records from Merger_Documents to external_email. High exfiltration risk.
+ACC-001107,True,EXFILTRATION_RISK,CRITICAL,Exported 13011 records from Strategic_Plans to external_email. High exfiltration risk.
+ACC-001108,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001109,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001110,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001111,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001112,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001113,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed SIEM_Dashboard (medium). Exceeds privilege level.
+ACC-001114,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Backup_System (high). Exceeds privilege level.
+ACC-001115,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Admin_Console (medium). Exceeds privilege level.
+ACC-001116,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Compliance_DB at 00:14 (outside 7-22 hours).
+ACC-001117,True,EXFILTRATION_RISK,CRITICAL,Exported 2368 records from Merger_Documents to usb_drive. High exfiltration risk.
+ACC-001118,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed Admin_Console (medium). Exceeds privilege level.
+ACC-001119,True,BULK_EXPORT,HIGH,Exported 11414 records from Backup_System (avg is 200). Volume is 57x normal.
+ACC-001120,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001121,True,CROSS_DEPT_ACCESS,MEDIUM,Legal employee accessed Executive_Dashboard (high sensitivity) — not in approved assets.
+ACC-001122,True,CROSS_DEPT_ACCESS,MEDIUM,Finance employee accessed All_Financial (restricted sensitivity) — not in approved assets.
+ACC-001123,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001124,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001125,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001126,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001127,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 8221 records bulk exported from Strategic_Plans at 02:27 to external_email. Weak auth (Password_Only), geo: Unknown_VPN."
+ACC-001128,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001129,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001130,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001131,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001132,True,BULK_EXPORT,HIGH,Exported 138792 records from AP_System (avg is 2460). Volume is 56x normal.
+ACC-001133,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001134,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001135,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001136,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001137,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001138,True,BULK_EXPORT,HIGH,Exported 45071 records from All_Financial (avg is 814). Volume is 55x normal.
+ACC-001139,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001140,True,CROSS_DEPT_ACCESS,MEDIUM,HR employee accessed Litigation_DB (restricted sensitivity) — not in approved assets.
+ACC-001141,True,PRIVILEGE_ESCALATION,HIGH,junior-tier user accessed Strategic_Plans (restricted). Exceeds privilege level.
+ACC-001142,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 24668 records bulk exported from Contract_Repository at 03:56 to external_email. Weak auth (API_Key), geo: Tor_Exit_Node."
+ACC-001143,True,EXFILTRATION_RISK,CRITICAL,Exported 78156 records from Merger_Documents to external_email. High exfiltration risk.
+ACC-001144,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity PROD_DB. Equipment policy violation.
+ACC-001145,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001146,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001147,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001148,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001149,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001150,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001151,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001152,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Infrastructure_DB at 05:39 (outside 8-20 hours).
+ACC-001153,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001154,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001155,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing restricted-sensitivity Payroll_System. Equipment policy violation.
+ACC-001156,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001157,True,DEVICE_ANOMALY,MEDIUM,Access from unregistered device (IP: 185.135.85.234) using Custom_ETL. Not matching registered equipment.
+ACC-001158,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001159,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001160,True,CROSS_DEPT_ACCESS,MEDIUM,Finance employee accessed Payroll_System (restricted sensitivity) — not in approved assets.
+ACC-001161,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 196238 records bulk exported from Legal_Documents at 03:20 to external_email. Weak auth (API_Key), geo: New_York."
+ACC-001162,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001163,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001164,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001165,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001166,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001167,True,EXFILTRATION_RISK,CRITICAL,Exported 1375 records from Executive_Dashboard to personal_device. High exfiltration risk.
+ACC-001168,True,CROSS_DEPT_ACCESS,MEDIUM,Marketing employee accessed Employee_Records (restricted sensitivity) — not in approved assets.
+ACC-001169,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001170,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001171,True,AFTER_HOURS_RESTRICTED,HIGH,Accessed high-sensitivity Compliance_DB at 22:17 (outside 7-22 hours).
+ACC-001172,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Caracas (IP: 91.2.123.41). Part of burst pattern.
+ACC-001173,True,EXFILTRATION_RISK,CRITICAL,Exported 387 records from Payroll_System to usb_drive. High exfiltration risk.
+ACC-001174,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001175,True,BULK_EXPORT,HIGH,Exported 78682 records from AP_System (avg is 1418). Volume is 55x normal.
+ACC-001176,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001177,True,STALE_ACCOUNT_ACCESS,HIGH,Account last active 2025-12-13; sudden access to Legal_Documents after extended dormancy.
+ACC-001178,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001179,True,BULK_EXPORT,HIGH,Exported 80220 records from All_Financial (avg is 1029). Volume is 78x normal.
+ACC-001180,True,EXFILTRATION_RISK,CRITICAL,Exported 655 records from Payroll_System to external_email. High exfiltration risk.
+ACC-001181,True,CROSS_DEPT_ACCESS,MEDIUM,Finance employee accessed Contract_Repository (high sensitivity) — not in approved assets.
+ACC-001182,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Unknown_VPN (IP: 45.118.94.13). Part of burst pattern.
+ACC-001183,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001184,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001185,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed SIEM_Dashboard (medium). Exceeds privilege level.
+ACC-001186,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001187,True,FAILED_AUTH_BURST,MEDIUM,Failed MFA authentication attempt from Frankfurt (IP: 10.26.91.93). Part of burst pattern.
+ACC-001188,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001189,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001190,True,NIGHT_BULK_CRITICAL,CRITICAL,"CRITICAL: 197711 records bulk exported from Compliance_DB at 04:16 to cloud_storage. Weak auth (Password_Only), geo: Tor_Exit_Node."
+ACC-001191,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001192,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001193,False,NORMAL,NONE,Access within normal behavioral parameters.
+ACC-001194,True,PRIVILEGE_ESCALATION,HIGH,standard-tier user accessed All_Financial (restricted). Exceeds privilege level.
+ACC-001195,True,FAILED_AUTH_BURST,MEDIUM,Failed SSO authentication attempt from Tor_Exit_Node (IP: 45.141.105.91). Part of burst pattern.
+ACC-001196,True,EXFILTRATION_RISK,CRITICAL,Exported 917 records from Customer_Vault to usb_drive. High exfiltration risk.
+ACC-001197,True,EXFILTRATION_RISK,CRITICAL,Exported 1225 records from Contract_Repository to external_email. High exfiltration risk.
+ACC-001198,True,DEVICE_ANOMALY,MEDIUM,Contractor machine accessing high-sensitivity Legal_Documents. Equipment policy violation.
+ACC-001199,True,FAILED_AUTH_BURST,MEDIUM,Failed Password_Only authentication attempt from Singapore (IP: 10.12.37.217). Part of burst pattern.
