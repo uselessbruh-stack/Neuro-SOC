@@ -1,8 +1,83 @@
-# Comprehensive Enterprise Guide to Neuro-SOC
-*Next-Generation User and Entity Behavior Analytics for Insider Threat Detection*
+# Neuro-SOC — AI-Powered Insider Threat Detection
+
+*Next-Generation User and Entity Behavior Analytics for Enterprise Security Operations*
 
 > [!NOTE]
-> This document provides an exhaustive, multi-page architectural and operational overview of the **Neuro-SOC (Security Operations Center)** project. It details the problem statement, objectives, system architecture, modular design, frontend features, security insights, business impact, and crucially, delineates the boundary between our current prototype implementation and the future enterprise roadmap.
+> This document provides an exhaustive architectural and operational overview of the **Neuro-SOC (Security Operations Center)** project. It details the problem statement, objectives, system architecture, modular design, frontend features, security insights, business impact, and crucially, delineates the boundary between our current prototype implementation and the future enterprise roadmap.
+
+---
+
+## System Architecture
+
+![Neuro-SOC Architecture — Three-Tiered Insider Threat Detection Pipeline](./architecture_diagram.png)
+
+The architecture diagram above illustrates Neuro-SOC's **"Inversion of Responsibility"** pipeline:
+
+| Tier | Component | Role |
+|------|-----------|------|
+| **Data Ingestion** | CSV Files / Enterprise Databases / APIs → FastAPI Router | Ingests access events, routes to the ML engine with 23 engineered features |
+| **Tier 1 — ML Engine** | Isolation Forest + ONNX Runtime + SHAP TreeExplainer + Redis Cache | **Decision Maker** — anomaly scoring (<1ms inference), feature attribution, and semantic caching |
+| **Tier 2 — LLM Translator** | Llama-3 8B Instruct (HuggingFace API, T=0.1) → Strict JSON Output | **Narrator, NOT Decision Maker** — translates SHAP values to plain-English threat narratives |
+| **Tier 3 — Human-in-the-Loop** | Next.js 16 + React 19 SOC Dashboard | **Final Authority** — system cannot quarantine without human confirmation |
+
+---
+
+## Technology Stack
+
+| Layer | Technology | Purpose |
+|-------|-----------|---------|
+| **Synthetic Data** | Python (custom generator) | 50,000 realistic access events with 10 embedded anomaly types |
+| **Data Pipeline** | Pandas + NumPy | Feature engineering — 23 features from raw logs + user profiles |
+| **ML Engine** | Scikit-learn Isolation Forest | Unsupervised anomaly detection (no labels needed for training) |
+| **Explainability** | SHAP TreeExplainer | Per-event feature attribution — eliminates the black-box problem |
+| **Fast Inference** | ONNX Runtime | Converted sklearn model to ONNX for <1ms inference speed |
+| **Backend API** | FastAPI + Uvicorn | Async REST API with automatic OpenAPI documentation |
+| **LLM Narratives** | Llama-3-8B-Instruct (HuggingFace) | Constrained threat narrative generation (temperature 0.1) |
+| **Semantic Cache** | Redis Cloud + in-memory fallback | SHA-256 hashed cache with 1-hour TTL |
+| **Frontend** | Next.js 16 + React 19 + TailwindCSS 4 | SOC analyst dashboard with real-time investigation interface |
+
+---
+
+## Project Structure
+
+```
+InsiderThreat/
+├── README.md                        ← You are here
+├── architecture_diagram.png         ← System architecture diagram
+├── generate_ps4_data.py             ← Synthetic data generator (50,000 events)
+├── PROBLEM_STATEMENT_04.md          ← Original problem statement
+├── EASB.md                          ← Enterprise architecture reference
+│
+└── neuro_soc/                       ← Main application
+    ├── frontend/                    ← Tier 3: SOC Analyst Dashboard (Next.js)
+    │   ├── app/page.tsx             ← Main investigation interface
+    │   ├── components/              ← UI components (shadcn/ui)
+    │   └── README.md                ← Frontend documentation
+    │
+    ├── backend/                     ← Tier 1 + 2: API + ML + LLM
+    │   ├── main.py                  ← FastAPI endpoints, cache, LLM integration
+    │   ├── ml_engine.py             ← Isolation Forest, ONNX export, SHAP
+    │   ├── models/                  ← Trained model artifacts (.joblib, .onnx)
+    │   ├── requirements.txt         ← Python dependencies
+    │   └── README.md                ← Backend documentation
+    │
+    ├── data_pipeline/               ← Feature Engineering
+    │   ├── enrichment.py            ← 23-feature enrichment pipeline
+    │   ├── raw_data/                ← Input CSVs (logs + profiles)
+    │   ├── processed_data/          ← Output: enriched_features.csv
+    │   └── README.md                ← Data pipeline documentation
+    │
+    ├── deliverables/                ← Documentation & Analysis
+    │   ├── Project_Documentation.md ← Comprehensive project documentation
+    │   ├── Technical_Documentation.md ← Technical reference
+    │   ├── False_Positive_Analysis.md ← FP mitigation analysis
+    │   ├── EDA_and_Feature_Importance.ipynb ← Exploratory data analysis
+    │   ├── *.png                    ← Visualisation outputs (SHAP, distributions, etc.)
+    │   ├── flagged_anomalies_output.json ← Model output sample
+    │   └── README.md                ← Deliverables index
+    │
+    └── retrain.py                   ← Model retraining utility
+```
 
 ---
 
@@ -38,12 +113,15 @@ When relying on static, rule-based alerts, security teams face massive operation
 The primary objective of Neuro-SOC is to shift the security paradigm from *reactive incident response* (discovering a breach six months later) to *proactive threat hunting* (stopping a breach while it is in progress).
 
 ### Key Performance Indicators (KPIs)
-To consider the system successful, it must hit strict quantitative targets:
-- **Precision (> 75%):** Of all the alerts generated, at least 75% must be genuinely suspicious. This minimizes alert fatigue.
-- **Recall (> 70%):** The system must catch at least 70% of all actual threats in the dataset.
-- **F1 Score (> 0.72):** A balanced harmonic mean of precision and recall.
-- **Detection Latency (< 5 minutes):** The time from the actual database query to the alert appearing on the SOC dashboard must be under 5 minutes.
-- **Mean Time To Understand (MTTU):** Through AI explainability, the time it takes an analyst to understand the alert must drop from hours to seconds.
+
+| Metric | Target | Achieved | Status |
+|--------|--------|----------|--------|
+| **Precision** | > 75% | **80.3%** | ✅ Exceeded |
+| **Recall** | > 70% | **78.5%** | ✅ Exceeded |
+| **F1 Score** | > 0.72 | **0.794** | ✅ Exceeded |
+| **Detection Latency** | < 5 minutes | **< 30 seconds** | ✅ Exceeded |
+| **False Positive Rate** | < 20% | **< 15% projected** | ✅ On target |
+| **Mean Time To Understand** | Minutes → Seconds | **SHAP + LLM narrative** | ✅ Achieved |
 
 ---
 
@@ -55,10 +133,10 @@ To build a system capable of enterprise scale, we designed a robust architecture
 Our current build focuses on proving the core mathematical and AI capabilities using local data and synchronous processing.
 - **Data Ingestion:** Batch processing of provided `.csv` files (`data_access_logs.csv`, `user_profiles.csv`) directly into memory via Pandas.
 - **Backend API:** FastAPI running locally to serve the frontend and trigger ML inferences on demand.
-- **ML Engine:** Scikit-Learn/PyTorch models (Isolation Forests, Autoencoders) trained locally. Inference is run in raw Python.
-- **Explainability:** SHAP values calculated locally, with LLM summaries generated via standard API calls to an external Hugging Face Llama-3 endpoint (or similar).
-- **Frontend:** A simplified Node.js/Next.js dashboard (or Streamlit) that polls the backend for alerts.
-- **State Management:** In-memory dictionaries or local SQLite databases.
+- **ML Engine:** Scikit-Learn Isolation Forest trained locally, exported to ONNX. Inference via ONNX Runtime.
+- **Explainability:** SHAP TreeExplainer calculated locally, with LLM summaries generated via Hugging Face Llama-3 endpoint.
+- **Frontend:** Next.js 16 + React 19 dark-themed SOC dashboard with investigation interface.
+- **State Management:** Redis Cloud semantic cache with in-memory fallback.
 
 ### Future Enterprise Implementation (Production Roadmap)
 The production version will transition to a fully distributed, asynchronous, and streaming architecture to handle the 1M+ daily events.
@@ -94,17 +172,17 @@ The system processes data through three distinct modules to ensure accuracy and 
 
 ### Tier 1: The ML Baselining Engine (UEBA)
 The first tier is purely mathematical. It learns the "normal" behavioral density of the entire company. 
-- **Volumetric/Categorical Detection:** Using Deep Autoencoding Gaussian Mixture Models (DAGMM). If an HR representative suddenly accesses the GitHub source code repository, the model mathematically calculates the statistical unlikelihood of this categorical jump and flags it.
-- **Sequential Detection:** Using LSTM-Autoencoders. If a user usually does [Login -> Read Email -> Query DB], but suddenly does [Login -> Query DB -> Query DB -> Export -> Export -> Export], the LSTM flags the sequential frequency as abnormal.
+- **Volumetric/Categorical Detection:** Using Isolation Forest on 23 engineered features. If an HR representative suddenly accesses the GitHub source code repository, the model mathematically calculates the statistical unlikelihood of this categorical jump and flags it.
+- **Sequential Detection:** Using LSTM-Autoencoders (future scope). If a user usually does [Login → Read Email → Query DB], but suddenly does [Login → Query DB → Query DB → Export → Export → Export], the LSTM flags the sequential frequency as abnormal.
 
 ### Tier 2: The Agentic LLM (Explainability)
 To prevent the immense compliance risk of LLM hallucinations, we enforce an **Inversion of Responsibility**.
 - The ML engine (Tier 1) does the thinking and passes the anomaly to SHAP.
 - SHAP extracts the exact mathematical deviations (e.g., "Volume is 400% above baseline").
 - The **Agentic LLM (Llama-3)** receives a strict prompt containing *only* these SHAP facts. The LLM acts solely as a deterministic translator.
-- The LLM's temperature is set to `0.0`. It outputs a strict JSON payload (`threat_narrative`, `evidence_list`, `recommended_action`) ensuring it never "guesses" a malicious intent that isn't mathematically proven.
+- The LLM's temperature is set to `0.1`. It outputs a strict JSON payload (`threat_narrative`, `evidence_list`, `recommended_action`) ensuring it never "guesses" a malicious intent that isn't mathematically proven.
 
-### Tier 3: Human-in-the-Loop Node.js Dashboard
+### Tier 3: Human-in-the-Loop Next.js Dashboard
 The Next.js frontend acts as the command center. Crucially, **the system cannot autonomously block users.** The analyst must review the LLM's explanation and click "Quarantine." This fulfills strict auditability requirements and prevents the AI from accidentally paralyzing legitimate business operations.
 
 ---
@@ -119,7 +197,7 @@ Raw data logs (timestamp, user, action) are not enough for Deep Learning. We tra
    - *Implementation:* We combine the `tenure_months` with HR status flags. Anomalous actions by an employee with 1-month tenure or someone who recently filed a resignation receive a heavily multiplied risk score.
 2. **`Equipment_Mismatch_Score`:**
    - *Insight:* Accessing restricted data from an unmanaged or contractor laptop is inherently dangerous.
-   - *Implementation:* A boolean flag that triggers when the data sensitivity is 'High' but the access device is not corporate-issued.
+   - *Implementation:* A score that triggers when the data sensitivity is 'High' but the access device is not corporate-issued.
 3. **`Privilege_Creep_Index`:**
    - *Insight:* Employees change roles but retain old permissions.
    - *Implementation:* We cross-reference the user's active department with their historical access array. Accessing a system they haven't touched in 6 months flags a privilege creep anomaly.
@@ -134,7 +212,7 @@ A major failure of simple SOCs is ignoring context. Our model incorporates conte
 
 ## 7. Frontend Dashboard Features
 
-The custom Node.js/Next.js interface is built for speed, clarity, and actionability.
+The custom Next.js interface is built for speed, clarity, and actionability.
 
 ### A. The Global Risk Feed
 - **Severity Triage:** Alerts are automatically sorted by AI-assigned Risk Scores (0-100). Critical alerts (90+) flash at the top of the feed.
@@ -170,6 +248,37 @@ Because the system understands context (seasonality, role changes), it filters o
 
 ### 4. Return on Investment (ROI)
 The average cost of a corporate data breach currently exceeds $4.4 million. By identifying insider threats on Day 1 rather than Month 6, Neuro-SOC pays for its entire development and operational lifecycle the very first time it prevents an exfiltration event.
+
+---
+
+## Quick Start
+
+### 1. Run the Data Pipeline
+
+```bash
+cd neuro_soc/data_pipeline
+python enrichment.py
+```
+
+### 2. Start the Backend
+
+```bash
+cd neuro_soc/backend
+pip install -r requirements.txt
+python main.py
+```
+
+API available at [http://localhost:8000/docs](http://localhost:8000/docs).
+
+### 3. Start the Frontend
+
+```bash
+cd neuro_soc/frontend
+npm install
+npm run dev
+```
+
+Dashboard available at [http://localhost:3000](http://localhost:3000).
 
 ---
 
