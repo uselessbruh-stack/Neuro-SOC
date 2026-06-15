@@ -2,9 +2,6 @@
 
 *Next-Generation User and Entity Behavior Analytics for Enterprise Security Operations*
 
-> [!NOTE]
-> This document provides an exhaustive architectural and operational overview of the **Neuro-SOC (Security Operations Center)** project. It details the problem statement, objectives, system architecture, modular design, frontend features, security insights, business impact, and crucially, delineates the boundary between our current prototype implementation and the future enterprise roadmap.
-
 ---
 
 ## System Architecture
